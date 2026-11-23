@@ -58,10 +58,10 @@ def classify(returncode, stdout, stderr):
     return 'INDETERMINATE'
 
 
-def run_tina(binary, pnml_path):
+def run_tina(binary, pnml_path, timeout=30):
     try:
         result = subprocess.run([binary, '-PNML', '-R', '-q', str(pnml_path)],
-                                capture_output=True, text=True, timeout=30)
+                                capture_output=True, text=True, timeout=timeout)
         return classify(result.returncode, result.stdout, result.stderr), result.returncode, result.stdout, result.stderr
     except subprocess.TimeoutExpired as exc:
         return 'TIMEOUT', None, (exc.stdout or b'').decode(errors='replace'), (exc.stderr or b'').decode(errors='replace')
@@ -75,6 +75,7 @@ def main():
     ap.add_argument('--total-batches', type=int, default=10)
     ap.add_argument('--limit', type=int, help='Smoke test only; never use for full coverage')
     ap.add_argument('--output-dir', type=Path, required=True)
+    ap.add_argument('--retry-plan', type=Path)
     args = ap.parse_args()
     binary = shutil.which(os.environ.get('TINA', TINA))
     if not binary:
@@ -83,12 +84,28 @@ def main():
         ap.error('Invalid shard or smoke limit')
     rows = list(csv.DictReader((ROOT / 'scope/generator_candidate_universe_full.csv').open(newline='', encoding='utf-8')))
     valid = [r for r in rows if r['static_validity'] == 'VALID_BY_FROZEN_RULE']
-    batch_size = (len(valid) + args.total_batches - 1) // args.total_batches
-    start = (args.batch - 1) * batch_size
-    end = min(start + batch_size, len(valid))
-    if len(valid) != 107520 or len({r['candidate_id'] for r in valid}) != len(valid) or start >= end:
-        ap.error('Unexpected frozen population or empty shard')
-    batch = valid[start:end][:args.limit]
+    by_id = {r['candidate_id']: r for r in valid}
+    if len(valid) != 107520 or len(by_id) != len(valid):
+        ap.error('Unexpected frozen population')
+    timeout = 30
+    if args.retry_plan:
+        plan = json.loads(args.retry_plan.read_text(encoding='utf-8'))
+        groups = plan['batches']
+        ids = [cid for g in groups for cid in g['ids']]
+        if (len(groups) != args.total_batches or len(ids) != 55003
+                or len(set(ids)) != len(ids) or not set(ids) <= by_id.keys()
+                or any(not g['ids'] or g['timeout'] not in (30, 120)
+                       or len(g['ids']) * g['timeout'] > 9600 for g in groups)):
+            ap.error('Invalid retry partition')
+        group = groups[args.batch - 1]
+        timeout = group['timeout']
+        batch = [by_id[cid] for cid in group['ids']][:args.limit]
+    else:
+        batch_size = (len(valid) + args.total_batches - 1) // args.total_batches
+        start = (args.batch - 1) * batch_size
+        batch = valid[start:start + batch_size][:args.limit]
+    if not batch:
+        ap.error('Empty shard')
     args.output_dir.mkdir(parents=True, exist_ok=True)
     out_path = args.output_dir / f'tina_batch_{args.batch}.csv'
     raw_path = args.output_dir / f'tina_batch_{args.batch}.jsonl.gz'
@@ -108,7 +125,7 @@ def main():
             with tempfile.NamedTemporaryFile(mode='w', suffix='.pnml', delete=False) as tf:
                 tf.write(pnml); tmp = tf.name
             try:
-                status, code, stdout, stderr = run_tina(binary, tmp)
+                status, code, stdout, stderr = run_tina(binary, tmp, timeout=timeout)
             finally:
                 Path(tmp).unlink()
             digest = sha256(pnml.encode('utf-8')).hexdigest()
@@ -119,6 +136,11 @@ def main():
             results.append({'candidate_id': r['candidate_id'], 'status': 'CASE_ERROR',
                             'returncode': None, 'pnml_sha256': None, 'places': None, 'transitions': None})
         evidence.write(json.dumps({**results[-1], 'stdout': stdout, 'stderr': stderr}) + '\n')
+        if len(results) % 25 == 0:
+            evidence.flush()
+            counts = Counter(row['status'] for row in results)
+            print(f'batch={args.batch} processed={len(results)}/{len(batch)} statuses={dict(counts)}',
+                  file=sys.stderr, flush=True)
     evidence.close()
     with out_path.open('w', newline='', encoding='utf-8') as f:
         w = csv.DictWriter(f, fieldnames=list(results[0])); w.writeheader(); w.writerows(results)

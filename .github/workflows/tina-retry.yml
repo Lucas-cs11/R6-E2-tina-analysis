@@ -1,0 +1,79 @@
+name: TINA Targeted Retry
+on:
+  workflow_dispatch:
+    inputs:
+      smoke:
+        description: Test a single short-budget and a single long-budget job
+        type: boolean
+        default: true
+permissions:
+  contents: read
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - id: plan
+        env:
+          SMOKE: ${{ inputs.smoke }}
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import hashlib, json, os
+          from pathlib import Path
+          data = Path('scope/tina_retry_45127189704.json').read_bytes()
+          assert hashlib.sha256(data).hexdigest() == '070ee51312036e9a4c7d93372276165841c4aec99064daaf24ed027f946e0e90'
+          groups = json.loads(data)['batches']
+          assert len(groups) == 187
+          indexes = list(range(1, len(groups)+1))
+          if os.environ['SMOKE'] == 'true':
+              indexes = [next(i for i in indexes if groups[i-1]['timeout']==t) for t in (30,120)]
+          print('matrix=' + json.dumps(indexes))
+          PY
+  retry:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 210
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        batch: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install verified TINA
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --max-time 120 'https://projects.laas.fr/tina/binaries/tina-4.0.0-amd64-linux.tgz' -o "$RUNNER_TEMP/tina.tgz"
+          printf '%s  %s\n' 5e1cbd7c2e043419037a3d265914042fde795563094f38ddd88b42444d4afa8c "$RUNNER_TEMP/tina.tgz" | sha256sum -c -
+          tar -xzf "$RUNNER_TEMP/tina.tgz" -C "$RUNNER_TEMP"
+          binary="$RUNNER_TEMP/tina-4.0.0/bin/tina"
+          printf '%s  %s\n' 2aba7983b28e578903b2e9ac9d98aa985d2fa221c8cee72f2aa6cfd1e2e2a962 "$binary" | sha256sum -c -
+          test -x "$binary"
+          echo "TINA=$binary" >> "$GITHUB_ENV"
+          mkdir -p "$RUNNER_TEMP/tina-evidence"
+          sha256sum "$RUNNER_TEMP/tina.tgz" "$binary" scope/tina_retry_45127189704.json > "$RUNNER_TEMP/tina-evidence/input.sha256"
+      - name: Run retry batch
+        timeout-minutes: 190
+        env:
+          BATCH: ${{ matrix.batch }}
+          SMOKE: ${{ inputs.smoke }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [[ "$SMOKE" == true ]]; then args+=(--limit 1); fi
+          python3 -B -u tests/tina_batch.py --batch "$BATCH" --total-batches 187 \
+            --retry-plan scope/tina_retry_45127189704.json \
+            --output-dir "$RUNNER_TEMP/tina-evidence" "${args[@]}" | tee "$RUNNER_TEMP/tina-evidence/summary.json"
+      - name: Upload retry evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: tina-retry-batch-${{ matrix.batch }}
+          path: ${{ runner.temp }}/tina-evidence/
+          if-no-files-found: error
