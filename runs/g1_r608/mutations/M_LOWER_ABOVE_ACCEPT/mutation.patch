@@ -1,0 +1,13 @@
+--- 
++++ 
+@@ -78,8 +78,8 @@
+                 # bound above q_i is a valid conservative enclosure and must be
+                 # intersected (clamped), not rejected. Contradiction only when the
+                 # lower bound exceeds the physical upper bound q_i.
+-                if qy[0] > q[1]:
+-                    raise EvidenceError(name + ' lower bound exceeds q_i upper bound (infeasible)')
++                if False:
++                    pass
+                 if qy[0] < 0:
+                     raise EvidenceError(name + ' has negative lower bound outside physical domain')
+         if pe[0] > min(pi0, pi1):

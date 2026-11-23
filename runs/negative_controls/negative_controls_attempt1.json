@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "id": "TAMPER_RAW_SHA",
+      "exit_code": 1,
+      "failed_as_expected": true,
+      "stderr_tail": ""
+    },
+    {
+      "id": "DROP_UNIVERSE_ROW",
+      "exit_code": 1,
+      "failed_as_expected": true,
+      "stderr_tail": ""
+    },
+    {
+      "id": "FLIP_G1_STATUS",
+      "exit_code": 1,
+      "failed_as_expected": true,
+      "stderr_tail": ""
+    },
+    {
+      "id": "BASELINE_UNMODIFIED",
+      "exit_code": 0,
+      "failed_as_expected": true,
+      "stderr_tail": ""
+    }
+  ],
+  "note": "verifier recomputes raw SHA and counts; tamper/drop/flip must not exit 0"
+}

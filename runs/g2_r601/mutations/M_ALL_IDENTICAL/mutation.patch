@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -38,10 +38,10 @@
+             if key in seen: continue
+             seen.add(key)
+             urgent = enabled(model, s, 'urgent')
+-            if urgent:
+-                for e in urgent: next_frontier.append(fire(model, s, e))
+-                record.append('urgent')
+-            else:
++            for e in enabled(model, s, 'nonurgent'):
++                next_frontier.append(fire(model, s, e))
++            record.append('same')
++            if False:
+                 for e in enabled(model, s, 'nonurgent'):
+                     next_frontier.append(fire(model, s, e))
+                 record.append('delay' if not urgent else 'urgent')

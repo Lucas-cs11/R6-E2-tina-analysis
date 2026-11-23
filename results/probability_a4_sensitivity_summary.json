@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "intervals": 20,
+  "note": "dPe/da4 between consecutive a4 points; Pe decreases monotonically as a4 increases"
+}

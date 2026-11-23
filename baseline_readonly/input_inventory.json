@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-11-22T15:06:39.527326+08:00",
+  "workspace": "/Users/lucas/Downloads/results1005/theory_validation/R6_E2",
+  "theory_tex_sha256": "a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a",
+  "items": [
+    {
+      "src": "example_revised_theory_v2_theory_round6_candidate.tex",
+      "sha256": "a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a"
+    },
+    {
+      "src": "第2至5章_第六轮理论修订_独立自审报告.md",
+      "sha256": "00da12bcfb70d9c13b7f2442a0953279e6360bfa8cf596fd0be590b6256b37c8"
+    },
+    {
+      "src": "R6-E1_独立复验审计报告_20261122.md",
+      "sha256": "c52304687f39678e489971890b9da114f616d7dff40e1b93edf39d012769253e"
+    },
+    {
+      "src": "R6-E2_全量主实验_经典基线_敏感性与数学接口整改执行指令.md",
+      "sha256": "96d9817a817f02372dfa794f350bb3acd5dad760f9a190a58ab77b50a9119305"
+    },
+    {
+      "src": "r6_e1_final_verify_negative_control.json",
+      "sha256": "b27847957e09451d3b3d9c9cfad8bfee1a802f6931485b0d771c5f048898c9ce"
+    },
+    {
+      "src": "theory_validation/R6_E1/R6_E1_complete_workspace.zip",
+      "sha256": "2cd50a6681cf8defccc1f92073055dc406f8647285dd7f7e98382d840ea980ec"
+    },
+    {
+      "src": "theory_validation/R6_E1/R6_E1_portable_evidence.zip",
+      "sha256": "b82464d46b0fc7950aa8e2834efcf68149c99de03bc9f6d04a9dcb5252913812"
+    }
+  ],
+  "status": "PASS"
+}

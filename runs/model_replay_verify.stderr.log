@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/final_verify_r6_e2.py", line 227, in <module>
+    'pyscrew': {'rows': len(manifest), 'workpieces': len(by_wp), 'raw_level': raw_level},
+           ^^^^^^
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/final_verify_r6_e2.py", line 212, in main
+    if not row.get(semantic_field) or row.get('errors'): errors.append(f'missing semantic/raw errors {component}:{row["test_id"]}')
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/final_verify_r6_e2.py", line 91, in validate_raw_component
+    if test_id == 'COARSENING_NEW_AMBIGUITY':
+       ^^^^^^^^^^^^
+KeyError: 'verdict'

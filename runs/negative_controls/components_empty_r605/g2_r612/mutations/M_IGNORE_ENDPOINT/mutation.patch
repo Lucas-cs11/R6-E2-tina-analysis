@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -10,7 +10,7 @@
+ def classify(model):
+     switch_time = F(model['switch_time'])
+     config = model['configurations']
+-    before = [c for c in config if F(c['end']) <= switch_time]
++    before = [c for c in config if F(c['end']) < switch_time]
+     after = [c for c in config if F(c['start']) >= switch_time]
+     overlap = [c for c in config if F(c['start']) < switch_time < F(c['end'])]
+     if overlap:

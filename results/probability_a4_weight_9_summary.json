@@ -1,0 +1,6 @@
+{
+  "status": "PENDING_SPEC_ALL_9",
+  "total": 9,
+  "validated": 0,
+  "note": "Root weight sensitivity requires re-deriving Y distribution from continuous max-of-uniforms model for each (a4, weight). Simplified discrete approximation rejected. All 9 PENDING_SPEC."
+}

@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "phase_gate": "PROVISIONAL_R6_07_PARTIAL_NOT_PHASE_GATE",
+  "cases": 5,
+  "passed": 5,
+  "mutations": [
+    {
+      "mutation": "M_RESET_ALL_CONSUMED",
+      "target": "IMPLICIT_RESET",
+      "detected": true,
+      "observed": "OK",
+      "expected": "OK"
+    },
+    {
+      "mutation": "M_IGNORE_EXPLICIT",
+      "target": "EXPLICIT_RESET",
+      "detected": true,
+      "observed": "OK",
+      "expected": "OK"
+    },
+    {
+      "mutation": "M_ALLOW_UNCONSUMED_RESET",
+      "target": "RESET_NOT_CONSUMED",
+      "detected": true,
+      "observed": "OK",
+      "expected": "RESET_NOT_CONSUMED"
+    }
+  ],
+  "not_covered": [
+    "general reset arc semantics",
+    "full R6-07 suite"
+  ]
+}

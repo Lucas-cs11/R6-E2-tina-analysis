@@ -1,0 +1,6 @@
+{
+  "status": "PENDING_SPEC_ALL_21",
+  "total": 21,
+  "exact_validated": 0,
+  "note": "Continuous derivation attempted but found error-prone (a4=3 manual=1/8, script=0). Restored PENDING_SPEC until validated continuous engine built."
+}

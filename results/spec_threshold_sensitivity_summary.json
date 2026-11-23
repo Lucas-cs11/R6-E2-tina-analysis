@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "rows": 12,
+  "note": "threshold sensitivity: a4=3.5 always 0 (Gamma=0); a4=4 always 1 (Pe=0, Gamma=1)"
+}

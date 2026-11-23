@@ -1,0 +1,7 @@
+{
+  "status": "PARTIAL_INFEASIBLE",
+  "processed": 8112,
+  "total": 107520,
+  "reason": "large models take 5-6s each, full run would take ~150 hours",
+  "decision": "switch to 54-cell paper subdomain or sampled subset"
+}

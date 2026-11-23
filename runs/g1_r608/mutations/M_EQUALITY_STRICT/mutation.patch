@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -98,7 +98,7 @@
+         if vc == '0':
+             return result('1', '0', 'NEGATIVE_EVIDENCE_PRIORITY',
+                           evidence=['COMPLETION_VIOLATION_WITNESS'])
+-        if pe[0] > eps:
++        if pe[0] >= eps:
+             return result('1', '0', 'NEGATIVE_EVIDENCE_PRIORITY',
+                           evidence=['PE_LOWER_STRICTLY_ABOVE_EPSILON'])
+         if ga[1] < gamma:

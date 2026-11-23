@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -37,7 +37,7 @@
+             key = (s[0], s[1])
+             if key in seen: continue
+             seen.add(key)
+-            urgent = enabled(model, s, 'urgent')
++            urgent = []
+             if urgent:
+                 for e in urgent: next_frontier.append(fire(model, s, e))
+                 record.append('urgent')

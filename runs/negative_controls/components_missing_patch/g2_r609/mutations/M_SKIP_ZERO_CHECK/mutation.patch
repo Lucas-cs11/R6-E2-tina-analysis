@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -21,7 +21,7 @@
+         return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'prior does not sum to 1', 'category': 'NORMALIZATION_MISMATCH'}
+     total = like['H0'] * prior0 + like['H1'] * prior1
+-    if total == 0:
++    if False:
+         return {'status': 'UNRESOLVED', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'zero likelihood under both hypotheses', 'category': 'ZERO_LIKELIHOOD'}
+     post0 = like['H0'] * prior0 / total

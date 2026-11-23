@@ -1,0 +1,7 @@
+{
+  "status": "INVALID_EVIDENCE",
+  "contract": "R6-E2-R6-08-MODULE-PARTIAL",
+  "tex_sha256": "a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a",
+  "reason": "interval lacks certified source",
+  "category": "UNCERTIFIED_INTERVAL"
+}

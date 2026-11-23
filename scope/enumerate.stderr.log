@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/enumerate_generator_universe.py", line 77, in <module>
+    w.writerow([cid, m, j, ops, wip, u, fault, w, adj, fixed['seed'],
+    ^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'writerow'

@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "id": "TAMPER_RAW_SHA",
+      "exit_code": 1,
+      "failed_as_expected": true
+    },
+    {
+      "id": "ABSOLUTE_DUPLICATE_RAW",
+      "exit_code": 1,
+      "failed_as_expected": true
+    },
+    {
+      "id": "DROP_UNIVERSE_ROW",
+      "exit_code": 1,
+      "failed_as_expected": true
+    },
+    {
+      "id": "ZERO_MODEL_SHA",
+      "exit_code": 1,
+      "failed_as_expected": true
+    },
+    {
+      "id": "FLIP_G1_STATUS",
+      "exit_code": 1,
+      "failed_as_expected": true
+    },
+    {
+      "id": "FLIP_R603_LEDGER",
+      "exit_code": 1,
+      "failed_as_expected": true
+    },
+    {
+      "id": "EMPTY_R605_COMPONENT",
+      "exit_code": 1,
+      "failed_as_expected": true
+    },
+    {
+      "id": "MISSING_R606_MUTATION_PATCH",
+      "exit_code": 1,
+      "failed_as_expected": true
+    },
+    {
+      "id": "R606_RAW_SEMANTIC_MISMATCH",
+      "exit_code": 1,
+      "failed_as_expected": true
+    },
+    {
+      "id": "TEX_HASH_MISMATCH",
+      "exit_code": 1,
+      "failed_as_expected": true
+    },
+    {
+      "id": "BASELINE_UNMODIFIED",
+      "exit_code": 0,
+      "failed_as_expected": true
+    }
+  ],
+  "negative_controls": 10,
+  "note": "raw paths, model replay, component raw evidence, mutation artifacts and TeX hash are bound"
+}

@@ -1,0 +1,14 @@
+--- 
++++ 
+@@ -13,9 +13,8 @@
+     before = [c for c in config if F(c['end']) <= switch_time]
+     after = [c for c in config if F(c['start']) >= switch_time]
+     overlap = [c for c in config if F(c['start']) < switch_time < F(c['end'])]
+-    if overlap:
+-        return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX,
+-                'reason': 'configuration spans switch time', 'category': 'SPANS_SWITCH'}
++    if False:
++        pass
+     if not before or not after:
+         return {'status': 'UNRESOLVED', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'missing configuration on one side of switch', 'category': 'MISSING_CONFIG'}

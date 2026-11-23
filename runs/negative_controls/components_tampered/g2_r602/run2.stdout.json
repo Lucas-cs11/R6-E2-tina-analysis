@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "phase_gate": "PROVISIONAL_R6_02_PARTIAL_NOT_PHASE_GATE",
+  "cases": 5,
+  "passed": 5,
+  "mutations": [
+    {
+      "mutation": "M_ENDPOINT_EXCLUSIVE",
+      "target": "FIRST_FAULT_AT_HPSI",
+      "detected": true,
+      "observed": {
+        "classification": "H0",
+        "post_fault_duration": "2",
+        "same_firing_fault_and_completion": false
+      }
+    },
+    {
+      "mutation": "M_POST_COMPLETION_FAULT_COUNTED",
+      "target": "COMPLETION_THEN_NEW_FAULT_IGNORED",
+      "detected": true,
+      "observed": {
+        "classification": "H1",
+        "post_fault_duration": "-1/2",
+        "same_firing_fault_and_completion": false
+      }
+    },
+    {
+      "mutation": "M_ZERO_DURATION_FLAGGED",
+      "target": "SAME_FAULT_COMPLETION_ZERO_DURATION",
+      "detected": true,
+      "observed": {
+        "classification": "H1",
+        "post_fault_duration": "1",
+        "same_firing_fault_and_completion": true
+      }
+    }
+  ],
+  "not_covered": [
+    "full SCG engine",
+    "mixed-state R6-05",
+    "general window B_c sweep"
+  ]
+}

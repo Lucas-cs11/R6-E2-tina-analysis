@@ -1,0 +1,594 @@
+--- attempt5/implementations/subject/r605.py
++++ current/implementations/subject/r605.py
+@@ -0,0 +1,90 @@
++#!/usr/bin/env python3
++"""R6-05 subject: exact rational Fourier-Motzkin split of a mixed state class."""
++
++from fractions import Fraction as F
++
++C = 'R6-E2-R6-05-PARTIAL'
++TEX = 'a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a'
++
++
++def inequalities(bounds, extra):
++    out = []
++    for var, (lo, hi) in bounds.items():
++        if lo is not None: out.append(({var: F(-1)}, -F(lo)))
++        if hi is not None: out.append(({var: F(1)}, F(hi)))
++    for item in extra:
++        out.append(({k: F(v) for k, v in item['coefficients'].items()}, F(item['upper'])))
++    return out
++
++
++def eliminate(items, var):
++    positive, negative, rest = [], [], []
++    for coeff, upper in items:
++        a = coeff.get(var, F(0))
++        if a > 0: positive.append((coeff, upper, a))
++        elif a < 0: negative.append((coeff, upper, a))
++        else: rest.append((coeff, upper))
++    if not positive or not negative:
++        return rest
++    result = list(rest)
++    for lc, lu, la in negative:
++        for uc, uu, ua in positive:
++            # (lu-rest_l)/la <= (uu-rest_u)/ua, with la<0<ua.
++            coeff = {}
++            for k in set(lc) | set(uc):
++                if k == var: continue
++                value = uc.get(k, F(0)) / ua - lc.get(k, F(0)) / la
++                if value: coeff[k] = value
++            upper = uu / ua - lu / la
++            result.append((coeff, upper))
++    return result
++
++
++def projected_bounds(bounds, extra, target):
++    items = inequalities(bounds, extra)
++    variables = list(bounds)
++    for var in variables:
++        if var != target: items = eliminate(items, var)
++    lower, upper = None, None
++    for coeff, bound in items:
++        a = coeff.get(target, F(0))
++        if a == 0:
++            if bound < 0: return None
++        elif a > 0:
++            value = bound / a
++            upper = value if upper is None else min(upper, value)
++        else:
++            value = bound / a
++            lower = value if lower is None else max(lower, value)
++    if lower is not None and upper is not None and lower > upper: return None
++    return lower, upper
++
++
++def satisfies(w, bounds, extra, strict_var=None, strict_lower=None):
++    for var, (lo, hi) in bounds.items():
++        if var not in w: return False
++        value = F(w[var])
++        if lo is not None and value < F(lo): return False
++        if hi is not None and value > F(hi): return False
++    for item in extra:
++        if sum((F(c) * F(w[k]) for k, c in item['coefficients'].items()), F(0)) > F(item['upper']): return False
++    return not (strict_var and F(w[strict_var]) <= F(strict_lower))
++
++
++def split(model):
++    var = model['fault_variable']; bc = F(model['B_c'])
++    base = {k: (F(v[0]), F(v[1])) for k, v in model['bounds'].items()}
++    extra = model.get('constraints', [])
++    compliant_bounds = dict(base); compliant_bounds[var] = (base[var][0], min(base[var][1], bc))
++    violating_bounds = dict(base); violating_bounds[var] = (max(base[var][0], bc), base[var][1])
++    compliant_range = projected_bounds(compliant_bounds, extra, var)
++    violating_range = projected_bounds(violating_bounds, extra, var)
++    compliant_witnesses = [w for w in model.get('witnesses', []) if satisfies(w, compliant_bounds, extra)]
++    violating_witnesses = [w for w in model.get('witnesses', []) if satisfies(w, violating_bounds, extra, var, bc)]
++    completion_witness_preserved = any(w.get('first_completion') for w in compliant_witnesses)
++    return {'status': 'DECIDED', 'contract': C, 'tex_sha256': TEX,
++            'compliant': {'feasible': compliant_range is not None, 'strict_upper': False,
++                          'witnesses': compliant_witnesses, 'completion_witness_preserved': completion_witness_preserved},
++            'violating': {'feasible': violating_range is not None and violating_range[1] > bc,
++                          'strict_lower': True, 'witnesses': violating_witnesses},
++            'B_c': str(bc), 'fault_variable': var}
+--- attempt5/implementations/subject/r606.py
++++ current/implementations/subject/r606.py
+@@ -0,0 +1,47 @@
++#!/usr/bin/env python3
++"""R6-06 subject: psi-specific observation projection and ambiguity witnesses."""
++
++from fractions import Fraction as F
++
++C = 'R6-E2-R6-06-PARTIAL'
++TEX = 'a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a'
++
++
++def quantized(value, quantum):
++    if quantum is None: return str(F(value))
++    q = F(quantum); t = F(value); scaled = t / q
++    return str(scaled.numerator // scaled.denominator)
++
++
++def project(path, psi):
++    fields = psi['fields']; out = {}
++    if 'word' in fields: out['word'] = list(path.get('labels', []))
++    if 'completion_time' in fields:
++        out['completion_time'] = quantized(path['completion_time'], psi.get('quantum'))
++    if 'intermediate_labels' in fields: out['intermediate_labels'] = list(path.get('intermediate_labels', []))
++    if 'intermediate_times' in fields:
++        out['intermediate_times'] = [quantized(x, psi.get('quantum')) for x in path.get('intermediate_times', [])]
++    if 'external_completion' in fields: out['external_completion'] = path.get('external_completion')
++    return out
++
++
++def evaluate(data, psi=None):
++    psi = psi or data['psi']
++    if not psi.get('prefix_compatible', True):
++        return {'status': 'UNSUPPORTED', 'contract': C, 'tex_sha256': TEX, 'verdict': 'PERP', 'witnesses': []}
++    paths = [p for p in data['paths'] if p.get('sample_termination', True)]
++    projected = [(p, project(p, psi)) for p in paths]
++    witnesses = []
++    for i, (normal, no) in enumerate(projected):
++        if normal['fault']: continue
++        for fault, fo in projected:
++            if fault['fault'] and no == fo:
++                witnesses.append({'normal_path': normal['id'], 'fault_path': fault['id'], 'observation': no})
++    if witnesses:
++        verdict = '0'
++    elif not data.get('search_complete', False):
++        verdict = 'PERP'
++    else:
++        verdict = '1'
++    return {'status': 'DECIDED' if verdict != 'PERP' else 'UNRESOLVED', 'contract': C,
++            'tex_sha256': TEX, 'verdict': verdict, 'witnesses': witnesses}
+--- attempt5/oracles/independent/r605_reference.py
++++ current/oracles/independent/r605_reference.py
+@@ -0,0 +1,59 @@
++#!/usr/bin/env python3
++"""Independent R6-05 reference: exact 2-D boundary-intersection enumeration."""
++
++from fractions import Fraction as Q
++from itertools import combinations
++
++C = 'R6-E2-R6-05-PARTIAL'
++TEX = 'a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a'
++
++
++def lines(model, region):
++    bounds = {k: (Q(v[0]), Q(v[1])) for k, v in model['bounds'].items()}
++    var = model['fault_variable']; bc = Q(model['B_c'])
++    if region == 'compliant': bounds[var] = (bounds[var][0], min(bounds[var][1], bc))
++    else: bounds[var] = (max(bounds[var][0], bc), bounds[var][1])
++    variables = sorted(bounds)
++    if len(variables) != 2: raise ValueError('independent reference supports exactly two variables')
++    out = []
++    for k, (lo, hi) in bounds.items():
++        out += [({k: Q(1)}, hi), ({k: Q(-1)}, -lo)]
++    for x in model.get('constraints', []):
++        out.append(({k: Q(v) for k, v in x['coefficients'].items()}, Q(x['upper'])))
++    return variables, out
++
++
++def vertices(model, region):
++    variables, boundary = lines(model, region)
++    candidates = []
++    for (a, b), (c, d) in combinations(boundary, 2):
++        det = a.get(variables[0], Q(0)) * c.get(variables[1], Q(0)) - a.get(variables[1], Q(0)) * c.get(variables[0], Q(0))
++        if det == 0: continue
++        x = (b * c.get(variables[1], Q(0)) - a.get(variables[1], Q(0)) * d) / det
++        y = (a.get(variables[0], Q(0)) * d - b * c.get(variables[0], Q(0))) / det
++        point = {variables[0]: x, variables[1]: y}
++        if all(sum((v * point[k] for k, v in coeff.items()), Q(0)) <= upper for coeff, upper in boundary):
++            if point not in candidates: candidates.append(point)
++    return candidates
++
++
++def split(model):
++    compliant_points = vertices(model, 'compliant')
++    violating_points = vertices(model, 'violating')
++    var = model['fault_variable']; bc = Q(model['B_c'])
++    violating_points = [p for p in violating_points if p[var] > bc]
++    compliant_witnesses = []
++    violating_witnesses = []
++    _, compliant_boundary = lines(model, 'compliant')
++    _, violating_boundary = lines(model, 'violating')
++    for w in model.get('witnesses', []):
++        if all(sum((v * Q(w[k]) for k, v in coeff.items()), Q(0)) <= upper for coeff, upper in compliant_boundary):
++            compliant_witnesses.append(w)
++        if all(sum((v * Q(w[k]) for k, v in coeff.items()), Q(0)) <= upper for coeff, upper in violating_boundary) and Q(w[var]) > bc:
++            violating_witnesses.append(w)
++    return {'status': 'DECIDED', 'contract': C, 'tex_sha256': TEX,
++            'compliant': {'feasible': bool(compliant_points), 'strict_upper': False,
++                          'witnesses': compliant_witnesses,
++                          'completion_witness_preserved': any(w.get('first_completion') for w in compliant_witnesses)},
++            'violating': {'feasible': bool(violating_points), 'strict_lower': True, 'witnesses': violating_witnesses},
++            'B_c': str(bc), 'fault_variable': var}
+--- attempt5/oracles/independent/r606_reference.py
++++ current/oracles/independent/r606_reference.py
+@@ -0,0 +1,44 @@
++#!/usr/bin/env python3
++"""Independent R6-06 observation reference with tuple construction."""
++
++from fractions import Fraction as Q
++
++C = 'R6-E2-R6-06-PARTIAL'
++TEX = 'a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a'
++
++
++def bucket(value, quantum):
++    if quantum is None: return str(Q(value))
++    scaled = Q(value) / Q(quantum)
++    return str(scaled.numerator // scaled.denominator)
++
++
++def tuple_view(path, psi):
++    fields = set(psi['fields']); pieces = []
++    if 'word' in fields: pieces.append(('word', tuple(path.get('labels', []))))
++    if 'completion_time' in fields: pieces.append(('completion_time', bucket(path['completion_time'], psi.get('quantum'))))
++    if 'intermediate_labels' in fields: pieces.append(('intermediate_labels', tuple(path.get('intermediate_labels', []))))
++    if 'intermediate_times' in fields: pieces.append(('intermediate_times', tuple(bucket(x, psi.get('quantum')) for x in path.get('intermediate_times', []))))
++    if 'external_completion' in fields: pieces.append(('external_completion', path.get('external_completion')))
++    return tuple(pieces)
++
++
++def evaluate(data, psi=None):
++    psi = psi or data['psi']
++    if not psi.get('prefix_compatible', True):
++        return {'status': 'UNSUPPORTED', 'contract': C, 'tex_sha256': TEX, 'verdict': 'PERP', 'witnesses': []}
++    views = [(p, tuple_view(p, psi)) for p in data['paths'] if p.get('sample_termination', True)]
++    pairs = []
++    for p, obs in views:
++        if p['fault']: continue
++        for other, other_obs in views:
++            if other['fault'] and obs == other_obs:
++                pairs.append((p['id'], other['id']))
++    if pairs:
++        verdict = '0'; status = 'DECIDED'
++    elif not data.get('search_complete', False):
++        verdict = 'PERP'; status = 'UNRESOLVED'
++    else:
++        verdict = '1'; status = 'DECIDED'
++    return {'status': status, 'contract': C, 'tex_sha256': TEX, 'verdict': verdict,
++            'witnesses': [{'normal_path': a, 'fault_path': b} for a, b in pairs]}
+--- attempt5/tests/run_g2_r605.py
++++ current/tests/run_g2_r605.py
+@@ -0,0 +1,89 @@
++#!/usr/bin/env python3
++"""Run R6-05 exact mixed/compliant/violating splits with source mutations."""
++
++import copy
++import csv
++import difflib
++import importlib.util
++import json
++import sys
++from pathlib import Path
++
++ROOT = Path(__file__).resolve().parents[1]
++OUT = ROOT / 'runs/g2_r605'
++OUT.mkdir(parents=True, exist_ok=True)
++sys.path.insert(0, str(ROOT / 'implementations/subject'))
++import r605 as subject  # noqa: E402
++sys.path.insert(0, str(ROOT / 'oracles/independent'))
++import r605_reference as oracle  # noqa: E402
++
++
++def model(lo, hi):
++    return {'fault_variable': 'theta_f', 'B_c': '2',
++            'bounds': {'theta_f': [lo, hi], 'theta_c': ['0', '5']},
++            'constraints': [{'coefficients': {'theta_f': '1', 'theta_c': '-1'}, 'upper': '0'}],
++            'witnesses': [
++                {'theta_f': '1', 'theta_c': '2', 'path': ['f', 'c'], 'first_completion': True},
++                {'theta_f': '3', 'theta_c': '4', 'path': ['f', 'c'], 'first_completion': True},
++            ]}
++
++
++cases = [('MIXED', model('1', '4'), (True, True, True)),
++         ('ALL_COMPLIANT', model('1', '2'), (True, False, True)),
++         ('ALL_VIOLATING', model('3', '4'), (False, True, False))]
++rows = []
++for name, data, expected in cases:
++    s = subject.split(copy.deepcopy(data)); o = oracle.split(copy.deepcopy(data))
++    actual = (s['compliant']['feasible'], s['violating']['feasible'], s['compliant']['completion_witness_preserved'])
++    errors = []
++    if actual != expected: errors.append('expected_split')
++    if s != o: errors.append('oracle_mismatch')
++    if s['violating']['feasible'] and not s['violating']['strict_lower']: errors.append('strictness_lost')
++    (OUT / f'{name}.subject.json').write_text(json.dumps(s, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++    (OUT / f'{name}.oracle.json').write_text(json.dumps(o, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++    rows.append({'test_id': name, 'expected': str(expected), 'actual': str(actual),
++                 'compliant_witnesses': len(s['compliant']['witnesses']),
++                 'violating_witnesses': len(s['violating']['witnesses']),
++                 'status': 'PASS' if not errors else 'FAIL', 'errors': ';'.join(errors)})
++
++
++def load_module(path, name):
++    spec = importlib.util.spec_from_file_location(name, path)
++    mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod); return mod
++
++
++def mutate(name, old, new):
++    folder = OUT / 'mutations' / name
++    folder.mkdir(parents=True, exist_ok=True)
++    original = (ROOT / 'implementations/subject/r605.py').read_text(encoding='utf-8')
++    if original.count(old) != 1: raise SystemExit('anchor ' + name)
++    changed = original.replace(old, new)
++    target = folder / 'r605.py'; target.write_text(changed, encoding='utf-8')
++    (folder / 'mutation.patch').write_text(''.join(difflib.unified_diff(original.splitlines(True), changed.splitlines(True))), encoding='utf-8')
++    mod = load_module(target, 'mut_' + name)
++    got = mod.split(model('1', '4')); ref = oracle.split(model('1', '4'))
++    detected = got != ref
++    (folder / 'subject.json').write_text(json.dumps(got, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++    (folder / 'oracle.json').write_text(json.dumps(ref, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++    return {'mutation': name, 'detected': detected,
++            'observed': {'compliant': got['compliant']['feasible'], 'violating': got['violating']['feasible'],
++                         'completion_witness_preserved': got['compliant']['completion_witness_preserved']}}
++
++
++mutations = [
++    mutate('M_PRUNE_WHOLE_MIXED_CLASS',
++           "    completion_witness_preserved = any(w.get('first_completion') for w in compliant_witnesses)\n    return",
++           "    completion_witness_preserved = any(w.get('first_completion') for w in compliant_witnesses)\n    if violating_range is not None and violating_range[1] > bc:\n        compliant_range = None\n        compliant_witnesses = []\n        completion_witness_preserved = False\n    return"),
++    mutate('M_DROP_COMPLETION_WITNESS',
++           "    completion_witness_preserved = any(w.get('first_completion') for w in compliant_witnesses)",
++           "    completion_witness_preserved = False"),
++]
++with (OUT / 'results.csv').open('w', newline='', encoding='utf-8') as f:
++    w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
++summary = {'status': 'PASS' if all(r['status'] == 'PASS' for r in rows) and all(m['detected'] for m in mutations) else 'FAIL',
++           'phase_gate': 'PROVISIONAL_R6_05_PARTIAL_NOT_PHASE_GATE', 'cases': len(rows),
++           'passed': sum(r['status'] == 'PASS' for r in rows), 'mutations': mutations,
++           'not_covered': ['general dimension polytope enumeration in independent oracle', 'general SCG construction']}
++(OUT / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++print(json.dumps(summary, ensure_ascii=False, indent=2))
++raise SystemExit(0 if summary['status'] == 'PASS' else 1)
+--- attempt5/tests/run_g2_r606.py
++++ current/tests/run_g2_r606.py
+@@ -0,0 +1,101 @@
++#!/usr/bin/env python3
++"""Run R6-06 observation/coarsening cases and source mutations."""
++
++import copy
++import csv
++import difflib
++import importlib.util
++import json
++import sys
++from pathlib import Path
++
++ROOT = Path(__file__).resolve().parents[1]
++OUT = ROOT / 'runs/g2_r606'
++OUT.mkdir(parents=True, exist_ok=True)
++sys.path.insert(0, str(ROOT / 'implementations/subject'))
++import r606 as subject  # noqa: E402
++sys.path.insert(0, str(ROOT / 'oracles/independent'))
++import r606_reference as oracle  # noqa: E402
++
++
++def path(pid, fault, labels, time, intermediate=None):
++    return {'id': pid, 'fault': fault, 'labels': labels, 'completion_time': time,
++            'intermediate_labels': intermediate or [], 'intermediate_times': ['1'],
++            'external_completion': 'done', 'sample_termination': True}
++
++
++def data(paths, fields, complete=True, prefix=True, quantum=None):
++    return {'paths': paths, 'search_complete': complete,
++            'psi': {'fields': fields, 'prefix_compatible': prefix, 'quantum': quantum}}
++
++
++cases = [
++    ('COMPLETION_ONLY_IGNORES_INTERMEDIATE', data([path('n', False, ['a'], '2', ['n1']), path('f', True, ['b'], '2', ['f1'])], ['completion_time']), '0'),
++    ('FULL_WORD_DIFFERENT', data([path('n', False, ['a'], '2'), path('f', True, ['b'], '2')], ['word', 'completion_time']), '1'),
++    ('QUANTIZED_TIMES_MATCH', data([path('n', False, ['a'], '21/10'), path('f', True, ['a'], '24/10')], ['word', 'completion_time'], quantum='1'), '0'),
++    ('INCOMPLETE_SEARCH_UNRESOLVED', data([path('n', False, ['a'], '2'), path('f', True, ['a'], '3')], ['word', 'completion_time'], complete=False), 'PERP'),
++    ('NON_PREFIX_UNSUPPORTED', data([path('n', False, ['a'], '2'), path('f', True, ['a'], '2')], ['completion_time'], prefix=False), 'PERP'),
++]
++rows = []
++for name, d, expected in cases:
++    s = subject.evaluate(copy.deepcopy(d)); o = oracle.evaluate(copy.deepcopy(d))
++    errors = []
++    if s['verdict'] != expected or o['verdict'] != expected: errors.append('expected_verdict')
++    if s['status'] != o['status'] or s['verdict'] != o['verdict']: errors.append('oracle_mismatch')
++    sw = {(x['normal_path'], x['fault_path']) for x in s['witnesses']}
++    ow = {(x['normal_path'], x['fault_path']) for x in o['witnesses']}
++    if sw != ow: errors.append('witness_mismatch')
++    (OUT / f'{name}.subject.json').write_text(json.dumps(s, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++    (OUT / f'{name}.oracle.json').write_text(json.dumps(o, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++    rows.append({'test_id': name, 'expected': expected, 'subject_verdict': s['verdict'], 'oracle_verdict': o['verdict'],
++                 'witnesses': len(sw), 'status': 'PASS' if not errors else 'FAIL', 'errors': ';'.join(errors)})
++
++# Coarsening must produce a new ambiguity witness here.
++coarse_data = data([path('n', False, ['a'], '2'), path('f', True, ['b'], '2')], ['word', 'completion_time'])
++fine_s = subject.evaluate(copy.deepcopy(coarse_data)); fine_o = oracle.evaluate(copy.deepcopy(coarse_data))
++coarse_s = subject.evaluate(copy.deepcopy(coarse_data), {'fields': ['completion_time'], 'prefix_compatible': True, 'quantum': None})
++coarse_o = oracle.evaluate(copy.deepcopy(coarse_data), {'fields': ['completion_time'], 'prefix_compatible': True, 'quantum': None})
++coarse_ok = fine_s['verdict'] == fine_o['verdict'] == '1' and coarse_s['verdict'] == coarse_o['verdict'] == '0' and len(coarse_s['witnesses']) == 1
++(OUT / 'COARSENING_NEW_AMBIGUITY.subject.json').write_text(json.dumps({'fine': fine_s, 'coarse': coarse_s}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++(OUT / 'COARSENING_NEW_AMBIGUITY.oracle.json').write_text(json.dumps({'fine': fine_o, 'coarse': coarse_o}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++rows.append({'test_id': 'COARSENING_NEW_AMBIGUITY', 'expected': '1->0', 'subject_verdict': fine_s['verdict'] + '->' + coarse_s['verdict'],
++             'oracle_verdict': fine_o['verdict'] + '->' + coarse_o['verdict'], 'witnesses': len(coarse_s['witnesses']),
++             'status': 'PASS' if coarse_ok else 'FAIL', 'errors': '' if coarse_ok else 'coarsening'})
++
++
++def load_module(path, name):
++    spec = importlib.util.spec_from_file_location(name, path)
++    mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod); return mod
++
++
++def mutate(name, target_case, old, new):
++    folder = OUT / 'mutations' / name
++    folder.mkdir(parents=True, exist_ok=True)
++    original = (ROOT / 'implementations/subject/r606.py').read_text(encoding='utf-8')
++    if original.count(old) != 1: raise SystemExit('anchor ' + name)
++    changed = original.replace(old, new); (folder / 'r606.py').write_text(changed, encoding='utf-8')
++    (folder / 'mutation.patch').write_text(''.join(difflib.unified_diff(original.splitlines(True), changed.splitlines(True))), encoding='utf-8')
++    mod = load_module(folder / 'r606.py', 'mut_' + name)
++    d, expected = next((d, e) for n, d, e in cases if n == target_case)
++    got = mod.evaluate(copy.deepcopy(d)); detected = got['verdict'] != expected
++    (folder / 'observed.json').write_text(json.dumps(got, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++    return {'mutation': name, 'target': target_case, 'detected': detected, 'observed': got['verdict'], 'expected': expected}
++
++
++mutations = [
++    mutate('M_READD_DROPPED_INTERMEDIATE_LABELS', 'COMPLETION_ONLY_IGNORES_INTERMEDIATE',
++           "    if 'external_completion' in fields: out['external_completion'] = path.get('external_completion')\n    return out",
++           "    if 'external_completion' in fields: out['external_completion'] = path.get('external_completion')\n    out['intermediate_labels'] = list(path.get('intermediate_labels', []))\n    return out"),
++    mutate('M_INCOMPLETE_SEARCH_NO_AMBIGUITY', 'INCOMPLETE_SEARCH_UNRESOLVED',
++           "    elif not data.get('search_complete', False):\n        verdict = 'PERP'\n    else:\n        verdict = '1'",
++           "    else:\n        verdict = '1'"),
++]
++with (OUT / 'results.csv').open('w', newline='', encoding='utf-8') as f:
++    w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
++summary = {'status': 'PASS' if all(r['status'] == 'PASS' for r in rows) and all(m['detected'] for m in mutations) else 'FAIL',
++           'phase_gate': 'PROVISIONAL_R6_06_PARTIAL_NOT_PHASE_GATE', 'cases': len(rows),
++           'passed': sum(r['status'] == 'PASS' for r in rows), 'mutations': mutations,
++           'not_covered': ['complete SCG construction', 'general non-prefix-compatible psi', 'deadline sweep']}
++(OUT / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++print(json.dumps(summary, ensure_ascii=False, indent=2))
++raise SystemExit(0 if summary['status'] == 'PASS' else 1)
+--- attempt5/tests/final_verify_r6_e2.py
++++ current/tests/final_verify_r6_e2.py
+@@ -95,6 +95,8 @@
+         'g2_r602': ('status', 'classification'),
+         'g2_r603': ('status', 'mass_total'),
+         'g2_r604': ('status', 'subject_outcome'),
++        'g2_r605': ('status', 'actual'),
++        'g2_r606': ('status', 'subject_verdict'),
+         'g2_r610': ('status_test', 'subject'),
+     }
+     components = {}
+--- attempt5/tests/run_negative_controls.py
++++ current/tests/run_negative_controls.py
+@@ -57,7 +57,7 @@
+ components_copy = OUT / 'components_tampered'
+ if components_copy.exists(): shutil.rmtree(components_copy)
+ components_copy.mkdir()
+-for component in ('g2_r602', 'g2_r603', 'g2_r604', 'g2_r610'):
++for component in ('g2_r602', 'g2_r603', 'g2_r604', 'g2_r605', 'g2_r606', 'g2_r610'):
+     shutil.copytree(ROOT / 'runs' / component, components_copy / component)
+ component_csv = components_copy / 'g2_r603' / 'results.csv'
+ component_rows = list(csv.DictReader(component_csv.open(newline='', encoding='utf-8')))
+--- attempt5/contracts/experiment_scope_frozen.json
++++ current/contracts/experiment_scope_frozen.json
+@@ -38,7 +38,7 @@
+   "not_closed_reasons": [
+     "G0-1: 107520 eligible candidates generated and structurally validated, but four-implementation diagnosis and formal research-domain adjudication are not closed",
+     "G0-2: 48 candidates are documented NOT_CERTIFIABLE without class-specific fault semantics; full 5000-record modeling is not executed",
+-    "G2: only R6-02/R6-03/R6-04/R6-10 provisional components; R6-01 endpoint/immediate priority and R6-05—09/11—13 not closed",
++    "G2: provisional components for R6-02/03/04/05/06/10 only; R6-01 endpoint/immediate priority and R6-07/08 full-module/09/11/12/13 not closed",
+     "G3 baselines unavailable; G4 full experiments not executed; G5 independent acceptance not executed"
+   ],
+   "g3_baselines": {
+@@ -100,6 +100,22 @@
+       "passed": 8,
+       "mutations_detected": 2,
+       "mutations_total": 2
++    },
++    "g2_r605": {
++      "status": "PASS",
++      "phase_gate": "PROVISIONAL_R6_05_PARTIAL_NOT_PHASE_GATE",
++      "cases": 3,
++      "passed": 3,
++      "mutations_detected": 2,
++      "mutations_total": 2
++    },
++    "g2_r606": {
++      "status": "PASS",
++      "phase_gate": "PROVISIONAL_R6_06_PARTIAL_NOT_PHASE_GATE",
++      "cases": 6,
++      "passed": 6,
++      "mutations_detected": 2,
++      "mutations_total": 2
+     }
+   }
+ }
+--- attempt5/results/final_verification_r6_e2.json
++++ current/results/final_verification_r6_e2.json
+@@ -35,13 +35,17 @@
+     "g2_r604_cases": 6,
+     "g2_r604_mutations_detected": 3,
+     "g2_r610_cases": 8,
+-    "g2_r610_mutations_detected": 2
++    "g2_r610_mutations_detected": 2,
++    "g2_r605_cases": 3,
++    "g2_r605_mutations_detected": 2,
++    "g2_r606_cases": 6,
++    "g2_r606_mutations_detected": 2
+   },
+   "errors": [],
+   "not_closed_reasons": [
+     "G0-1: 107520 eligible candidates generated and structurally validated, but four-implementation diagnosis and formal research-domain adjudication are not closed",
+     "G0-2: 48 candidates are documented NOT_CERTIFIABLE without class-specific fault semantics; full 5000-record modeling is not executed",
+-    "G2: only R6-02/R6-03/R6-04/R6-10 provisional components; R6-01 endpoint/immediate priority and R6-05—09/11—13 not closed",
++    "G2: provisional components for R6-02/03/04/05/06/10 only; R6-01 endpoint/immediate priority and R6-07/08 full-module/09/11/12/13 not closed",
+     "G3 baselines unavailable; G4 full experiments not executed; G5 independent acceptance not executed"
+   ]
+ }
+--- attempt5/README.md
++++ current/README.md
+@@ -10,7 +10,7 @@
+ 
+ - G0-1：八轴 143,360 形式候选全枚举（107,520 合法 / 35,840 非法）；合法格实际生成/结构验证已完成：**107,520/107,520 PASS，0 错误，0 重复**（`results/all_population_results.csv`）。
+ - G0-2：PyScrew `--raw-root` 可移植清单，5000/2500/25/50 实测可重放；48 候选语义对齐已核实为 `NOT_CERTIFIABLE`（仅经验分类）。
+-- G2（部分）：R6-02 5/5、R6-03 3/3、R6-04 6/6、R6-10 8/8；合计 11 个真实变异均检出；均非正式阶段 PASS。
++- G2（部分）：R6-02 5/5、R6-03 3/3、R6-04 6/6、R6-05 3/3、R6-06 6/6、R6-10 8/8；合计 15 个真实变异均检出；均非正式阶段 PASS。
+ - G1：R6-08 联合区间可行性纠偏，20/20 边界、5/5 真实源码变异；宽松上界取交、只有下界越界才矛盾。
+ - G4 敏感性：1620/567/135 预注册骨架（`PENDING_SPEC`/`NOT_EXECUTED`）。
+ - G3 基线：18 项 L/P 基线全部 `NOT_AVAILABLE`/`UNASSESSED`，未做性能对比。
+@@ -32,6 +32,8 @@
+ - `reports/provisional_r602.md`
+ - `reports/provisional_r603.md`
+ - `reports/provisional_r604.md`
++- `reports/provisional_r605.md`
++- `reports/provisional_r606.md`
+ - `reports/provisional_r610.md`
+ - `runs/g2_r602/results.csv`
+ - `reports/full_scope_audit.md`、`reports/remaining_blockers.md`
+--- attempt5/reports/remaining_blockers.md
++++ current/reports/remaining_blockers.md
+@@ -11,7 +11,7 @@
+ 1. `GENERATOR-SCOPE-143360`：候选已全枚举，107,520 合法格已实际生成并结构验证通过；但尚未执行四实现诊断，54 与 143360 的研究域裁定未由主理论助手完成。
+ 2. `FRESH-LOGIC-ENGINE`：新独立四实现诊断引擎未构建。
+ 3. `FULL-PYS-PIPELINE`：48 候选语义已核实为不可认证（仅经验分类）；5000 全量建模、32 工况新认证未执行。
+-4. `G2-PARTIAL`：R6-02/03/04/10 仅临时组件通过；其余 R6-01 端点/即时优先、R6-05—09/11—13 未闭合。
++4. `G2-PARTIAL`：R6-02/03/04/05/06/10 仅临时组件通过；其余 R6-01 端点/即时优先、R6-07/08 全模块/09/11—13 未闭合。
+ 5. `BASELINES-SENSITIVITY`：经典 PN 基线、敏感性矩阵未做。
+ 6. `BASELINES-SENSITIVITY` 已登记 18 项，但全部 `NOT_AVAILABLE`/`UNASSESSED`。
+ 7. `INDEPENDENT-SIGNOFF`：G5 独立终验未执行。
+--- attempt5/reports/provisional_r605.md
++++ current/reports/provisional_r605.md
+@@ -0,0 +1,15 @@
++# R6-05 混合状态类精确分割（临时）
++
++**`PASS_PROVISIONAL_R6_05_PARTIAL_NOT_PHASE_GATE`**
++
++subject 使用精确有理 Fourier–Motzkin；oracle 独立枚举二维约束边交点，不共享实现。
++
++3/3 用例通过：
++
++- 混合类：同时保留 `θ_f>B_c` 违规片和 `θ_f≤B_c` 合规片；合规首次完成见证保留。
++- 全合规：违规片为空，不输出未决。
++- 全违规：合规片为空。
++
++严格违规下界单独标记，未用闭包边界冒充违规见证。2/2 真实变异检出：剪掉整个混合类、丢弃合规完成见证。
++
++证据：`runs/g2_r605/results.csv`、逐项 JSON、`mutations/`。不覆盖一般维数 oracle 或完整 SCG。
+--- attempt5/reports/provisional_r606.md
++++ current/reports/provisional_r606.md
+@@ -0,0 +1,16 @@
++# R6-06 观测投影与歧义见证（临时）
++
++**`PASS_PROVISIONAL_R6_06_PARTIAL_NOT_PHASE_GATE`**
++
++6/6 用例通过：
++
++- ψ 仅保留完成时刻：不同中间标签不构成不匹配；正常/故障路径有真实歧义见证。
++- 完整事件字：不同字保持可区分。
++- 量化时刻：同桶正常/故障路径产生歧义。
++- 候选搜索不完整且无见证：`PERP`，不得声称无歧义。
++- 非前缀兼容 ψ：`UNSUPPORTED`。
++- 观测粗化：从完整字可区分 1 变为粗化后歧义 0，并产生真实见证。
++
++2/2 真实变异检出：重新加入 ψ 丢弃的中间标签；不完整搜索仍报无歧义。
++
++证据：`runs/g2_r606/results.csv`、逐项 JSON、`mutations/`。不覆盖完整 SCG、一般 ψ 或截止扫描。

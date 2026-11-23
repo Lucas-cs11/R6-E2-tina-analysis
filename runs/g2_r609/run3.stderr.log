@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r609.py", line 75, in <module>
+    mutate('M_SKIP_ZERO_CHECK', 'ZERO_LIKELIHOOD',
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           "    if total == 0:",
+           ^^^^^^^^^^^^^^^^^^^^^
+           "    if False:"),
+           ^^^^^^^^^^^^^^^^
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r609.py", line 70, in mutate
+    (folder / 'oracle.json').write_text(json.dumps(ref, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+                                                   ^^^
+NameError: name 'ref' is not defined

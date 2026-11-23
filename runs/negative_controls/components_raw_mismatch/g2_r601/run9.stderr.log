@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r601.py", line 68, in <module>
+    mutate('M_DELAYED_BEFORE_URGENT', 'URGENT_DELAYED_PRIORITY',
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           "            if urgent:\n                for e in urgent: next_frontier.append(fire(model, s, e))\n                record.append('urgent')\n            else:",
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           "            if urgent:\n                for e in enabled(model, s, 'nonurgent'): next_frontier.append(fire(model, s, e))\n                record.append('delay')\n            else:"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r601.py", line 64, in mutate
+    return {'mutation': name, 'target': target, 'detected': detected, 'observed': got['undistinguished_pairs'], 'expected': expected}
+                                                                                                                            ^^^^^^^^
+NameError: name 'expected' is not defined. Did you mean: 'detected'?

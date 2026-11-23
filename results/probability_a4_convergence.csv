@@ -1,0 +1,10 @@
+k,a4,N,Pe,note
+0,3,500,0.12500000,convergence test
+0,3,1000,0.12500000,convergence test
+0,3,2000,0.12500000,convergence test
+10,3+10/20,500,0.04166667,convergence test
+10,3+10/20,1000,0.04166667,convergence test
+10,3+10/20,2000,0.04166667,convergence test
+20,3+20/20,500,0.00000000,convergence test
+20,3+20/20,1000,0.00000000,convergence test
+20,3+20/20,2000,0.00000000,convergence test

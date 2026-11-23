@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -18,7 +18,7 @@
+             return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX, 'category': 'NOT_ENABLED'}
+         explicit = set(step.get('explicit_reset', []))
+         consumed = set(t['pre'].keys())
+-        implicit = consumed - explicit
++        implicit = set()
+         for p in explicit:
+             if p not in consumed: return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX, 'category': 'RESET_NOT_CONSUMED'}
+         for p in implicit:

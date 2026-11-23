@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -9,7 +9,7 @@
+ 
+ def bayes_error(d0, d1, pi0=F(1, 2), pi1=F(1, 2)):
+     keys = set(d0) | set(d1)
+-    return sum((min(pi0 * F(d0.get(k, '0')), pi1 * F(d1.get(k, '0'))) for k in keys), F(0))
++    return sum((max(pi0 * F(d0.get(k, '0')), pi1 * F(d1.get(k, '0'))) for k in keys), F(0))
+ 
+ 
+ def coverage(d0, d1, delta=F(3, 20), pi0=F(1, 2), pi1=F(1, 2)):

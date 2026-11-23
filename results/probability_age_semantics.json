@@ -1,0 +1,7 @@
+{
+  "our_model": {
+    "fault_time": "not explicitly modeled (X4 is completion delay, not fault time)"
+  },
+  "relevance": "R6-02 and R6-04 cover fault/completion timing",
+  "conclusion": "Age semantics validated in R6-02/R6-04; not directly applicable to Pe computation"
+}

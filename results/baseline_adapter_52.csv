@@ -1,0 +1,53 @@
+case_id,family,status,model_sha256,L,H,places,transitions,hist_L,hist_H,hist_places,structural_issues,hist_match,note
+M01,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M02,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M03,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M04,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M05,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M06,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M07,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M08,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M09,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M10,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M11,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M12,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M13,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M14,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M15,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+M16,micro,NOT_AVAILABLE_PARAMS_ONLY,,,,,,,,,,,micro model has no generator params in freeze
+RMT_j1_m2_u0.1_w0.5,rmt_original_subset,ADAPTER_VALIDATED,d1ec782c93978df400222b073b6a1a67a142c6c8041a1f8eb7ece11e6f464eac,6,16.5,20,16,6,16.5,20,,True,
+RMT_j1_m2_u0.1_w1.0,rmt_original_subset,ADAPTER_VALIDATED,207ca9e85f752dd3032fd8da1e37df381a7ea0fee0f007ea1e17571d59c8581d,6,18.0,20,16,6,18.0,20,,True,
+RMT_j1_m2_u0.1_w1.5,rmt_original_subset,ADAPTER_VALIDATED,1149226de8099c01c9e507c7b16bbe6e105815538ee3f8d95e532ed222dae86f,6,19.5,20,16,6,19.5,20,,True,
+RMT_j1_m2_u0.3_w0.5,rmt_original_subset,ADAPTER_VALIDATED,8f38915ecbe0ec174ad1ac83bf22326c32eb64c7c3b6f32f674149584169550a,6,16.5,20,16,6,16.5,20,,True,
+RMT_j1_m2_u0.3_w1.0,rmt_original_subset,ADAPTER_VALIDATED,14c75106b65cfbf3dbc825d337f3ddf11b3b95225415715e5d56c09616bc6140,6,18.0,20,16,6,18.0,20,,True,
+RMT_j1_m2_u0.3_w1.5,rmt_original_subset,ADAPTER_VALIDATED,92249410ffa78889a914305568c0e17ab69b31d42655aca4f91541fbfab154a8,6,19.5,20,16,6,19.5,20,,True,
+RMT_j1_m2_u0.5_w0.5,rmt_original_subset,ADAPTER_VALIDATED,642a706b31bf239277a986e0b9871ec3e6f1a5b52effceb876f57052d6efc4c2,6,16.5,20,16,6,16.5,20,,True,
+RMT_j1_m2_u0.5_w1.0,rmt_original_subset,ADAPTER_VALIDATED,59334bddc133449d4fdea87836570818ca2dfe9ffd62f89194c7495d70147f4d,6,18.0,20,16,6,18.0,20,,True,
+RMT_j1_m2_u0.5_w1.5,rmt_original_subset,ADAPTER_VALIDATED,cd99a86cc97f0f3d1467d189a479f4654bf59900974b8e06de52c6867eaddcb6,6,19.5,20,16,6,19.5,20,,True,
+RMT_j1_m3_u0.1_w0.5,rmt_original_subset,ADAPTER_VALIDATED,85ddbf6281dff99c7b06f02d4dffbb11da25443a789f1e5fc20c26860ddb8acd,6,16.5,20,16,6,16.5,20,,True,
+RMT_j1_m3_u0.1_w1.0,rmt_original_subset,ADAPTER_VALIDATED,64f5187aeb60c41743154291890a924bb77634573383fba3dec45430c6f3fd96,6,18.0,20,16,6,18.0,20,,True,
+RMT_j1_m3_u0.1_w1.5,rmt_original_subset,ADAPTER_VALIDATED,05324b23a23c15407774810a2ba46cfc745fb237f207b04422e9e1efd4c20de6,6,19.5,20,16,6,19.5,20,,True,
+RMT_j1_m3_u0.3_w0.5,rmt_original_subset,ADAPTER_VALIDATED,743a89d8d44d7e230b9819caa9564eaffd9e5147f687a6e497077158901ad269,6,16.5,20,16,6,16.5,20,,True,
+RMT_j1_m3_u0.3_w1.0,rmt_original_subset,ADAPTER_VALIDATED,f2c6b1350e3b7adbed6a749c484213280e9184e6dbef3948bdef233cc2b5de2b,6,18.0,20,16,6,18.0,20,,True,
+RMT_j1_m3_u0.3_w1.5,rmt_original_subset,ADAPTER_VALIDATED,f39b9e95c4fa5c2c4cc5f3eb8810fc387d472fd07ca7445355130d7de41b699c,6,19.5,20,16,6,19.5,20,,True,
+RMT_j1_m3_u0.5_w0.5,rmt_original_subset,ADAPTER_VALIDATED,7501374e24beb18724e8de650ac71f917186c2cd4c35af6d2800bade35d46dff,6,16.5,20,16,6,16.5,20,,True,
+RMT_j1_m3_u0.5_w1.0,rmt_original_subset,ADAPTER_VALIDATED,3f7ccb2106d5fc8480d8cfdf62010acf9e623e14292e4f39e7611d1f9d8393a2,6,18.0,20,16,6,18.0,20,,True,
+RMT_j1_m3_u0.5_w1.5,rmt_original_subset,ADAPTER_VALIDATED,fd43059e5b70d14a292974b90604bf6081018d3368a1d00601fb034c35df8d46,6,19.5,20,16,6,19.5,20,,True,
+RMT_j1_m4_u0.1_w0.5,rmt_original_subset,ADAPTER_VALIDATED,5b63abc174d27a5fb17f2d3858f3b8bba7e25ad5c766527f253e4ac2306cbdda,6,16.5,20,16,6,16.5,20,,True,
+RMT_j1_m4_u0.1_w1.0,rmt_original_subset,ADAPTER_VALIDATED,f9f268f37251dbd9afb40a483901f7eab180fabd63b82da54a0784dc16f9dc13,6,18.0,20,16,6,18.0,20,,True,
+RMT_j1_m4_u0.1_w1.5,rmt_original_subset,ADAPTER_VALIDATED,72d558b4e8cf3c40df00b4759d8b55bee5d4d4dc66c57c5ca57469bf695aecf1,6,19.5,20,16,6,19.5,20,,True,
+RMT_j1_m4_u0.3_w0.5,rmt_original_subset,ADAPTER_VALIDATED,5a41238db428caf105ef04d0291fefd84cf013027133614d2797ce004f53d5f1,6,16.5,20,16,6,16.5,20,,True,
+RMT_j1_m4_u0.3_w1.0,rmt_original_subset,ADAPTER_VALIDATED,3082aa7b18f931de417277352ee89188088449ab9724d48032479871e661050f,6,18.0,20,16,6,18.0,20,,True,
+RMT_j1_m4_u0.3_w1.5,rmt_original_subset,ADAPTER_VALIDATED,d9cac3f635048150ed9ec689def5006a62261899298d1a64be48396112d238e8,6,19.5,20,16,6,19.5,20,,True,
+RMT_j1_m4_u0.5_w0.5,rmt_original_subset,ADAPTER_VALIDATED,53da7d547544dfc33e30c240dc2a8054669269fbbfa716b2440ebf75f8b8e56b,6,16.5,20,16,6,16.5,20,,True,
+RMT_j1_m4_u0.5_w1.0,rmt_original_subset,ADAPTER_VALIDATED,f761f98f3137aaeea44d462881aaa73659d86c127bba54451ab27348a5c3a552,6,18.0,20,16,6,18.0,20,,True,
+RMT_j1_m4_u0.5_w1.5,rmt_original_subset,ADAPTER_VALIDATED,b9426dc6a50627e56cc8ef75360f49c88392373b2f2db8ca0a2bf9b3b81b8bb8,6,19.5,20,16,6,19.5,20,,True,
+RMT_j2_m2_u0.1_w0.5,rmt_original_subset,ADAPTER_VALIDATED,fe895e97f85bbd0d7b58a6c749f9a88fd60c4a3d60195b41108806cdc9c81d57,10,33.0,32,31,10,33.0,32,,True,
+RMT_j2_m2_u0.1_w1.0,rmt_original_subset,ADAPTER_VALIDATED,655571206d5f34531369e5ea03fd6ff6b3adfbfae9ba4123f0ce0a184aeb1ef1,10,36.0,32,31,10,36.0,32,,True,
+RMT_j2_m2_u0.1_w1.5,rmt_original_subset,ADAPTER_VALIDATED,062846d8669ef19be4602ba1bffe8f3a0261d8c2cbce41e221e2a347a2d14cfc,10,39.0,32,31,10,39.0,32,,True,
+RMT_j2_m2_u0.3_w0.5,rmt_original_subset,ADAPTER_VALIDATED,2b6ebc026802594c31596921a71a5375d3614bcc75cf924ba86a6b8991afafff,10,33.0,32,31,10,33.0,32,,True,
+RMT_j2_m2_u0.3_w1.0,rmt_original_subset,ADAPTER_VALIDATED,cfde5f0c41175c8fd184923e5de5b94d37aabb68d81c991a34bacc8a1a5bc0e6,10,36.0,32,31,10,36.0,32,,True,
+RMT_j2_m2_u0.3_w1.5,rmt_original_subset,ADAPTER_VALIDATED,42e047903474cf79fc0d17de809e5a109539a85694626f0f835fef9354ce7b7f,10,39.0,32,31,10,39.0,32,,True,
+RMT_j2_m2_u0.5_w0.5,rmt_original_subset,ADAPTER_VALIDATED,6633ee04f99c6c13ae69c81fe1b9dc6e8730166cc5fb8e44bb43ecd70eab15c9,10,33.0,32,31,10,33.0,32,,True,
+RMT_j2_m2_u0.5_w1.0,rmt_original_subset,ADAPTER_VALIDATED,fafb5d33054f77ac046d034fad7ebf004842a3eaa122ea5cbf977701bd7e19f8,10,36.0,32,31,10,36.0,32,,True,
+RMT_j2_m2_u0.5_w1.5,rmt_original_subset,ADAPTER_VALIDATED,1c56064d37343f5f903d1f4f827b3ec32ac49bea57e0f4f62f942e3edababe44,10,39.0,32,31,10,39.0,32,,True,

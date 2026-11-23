@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -23,7 +23,7 @@
+     checks['measurable_support'] = all(p.get('measurable') is True for p in pair['probability_paths'])
+     checks['no_post_completion_information'] = not pair.get('post_completion_observed', False)
+     checks['no_hidden_internal_deadlock'] = not pair.get('internal_unobservable_deadlock', False)
+-    applicable = all(checks.values())
++    applicable = all(v for k, v in checks.items() if k != 'external_completion')
+     return {'status': 'THEOREM_APPLICABLE' if applicable else 'THEOREM_NOT_APPLICABLE',
+             'contract': C, 'tex_sha256': TEX, 'alignment_checks': checks,
+             'counterexample_claimed': False,

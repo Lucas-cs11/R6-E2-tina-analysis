@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "candidates": 48,
+  "certifiable": 0,
+  "not_certifiable": 48,
+  "control_fault_mapping": "MISSING",
+  "class_fault_binding": "GENERIC_TEMPLATE_ONLY",
+  "note": "physical_to_tpn_mapping.csv provides a four-stage TPN template and generic t_init_F/t_init_N, but no class-specific fault firing event for the 24 variation classes nor a control-class fault event; hence 0 strict LSTPN fault-event certificates can be issued now."
+}

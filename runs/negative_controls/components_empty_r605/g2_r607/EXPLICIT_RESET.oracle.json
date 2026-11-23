@@ -1,0 +1,14 @@
+{
+  "category": "OK",
+  "final_marking": {
+    "p1": -1,
+    "p3": 1
+  },
+  "resets": [
+    {
+      "implicit_reset": [
+        "p1"
+      ]
+    }
+  ]
+}

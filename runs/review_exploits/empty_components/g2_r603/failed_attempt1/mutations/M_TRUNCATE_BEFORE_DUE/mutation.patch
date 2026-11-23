@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -60,7 +60,7 @@
+         raise InputError('only fixed-delay intervals are supported')
+     event_time = state['time'] + F(t['interval'][0])
+     # Process a due event before H_A truncation, including event_time == H_A.
+-    if event_time > F(model['H_A']):
++    if event_time >= F(model['H_A']):
+         return leaf(model, state, 'horizon_incomplete')
+     minus, after = fire(model, state['marking'], name)
+     state['history'].append(name)

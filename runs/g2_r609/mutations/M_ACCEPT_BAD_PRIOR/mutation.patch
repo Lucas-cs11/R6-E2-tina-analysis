@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -17,7 +17,7 @@
+         for obs in seq:
+             p = F(dist[obs]) if obs in dist else F(0)
+             like[hyp] *= p
+-    if prior0 + prior1 != 1:
++    if False:
+         return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'prior does not sum to 1', 'category': 'NORMALIZATION_MISMATCH'}
+     total = like['H0'] * prior0 + like['H1'] * prior1

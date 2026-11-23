@@ -1,0 +1,6 @@
+test_id,expected_class,subject_class,subject_duration,subject_same_firing,oracle_class,status
+SAME_FAULT_COMPLETION_ZERO_DURATION,H1,H1,0,True,H1,PASS
+FIRST_FAULT_BEFORE_HPSI,H1,H1,3,False,H1,PASS
+FIRST_FAULT_AT_HPSI,H1,H1,2,False,H1,PASS
+FIRST_FAULT_AFTER_HPSI,H0,H0,1,False,H0,PASS
+COMPLETION_THEN_NEW_FAULT_IGNORED,H0,H0,,False,H0,PASS

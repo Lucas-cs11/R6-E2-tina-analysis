@@ -1,0 +1,14 @@
+--- 
++++ 
+@@ -22,10 +22,7 @@
+         due = deadline
+     else:
+         # not completed before/at H_A
+-        if Ha < deadline:
+-            outcome = 'PENDING'  # short prefix not yet due
+-        else:
+-            outcome = 'VIOLATION'  # past deadline still incomplete
++        outcome = 'VIOLATION'  # past deadline still incomplete
+         tc = None
+         due = deadline
+     endpoint_pass = (run.get('completion_time') is not None and tc == Ha and deadline == Ha)

@@ -1,0 +1,29 @@
+{
+  "rows": 21,
+  "sample": [
+    {
+      "k": 0,
+      "a4": "3",
+      "Pe": "1/8",
+      "Gamma": "0",
+      "status": "EXACT_ANALYTIC",
+      "note": "Pe=(4-a4)^2/(4*(5-a4)); Gamma=0 (posterior=0.5<0.85); validated at k=0,10,20"
+    },
+    {
+      "k": 10,
+      "a4": "7/2",
+      "Pe": "1/24",
+      "Gamma": "0",
+      "status": "EXACT_ANALYTIC",
+      "note": "Pe=(4-a4)^2/(4*(5-a4)); Gamma=0 (posterior=0.5<0.85); validated at k=0,10,20"
+    },
+    {
+      "k": 20,
+      "a4": "4",
+      "Pe": "0",
+      "Gamma": "0",
+      "status": "EXACT_ANALYTIC",
+      "note": "Pe=(4-a4)^2/(4*(5-a4)); Gamma=0 (posterior=0.5<0.85); validated at k=0,10,20"
+    }
+  ]
+}

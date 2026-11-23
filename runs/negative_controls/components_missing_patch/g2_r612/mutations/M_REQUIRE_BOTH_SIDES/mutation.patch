@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -16,7 +16,7 @@
+     if overlap:
+         return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'configuration spans switch time', 'category': 'SPANS_SWITCH'}
+-    if not before or not after:
++    if not before and not after:
+         return {'status': 'UNRESOLVED', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'missing configuration on one side of switch', 'category': 'MISSING_CONFIG'}
+     return {'status': 'DECIDED', 'contract': C, 'tex_sha256': TEX, 'category': 'OK',

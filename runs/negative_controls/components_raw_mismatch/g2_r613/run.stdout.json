@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "phase_gate": "PROVISIONAL_R6_13_PARTIAL_NOT_PHASE_GATE",
+  "cases": 5,
+  "passed": 5,
+  "mutations": [
+    {
+      "mutation": "M_IGNORE_DELAY",
+      "target": "EXACT_DELAY",
+      "detected": true,
+      "observed": "DELAY_MISMATCH",
+      "expected": "OK"
+    },
+    {
+      "mutation": "M_ALLOW_COUNT_MISMATCH",
+      "target": "COUNT_MISMATCH",
+      "detected": true,
+      "observed": "DELAY_MISMATCH",
+      "expected": "COUNT_MISMATCH"
+    },
+    {
+      "mutation": "M_DROP_NEGATIVE_DELAY",
+      "target": "NEGATIVE_DELAY",
+      "detected": true,
+      "observed": "DELAY_MISMATCH",
+      "expected": "OK"
+    }
+  ],
+  "not_covered": [
+    "general sensor fusion",
+    "full R6-13 suite"
+  ]
+}

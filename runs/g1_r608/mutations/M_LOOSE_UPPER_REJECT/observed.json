@@ -1,0 +1,9 @@
+{
+  "status": "INVALID_EVIDENCE",
+  "contract": "AP41-R6-E1-R6-08-PROVISIONAL",
+  "contract_sha256": "e0f38ecac74cd250e53a7618193089d33063a405f933b750e052b4166eaa9c8b",
+  "tex_sha256": "a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a",
+  "reason": "Q0_Y exceeds q_i upper bound (old wrong rule)",
+  "a_P": null,
+  "v_P": null
+}

@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "pairs": 10,
+  "note": "coarsening merges adjacent a4 points; Pe decreases monotonically"
+}

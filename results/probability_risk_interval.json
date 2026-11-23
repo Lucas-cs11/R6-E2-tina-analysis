@@ -1,0 +1,7 @@
+{
+  "uncertainty": "a4 in [3.4, 3.6]",
+  "Pe_lower": "1/35",
+  "Pe_upper": "9/160",
+  "monotone": "Pe decreases with a4, so lower bound at a4=3.6, upper at a4=3.4",
+  "our_exact": "single a4 values give exact Pe, no interval needed"
+}

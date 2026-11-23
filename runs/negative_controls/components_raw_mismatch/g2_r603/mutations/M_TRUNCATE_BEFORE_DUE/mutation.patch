@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -58,7 +58,7 @@
+         raise InputError('only fixed-delay intervals are supported')
+     event_time = state['time'] + F(t['interval'][0])
+     # H_A incompletion is semantic and is assessed before a budget refusal.
+-    if event_time > F(model['H_A']):
++    if event_time >= F(model['H_A']):
+         return leaf(model, state, 'horizon_incomplete')
+     if len(state['history']) >= int(model['path_budget']):
+         return leaf(model, state, 'unresolved_frontier')

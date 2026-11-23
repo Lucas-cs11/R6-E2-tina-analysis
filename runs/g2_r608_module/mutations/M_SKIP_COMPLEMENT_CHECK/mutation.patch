@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -15,7 +15,7 @@
+         return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'interval lacks certified source', 'category': 'UNCERTIFIED_INTERVAL'}
+     q = {k: (F(v[0]), F(v[1])) for k, v in evidence['q_intervals'].items()}
+-    if sum((v[0] for v in q.values()), F(0)) > 1 or sum((v[1] for v in q.values()), F(0)) < 1:
++    if False:
+         return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'q0+q1=1 jointly infeasible', 'category': 'COMPLEMENT_INFEASIBLE'}
+     for name, (lo, hi) in q.items():

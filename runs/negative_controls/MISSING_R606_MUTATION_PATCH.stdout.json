@@ -1,0 +1,119 @@
+{
+  "status": "FAIL",
+  "scope": "EVIDENCE_INTEGRITY_ONLY_NOT_PHASE_GATE",
+  "errors": [
+    "missing mutation patch g2_r606:M_READD_DROPPED_INTERMEDIATE_LABELS",
+    "missing mutation patch g2_r606:M_INCOMPLETE_SEARCH_NO_AMBIGUITY"
+  ],
+  "tex_sha256": "a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a",
+  "universe": {
+    "rows": 143360,
+    "valid": 107520,
+    "invalid": 35840
+  },
+  "generated": {
+    "rows": 107520,
+    "unique": 107520,
+    "hash_level": "REPLAYED_GENERATOR_HASH"
+  },
+  "pyscrew": {
+    "rows": 5000,
+    "workpieces": 2500,
+    "raw_level": "FULL_RAW_REPRODUCIBLE"
+  },
+  "g1": {
+    "rows": 20,
+    "all_pass": true
+  },
+  "sensitivity": {
+    "rows": 1620
+  },
+  "baseline_adapter": {
+    "rows": 52,
+    "validated": 36
+  },
+  "probability_a4": {
+    "rows": 21,
+    "exact": 3
+  },
+  "components": {
+    "g2_r601": {
+      "rows": 3,
+      "passed": 3,
+      "mutations": 3,
+      "detected": 3
+    },
+    "g2_r602": {
+      "rows": 5,
+      "passed": 5,
+      "mutations": 3,
+      "detected": 3
+    },
+    "g2_r603": {
+      "rows": 3,
+      "passed": 3,
+      "mutations": 3,
+      "detected": 3
+    },
+    "g2_r604": {
+      "rows": 6,
+      "passed": 6,
+      "mutations": 3,
+      "detected": 3
+    },
+    "g2_r605": {
+      "rows": 3,
+      "passed": 3,
+      "mutations": 2,
+      "detected": 2
+    },
+    "g2_r606": {
+      "rows": 6,
+      "passed": 6,
+      "mutations": 2,
+      "detected": 2
+    },
+    "g2_r607": {
+      "rows": 5,
+      "passed": 5,
+      "mutations": 3,
+      "detected": 3
+    },
+    "g2_r608_module": {
+      "rows": 10,
+      "passed": 10,
+      "mutations": 3,
+      "detected": 3
+    },
+    "g2_r609": {
+      "rows": 5,
+      "passed": 5,
+      "mutations": 3,
+      "detected": 3
+    },
+    "g2_r610": {
+      "rows": 8,
+      "passed": 8,
+      "mutations": 2,
+      "detected": 2
+    },
+    "g2_r611": {
+      "rows": 4,
+      "passed": 4,
+      "mutations": 3,
+      "detected": 3
+    },
+    "g2_r612": {
+      "rows": 5,
+      "passed": 5,
+      "mutations": 3,
+      "detected": 3
+    },
+    "g2_r613": {
+      "rows": 5,
+      "passed": 5,
+      "mutations": 3,
+      "detected": 3
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "THEOREM_NOT_APPLICABLE",
+  "contract": "R6-E2-R6-10-PARTIAL",
+  "tex_sha256": "a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a",
+  "alignment_checks": {
+    "discrete_structure": true,
+    "fault_domain": true,
+    "persistent_support": true,
+    "completion_domain": true,
+    "external_completion": false,
+    "support_alignment": true,
+    "observation_injective": true,
+    "observation_projection": true,
+    "measurable_support": true,
+    "no_post_completion_information": true,
+    "no_hidden_internal_deadlock": true
+  },
+  "counterexample_claimed": false
+}

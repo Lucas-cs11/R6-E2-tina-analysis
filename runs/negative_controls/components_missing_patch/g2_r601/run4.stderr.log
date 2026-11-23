@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r601.py", line 71, in <module>
+    mutate('M_ENDPOINT_OPEN', 'NONURGENT_ENDPOINT_DISTINGUISHED',
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           "        steps = 1 if model.get('endpoint_grid', False) else 2",
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           "            steps = 2"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r601.py", line 58, in mutate
+    mod = load_module(folder / 'r601.py', 'mut_' + name)
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r601.py", line 48, in load_module
+    mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod); return mod
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 747, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 881, in get_code
+  File "<frozen importlib._bootstrap_external>", line 810, in source_to_code
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/runs/g2_r601/mutations/M_ENDPOINT_OPEN/r601.py", line 15
+    lo, hi = F(interval[0]), F(interval[1])
+                                           ^
+IndentationError: unindent does not match any outer indentation level

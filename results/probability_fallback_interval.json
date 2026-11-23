@@ -1,0 +1,8 @@
+{
+  "fallback_Pe": "[0, 1/2]",
+  "fallback_Gamma": "[0, 1]",
+  "our_Pe": "all <= 1/8 < 1/2",
+  "our_Gamma": "0",
+  "within_fallback": true,
+  "conclusion": "exact values within trivial fallback intervals"
+}

@@ -1,0 +1,3094 @@
+{
+  "purpose": "D1原方法复用验收，非真实数据确认；不恢复整定或成本主线",
+  "p1_root": "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD",
+  "p2_root": "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis",
+  "workers": 4,
+  "row_wall_s": 60,
+  "tasks": [
+    {
+      "family": "micro",
+      "case_id": "M01",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M01/model.yaml",
+      "id": 0
+    },
+    {
+      "family": "micro",
+      "case_id": "M01",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M01/model.yaml",
+      "id": 1
+    },
+    {
+      "family": "micro",
+      "case_id": "M01",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M01/model.yaml",
+      "id": 2
+    },
+    {
+      "family": "micro",
+      "case_id": "M01",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M01/model.yaml",
+      "id": 3
+    },
+    {
+      "family": "micro",
+      "case_id": "M02",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M02/model.yaml",
+      "id": 4
+    },
+    {
+      "family": "micro",
+      "case_id": "M02",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M02/model.yaml",
+      "id": 5
+    },
+    {
+      "family": "micro",
+      "case_id": "M02",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M02/model.yaml",
+      "id": 6
+    },
+    {
+      "family": "micro",
+      "case_id": "M02",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M02/model.yaml",
+      "id": 7
+    },
+    {
+      "family": "micro",
+      "case_id": "M03",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M03/model.yaml",
+      "id": 8
+    },
+    {
+      "family": "micro",
+      "case_id": "M03",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M03/model.yaml",
+      "id": 9
+    },
+    {
+      "family": "micro",
+      "case_id": "M03",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M03/model.yaml",
+      "id": 10
+    },
+    {
+      "family": "micro",
+      "case_id": "M03",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M03/model.yaml",
+      "id": 11
+    },
+    {
+      "family": "micro",
+      "case_id": "M04",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M04/model.yaml",
+      "id": 12
+    },
+    {
+      "family": "micro",
+      "case_id": "M04",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M04/model.yaml",
+      "id": 13
+    },
+    {
+      "family": "micro",
+      "case_id": "M04",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M04/model.yaml",
+      "id": 14
+    },
+    {
+      "family": "micro",
+      "case_id": "M04",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M04/model.yaml",
+      "id": 15
+    },
+    {
+      "family": "micro",
+      "case_id": "M05",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M05/model.yaml",
+      "id": 16
+    },
+    {
+      "family": "micro",
+      "case_id": "M05",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M05/model.yaml",
+      "id": 17
+    },
+    {
+      "family": "micro",
+      "case_id": "M05",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M05/model.yaml",
+      "id": 18
+    },
+    {
+      "family": "micro",
+      "case_id": "M05",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M05/model.yaml",
+      "id": 19
+    },
+    {
+      "family": "micro",
+      "case_id": "M06",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M06/model.yaml",
+      "id": 20
+    },
+    {
+      "family": "micro",
+      "case_id": "M06",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M06/model.yaml",
+      "id": 21
+    },
+    {
+      "family": "micro",
+      "case_id": "M06",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M06/model.yaml",
+      "id": 22
+    },
+    {
+      "family": "micro",
+      "case_id": "M06",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M06/model.yaml",
+      "id": 23
+    },
+    {
+      "family": "micro",
+      "case_id": "M07",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M07/model.yaml",
+      "id": 24
+    },
+    {
+      "family": "micro",
+      "case_id": "M07",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M07/model.yaml",
+      "id": 25
+    },
+    {
+      "family": "micro",
+      "case_id": "M07",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M07/model.yaml",
+      "id": 26
+    },
+    {
+      "family": "micro",
+      "case_id": "M07",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M07/model.yaml",
+      "id": 27
+    },
+    {
+      "family": "micro",
+      "case_id": "M08",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M08/model.yaml",
+      "id": 28
+    },
+    {
+      "family": "micro",
+      "case_id": "M08",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M08/model.yaml",
+      "id": 29
+    },
+    {
+      "family": "micro",
+      "case_id": "M08",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M08/model.yaml",
+      "id": 30
+    },
+    {
+      "family": "micro",
+      "case_id": "M08",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M08/model.yaml",
+      "id": 31
+    },
+    {
+      "family": "micro",
+      "case_id": "M09",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M09/model.yaml",
+      "id": 32
+    },
+    {
+      "family": "micro",
+      "case_id": "M09",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M09/model.yaml",
+      "id": 33
+    },
+    {
+      "family": "micro",
+      "case_id": "M09",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M09/model.yaml",
+      "id": 34
+    },
+    {
+      "family": "micro",
+      "case_id": "M09",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M09/model.yaml",
+      "id": 35
+    },
+    {
+      "family": "micro",
+      "case_id": "M10",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M10/model.yaml",
+      "id": 36
+    },
+    {
+      "family": "micro",
+      "case_id": "M10",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M10/model.yaml",
+      "id": 37
+    },
+    {
+      "family": "micro",
+      "case_id": "M10",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M10/model.yaml",
+      "id": 38
+    },
+    {
+      "family": "micro",
+      "case_id": "M10",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M10/model.yaml",
+      "id": 39
+    },
+    {
+      "family": "micro",
+      "case_id": "M11",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M11/model.yaml",
+      "id": 40
+    },
+    {
+      "family": "micro",
+      "case_id": "M11",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M11/model.yaml",
+      "id": 41
+    },
+    {
+      "family": "micro",
+      "case_id": "M11",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M11/model.yaml",
+      "id": 42
+    },
+    {
+      "family": "micro",
+      "case_id": "M11",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M11/model.yaml",
+      "id": 43
+    },
+    {
+      "family": "micro",
+      "case_id": "M12",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M12/model.yaml",
+      "id": 44
+    },
+    {
+      "family": "micro",
+      "case_id": "M12",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M12/model.yaml",
+      "id": 45
+    },
+    {
+      "family": "micro",
+      "case_id": "M12",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M12/model.yaml",
+      "id": 46
+    },
+    {
+      "family": "micro",
+      "case_id": "M12",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M12/model.yaml",
+      "id": 47
+    },
+    {
+      "family": "micro",
+      "case_id": "M13",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M13/model.yaml",
+      "id": 48
+    },
+    {
+      "family": "micro",
+      "case_id": "M13",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M13/model.yaml",
+      "id": 49
+    },
+    {
+      "family": "micro",
+      "case_id": "M13",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M13/model.yaml",
+      "id": 50
+    },
+    {
+      "family": "micro",
+      "case_id": "M13",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M13/model.yaml",
+      "id": 51
+    },
+    {
+      "family": "micro",
+      "case_id": "M14",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M14/model.yaml",
+      "id": 52
+    },
+    {
+      "family": "micro",
+      "case_id": "M14",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M14/model.yaml",
+      "id": 53
+    },
+    {
+      "family": "micro",
+      "case_id": "M14",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M14/model.yaml",
+      "id": 54
+    },
+    {
+      "family": "micro",
+      "case_id": "M14",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M14/model.yaml",
+      "id": 55
+    },
+    {
+      "family": "micro",
+      "case_id": "M15",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M15/model.yaml",
+      "id": 56
+    },
+    {
+      "family": "micro",
+      "case_id": "M15",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M15/model.yaml",
+      "id": 57
+    },
+    {
+      "family": "micro",
+      "case_id": "M15",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M15/model.yaml",
+      "id": 58
+    },
+    {
+      "family": "micro",
+      "case_id": "M15",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M15/model.yaml",
+      "id": 59
+    },
+    {
+      "family": "micro",
+      "case_id": "M16",
+      "method": "main",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M16/model.yaml",
+      "id": 60
+    },
+    {
+      "family": "micro",
+      "case_id": "M16",
+      "method": "reference",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M16/model.yaml",
+      "id": 61
+    },
+    {
+      "family": "micro",
+      "case_id": "M16",
+      "method": "no_sync",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M16/model.yaml",
+      "id": 62
+    },
+    {
+      "family": "micro",
+      "case_id": "M16",
+      "method": "no_envelope",
+      "path": "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M16/model.yaml",
+      "id": 63
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.1_w0.5",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 64
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.1_w0.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 65
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.1_w0.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 66
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.1_w0.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 67
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.1_w1.0",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 68
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.1_w1.0",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 69
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.1_w1.0",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 70
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.1_w1.0",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 71
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.1_w1.5",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 72
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.1_w1.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 73
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.1_w1.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 74
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.1_w1.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 75
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.3_w0.5",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 76
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.3_w0.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 77
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.3_w0.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 78
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.3_w0.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 79
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.3_w1.0",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 80
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.3_w1.0",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 81
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.3_w1.0",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 82
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.3_w1.0",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 83
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.3_w1.5",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 84
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.3_w1.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 85
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.3_w1.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 86
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.3_w1.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 87
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.5_w0.5",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 88
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.5_w0.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 89
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.5_w0.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 90
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.5_w0.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 91
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.5_w1.0",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 92
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.5_w1.0",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 93
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.5_w1.0",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 94
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.5_w1.0",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 95
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.5_w1.5",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 96
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.5_w1.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 97
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.5_w1.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 98
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m2_u0.5_w1.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 99
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.1_w0.5",
+      "method": "main",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 100
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.1_w0.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 101
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.1_w0.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 102
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.1_w0.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 103
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.1_w1.0",
+      "method": "main",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 104
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.1_w1.0",
+      "method": "reference",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 105
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.1_w1.0",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 106
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.1_w1.0",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 107
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.1_w1.5",
+      "method": "main",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 108
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.1_w1.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 109
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.1_w1.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 110
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.1_w1.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 111
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.3_w0.5",
+      "method": "main",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 112
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.3_w0.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 113
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.3_w0.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 114
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.3_w0.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 115
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.3_w1.0",
+      "method": "main",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 116
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.3_w1.0",
+      "method": "reference",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 117
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.3_w1.0",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 118
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.3_w1.0",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 119
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.3_w1.5",
+      "method": "main",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 120
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.3_w1.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 121
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.3_w1.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 122
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.3_w1.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 123
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.5_w0.5",
+      "method": "main",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 124
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.5_w0.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 125
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.5_w0.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 126
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.5_w0.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 127
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.5_w1.0",
+      "method": "main",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 128
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.5_w1.0",
+      "method": "reference",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 129
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.5_w1.0",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 130
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.5_w1.0",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 131
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.5_w1.5",
+      "method": "main",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 132
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.5_w1.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 133
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.5_w1.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 134
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m3_u0.5_w1.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 3,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 135
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.1_w0.5",
+      "method": "main",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 136
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.1_w0.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 137
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.1_w0.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 138
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.1_w0.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 139
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.1_w1.0",
+      "method": "main",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 140
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.1_w1.0",
+      "method": "reference",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 141
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.1_w1.0",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 142
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.1_w1.0",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 143
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.1_w1.5",
+      "method": "main",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 144
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.1_w1.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 145
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.1_w1.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 146
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.1_w1.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 147
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.3_w0.5",
+      "method": "main",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 148
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.3_w0.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 149
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.3_w0.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 150
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.3_w0.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 151
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.3_w1.0",
+      "method": "main",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 152
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.3_w1.0",
+      "method": "reference",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 153
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.3_w1.0",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 154
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.3_w1.0",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 155
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.3_w1.5",
+      "method": "main",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 156
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.3_w1.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 157
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.3_w1.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 158
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.3_w1.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 159
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.5_w0.5",
+      "method": "main",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 160
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.5_w0.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 161
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.5_w0.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 162
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.5_w0.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 163
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.5_w1.0",
+      "method": "main",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 164
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.5_w1.0",
+      "method": "reference",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 165
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.5_w1.0",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 166
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.5_w1.0",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 167
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.5_w1.5",
+      "method": "main",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 168
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.5_w1.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 169
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.5_w1.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 170
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j1_m4_u0.5_w1.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 4,
+        "n_parts": 1,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 171
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.1_w0.5",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 172
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.1_w0.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 173
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.1_w0.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 174
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.1_w0.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 175
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.1_w1.0",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 176
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.1_w1.0",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 177
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.1_w1.0",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 178
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.1_w1.0",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 179
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.1_w1.5",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 180
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.1_w1.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 181
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.1_w1.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 182
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.1_w1.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.1,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 183
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.3_w0.5",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 184
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.3_w0.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 185
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.3_w0.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 186
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.3_w0.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 187
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.3_w1.0",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 188
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.3_w1.0",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 189
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.3_w1.0",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 190
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.3_w1.0",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 191
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.3_w1.5",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 192
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.3_w1.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 193
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.3_w1.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 194
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.3_w1.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.3,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 195
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.5_w0.5",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 196
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.5_w0.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 197
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.5_w0.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 198
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.5_w0.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 0.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 199
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.5_w1.0",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 200
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.5_w1.0",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 201
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.5_w1.0",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 202
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.5_w1.0",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.0,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 203
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.5_w1.5",
+      "method": "main",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 204
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.5_w1.5",
+      "method": "reference",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 205
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.5_w1.5",
+      "method": "no_sync",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 206
+    },
+    {
+      "family": "rmt_original_subset",
+      "case_id": "RMT_j2_m2_u0.5_w1.5",
+      "method": "no_envelope",
+      "params": {
+        "n_machines": 2,
+        "n_parts": 2,
+        "ops_per_part": 2,
+        "wip_bound": 1,
+        "unobservable_ratio": 0.5,
+        "fault_locations": 1,
+        "interval_width_factor": 1.5,
+        "adjustable_ratio": 0.1,
+        "seed": 0
+      },
+      "id": 207
+    },
+    {
+      "family": "p2",
+      "case_id": "C1",
+      "method": "original_probability",
+      "path": "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/experiments/models/cyclic_reconvergent/C1.yaml",
+      "id": 208
+    },
+    {
+      "family": "p2",
+      "case_id": "C2",
+      "method": "original_probability",
+      "path": "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/experiments/models/cyclic_reconvergent/C2.yaml",
+      "id": 209
+    },
+    {
+      "family": "p2",
+      "case_id": "C3",
+      "method": "original_probability",
+      "path": "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/experiments/models/cyclic_reconvergent/C3.yaml",
+      "id": 210
+    },
+    {
+      "family": "p2",
+      "case_id": "C_cycle",
+      "method": "original_probability",
+      "path": "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/experiments/models/cyclic_reconvergent/C_cycle.yaml",
+      "id": 211
+    }
+  ],
+  "frozen_before_runs": true,
+  "selection_rule": "16个已有micro全部；原fullscale协议内36个明确参数点，覆盖机器数/观测比例/宽度/单与双工件，不按判定筛选；原概率C1/C2/C3/C_cycle全部",
+  "success": "检查完成状态、主/参考一致性与原expected；保留失败、超时和UNKNOWN，不以PASS数量评估成功",
+  "not_claimed": "无法恢复原36,450逐行结果时不使用其旧效率数字作为重跑证据",
+  "source_sha256": {
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M01/model.yaml": "85a4c5e03da293711055b618bb2a54cb1923a9370556b109f61e92d905dc5e39",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M01/expected.json": "8be5d5b4d1bd5cf9ef67ed75f11009891f13aac3932c52a3a1fc78b8391dd0fc",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M01/oracle.md": "4a771b09a56fa0ba9b20127674d485dd80b37836fea82dd5dbb597b2dcb9eb56",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M02/model.yaml": "2e663f776f0fbcb1fb3cd8ce2ddfc98b80d69d97b22bd667334bf6d664ba8870",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M02/expected.json": "cabe240d066096cc959a27d7cb2bb846d08b41e63440cbf33c49e494c222c061",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M02/oracle.md": "9dadf087b1b173ee9a499b00cb90ddd17d10be97037bb841bbfd7671e50ea2f4",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M03/model.yaml": "c205a86eb6dd80e06eaf7dc2945ff979a57a54c7b76a32053345e6759329f4d8",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M03/expected.json": "cabe240d066096cc959a27d7cb2bb846d08b41e63440cbf33c49e494c222c061",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M03/oracle.md": "e04fb17e6aa3beb209f247116b34d7006538051fe323cef8c904bb4621913c9b",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M04/model.yaml": "e03d7eedc92fe7fcb21d1b409ead252265591abd388763ab93c6b53cbb7e2668",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M04/expected.json": "c7b1b39c46572f3dc1efa56756deeb1edf54f645c98d8536297620de4c36acef",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M04/oracle.md": "c79d2beb3e65210d91a7a56ad7babab2c940ce6f275a8091cf33bedd6b012e2a",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M05/model.yaml": "515ec8047e750a5d85c695e28213b845280a5fff8429836ebf24dbe71114e826",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M05/expected.json": "733e0865a4eb094051b78935e527f09a49280bda5c8893aebb8eba2d0b4af2b0",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M05/oracle.md": "8885d1c219093685cccb93b4ff5ddcf3e6c2e046b767e9ce88e264538ade3217",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M06/model.yaml": "b47b86f379c5a3f5471f00d9e0e6994d08c1dca01946585ca5b399d0df6994a6",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M06/expected.json": "c7b1b39c46572f3dc1efa56756deeb1edf54f645c98d8536297620de4c36acef",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M06/oracle.md": "608465bf37f9fd351986832d4a4ebb492fddf9e1e7c5225892f45636a8287a9c",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M07/model.yaml": "a5d0e88fb52f006d10be66e75305b8be3fcc8ac76c13d1e475eb08130d038630",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M07/expected.json": "733e0865a4eb094051b78935e527f09a49280bda5c8893aebb8eba2d0b4af2b0",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M07/oracle.md": "57474b5ab1f444813672ce371a5f6fa7852279c74f8063d2384ed4537402c6ae",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M08/model.yaml": "8221ff025f85549c76c59d8ef4f5ae92af84ee797e49486f01e493b04efbaa24",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M08/expected.json": "733e0865a4eb094051b78935e527f09a49280bda5c8893aebb8eba2d0b4af2b0",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M08/oracle.md": "ef40237d56d15be236109d5125658bc4726413e840337ea4e26258a7e03d1592",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M09/model.yaml": "a7ac4fa166b2053fc4543b91d4da1a8f5a265cfc9af96603c8c9a96f363d761c",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M09/expected.json": "c7b1b39c46572f3dc1efa56756deeb1edf54f645c98d8536297620de4c36acef",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M09/oracle.md": "7f5c419881900cf96b177c7226d1b01f25aa1f3971285f5bfb8598399202c661",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M10/model.yaml": "bc0ef11893c537060a7a14a6ae6c8415165ca059b62bdab0ba5ec2f8af332d1b",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M10/expected.json": "a07cf9fb93f49312a1b413eeef8aac19f2e28fadd0f1b6bfb923d647b12c2126",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M10/oracle.md": "dfcd79e97f77b48ba97f443bf00c8503314beb11682341b7427f36b212702442",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M11/model.yaml": "da7b2e8240c89a349a3fd59996064e3eba322def7411aeb09f7ed2e334f63062",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M11/expected.json": "733e0865a4eb094051b78935e527f09a49280bda5c8893aebb8eba2d0b4af2b0",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M11/oracle.md": "afbaa4a60abb4ca72e69a5eda9e7414114be9834eb43517d565a71e61aab94f9",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M12/model.yaml": "648d6872923ecda42fdb1868e0f258fb4c6a01868a948be0fdafa81d918795c7",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M12/expected.json": "cabe240d066096cc959a27d7cb2bb846d08b41e63440cbf33c49e494c222c061",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M12/oracle.md": "a6e7a996aaef220335eaaac31abc59f8c4a6f02fdd165d16614ebbf0a409297c",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M13/model.yaml": "bb83ee69617eec1d3f8a89897c2c70a6630511750ca3d7ea91aa4c9b09c2aa68",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M13/expected.json": "0ded16c89f0074afef67d82b166fbf50c509e80a2996596a43119fdc49751dce",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M13/oracle.md": "0477b8688fbcf8ef932f6e13f878da70d7e5d696580e2fc806e120d65e0d815d",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M14/model.yaml": "bbde0251f4e85e12237bf8c3bf45228c9bb56d2a6cad0b8399036fafea27e8d7",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M14/expected.json": "cc33c0baf52f4baaf3d86d39cdc83352ded5202b38d45fb32268142501d4f36c",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M14/oracle.md": "fec845f5481d10a6e7c881d624166daabfbffebdd1faeca2ef2962ae6bd609f4",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M15/model.yaml": "bcb3758b8b71a5076f84834437b289d80a456d146c36b535faa0f3ca74d9ce7c",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M15/expected.json": "831957aca90fe1d397d0622bb21beeb652b35033867bcfb62eb148041f02ffc1",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M15/oracle.md": "5a9d313f145efdc6ae3c2c20fbd32478cc95a5dfcb029f6f6c3c06bf400bbc90",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M16/model.yaml": "7dd79e3490fc40d575d00f21676365b0c193238d526c823e5ccbf62b17fa6b57",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M16/expected.json": "b385f5e268a46c8abf2e78d3ef20a6d0185e3f2d7571a665b3c1ef78b15c9965",
+    "/mnt/data/Research_past_programs/Code_data/benchmarks/micro/M16/oracle.md": "2fde07ebea94c945d89ebb5d849e1419be92e299ac03b20260bb5f67147f0c7d",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/experiments/models/cyclic_reconvergent/C1.yaml": "47425440f51f9be774b45cf557658f1f605e1eb2c487c528b8133821354acfae",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/experiments/models/cyclic_reconvergent/C2.yaml": "00dc65512b8d9f89e06182db0ca458e4017f127202af2f2b0b9fd9cd178f12d7",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/experiments/models/cyclic_reconvergent/C3.yaml": "0e682d817fed869632f033f537f6f46843ad1ff1676d2bd58c80218afcae8fd2",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/experiments/models/cyclic_reconvergent/C_cycle.yaml": "f15caf2c4f314c99ed13a8b4f9b45f305ca15c7612a722fc912e1ea25781fada",
+    "/mnt/data/Research_past_programs/configs/fullscale_protocol_v1.yaml": "fe2603d29e9e1e4251afaaf3c4e3b7f34614cb04d9f2fb31506ca1a8d12edc4a",
+    "/mnt/data/Research_past_programs/configs/fullscale_protocol_corrected.yaml": "5a34d8d1f31b30fa4eedfa576afe93478da383f5611e6f9891d759562a11e5b7",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/cli.py": "2fb009767f2bdb8206a25ba6397a8b7233a8d7d084695cf64373b12b7c921295",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/verifier.py": "0cc00865ecb471f45ff27583ff475efe69066d5bba0017e4b861f22694cc3018",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/baselines/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/baselines/mscg_lp_adapted.py": "1f577105489483baf0a6130c953eeff62bc2b86e82108d33fa5a4b498a3cb376",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/baselines/no_sync.py": "254c6327676b9df9f778a27de45cb368e2c72015cd2d4cce4c5de310a3666fa2",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/baselines/mscg_lp_complete.py": "86401ac02b69e4aabfbe7e3cd0286efbde4e9d7cbea9251f5a88458300341a6c",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/baselines/no_envelope.py": "8d6a64910cc6025690de42fd0d59c8bcd785bfe19fbc5a119c81e1996f582af4",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/simulation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/model/tpn.py": "2844825bc2394a9462a96e1def61d19620fbd4dfa76ea848ec5af4e52354a163",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/model/validation.py": "fb3c0da9cc89349dabe3bf39117f2135e74c6f7cdc1eec73dd1187ffc7d783f7",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/model/parser.py": "691b7f9ad1b6faa97f145af32ad5e34ce9afad69121e682f206df04bc31646dd",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/semantics/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/semantics/strong_time.py": "1f1fb186159dd9671dcaca2b70f46f6e341ac817f766379a1fc246329ce90654",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/temporal_expansion/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/temporal_expansion/builder.py": "a8c1180847c1fe56b22a77a74390a4c4b2e5f756ccc5b46d2591f21fcbf48153",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/synchronizer/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/synchronizer/builder.py": "45dba2730e9eca7725944ed3b5dc1f18d36fbd230884d626f23bc482d742b31a",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/exact_confirmation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/exact_confirmation/lp_solver.py": "d1c9c62850e5e7cf31d8febd9dc1d64df66877c2e087632e8759a3a246de22d8",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/scg/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/scg/builder.py": "5d1021de30a4698bff1f642bd1c181396a8b42e5b7631de5c4e46a27edf76328",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/benchmarks/rmt_fms_generator.py": "4ab74687b1593bd002f07b9b9af99259f822773db6ff060b732d2856fc3892fb",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/benchmarks/boundary_generator.py": "ad2ab805fd664500d7ec4bae03329af80ccfe8f3ef13fde84deb1911f4f88d56",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/repair/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/repair/exhaustive.py": "8065fa6f731eb82bccdaa37c2f9fbe2a2ae47ef179e386c684615846863ccdd2",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/repair/task_constraint.py": "2b856e0a24d0412532e8b1fe3d57dc3fae30d7c50a0900f11506e3e943021011",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/repair/algorithm.py": "436a694496dac84193a03d1899f75c6522d8545254da0fa6d0decb414c5cbf3b",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/repair/lp_interval_search.py": "57250930d5b3f41efa1f814405a119272d35c72381217b5e651a166201f7f5c8",
+    "/mnt/data/Research/小论文项目代码/论文1_TPN_BTCD/src/repair/global_constraint_repair.py": "6f37124bb13195f0d835531b7809ca0ce050361482218ae185f5d0b9d1052d28",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/__init__.py": "84b15aed45c61543260de399da02b439de3064d5577ca6aeccd018a57444405e",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/path_event.py": "636647e3dda4846d5a896f38ea53d3aa5ace226f8c1057a686ac7c51eb5feabc",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/observation_cells.py": "0a19ad3a2b1db759456c8e573e0db444f6d680f6a34ebf2693b20c74e3bd19cb",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/decision.py": "aed118f8cf8acd466ec94f5924d305fbf2f64f6556ceb844e70c8d3ddd4a13e5",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/ablations.py": "8241a4529b5f4acb1e16d0ab3bcb8b5d110c39b6bd38583c5b89ca5735c859d7",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/distributions.py": "bec69609f42894c6c7c8f23c17cbeb679973c9ef096e8ccb78c47da29e391a46",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/state_graph.py": "6ec13ea96a4ebdf9963a0ff6ab3537fd0cf46d439f33fa302912e8745b1074d6",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/semantics.py": "8ce3aa0b6264a1986870d9c255b19b9c3e0f8debee4ebd6a960dacbcb94c5047",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/enclosures.py": "ee1cbe3af28fe6ef61cb7e37a4032f548ec4756255fd4534ad417c51fdd5b84e",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/monte_carlo.py": "b4bdf831618fc1edc34ceb33bec710d64063d72bab26846e6050b04aeafcd6ec",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/completion_monitor.py": "e0219271cbbd4218133b7daabc201dae7ceb4cf2e3f0371a2edfeb39fb33e230",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/probability.py": "7eaf5248222caf6b1f6ac61c2386211dafd6a6fbf5e687415fe01514d2193654",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/rigorous_race.py": "fc65580a140776f17dcdb28432416efabaef21d397ec7fc1ae9b95c53ecf1663",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/model.py": "f9fcd004cd4b7537ad81db644b40ddafbba04a625bbb06f121a0e9a31ee8779b",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/episode_probability.py": "1f67db091289e42c5dfbd2192bf67be50d4c13240e4ebe38775322ac5ff77de5",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/dbm.py": "e0ae78336741518babeb449c7c6888b69d080edfbdbe5bb8b5efba8562850cc7",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/certificates.py": "1bf2369508818517ff9e8a3af289852ab5409d1984741a14bcf1002a6f80240d",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/src/lstpn/verifier.py": "18219ca626ea8febf1e48f380ffc2524a2ad3f3f26f214d87901021ab000c191",
+    "/mnt/data/Research/小论文项目代码/论文2_LSTPN_RBTCD/lstpn-diagnosis/experiments/scripts/g2_wiring.py": "99d303d98ba65d3de6c13f984823c29cd1556153e1f46d830fef5bc9fabc45bd",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/code/worker.py": "2e311521124d9f78eb516482d9622151ec96dd7229ac0859773ed134f5ef0360",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/code/run.py": "8624a9d4f52326dcda2f05f47e20e606c9bb0fa4c6e17b00a67128ffbf26c25b",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M09/expected.json": "c7b1b39c46572f3dc1efa56756deeb1edf54f645c98d8536297620de4c36acef",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M09/model.yaml": "a7ac4fa166b2053fc4543b91d4da1a8f5a265cfc9af96603c8c9a96f363d761c",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M09/oracle.md": "7f5c419881900cf96b177c7226d1b01f25aa1f3971285f5bfb8598399202c661",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M02/expected.json": "cabe240d066096cc959a27d7cb2bb846d08b41e63440cbf33c49e494c222c061",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M02/model.yaml": "2e663f776f0fbcb1fb3cd8ce2ddfc98b80d69d97b22bd667334bf6d664ba8870",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M02/oracle.md": "9dadf087b1b173ee9a499b00cb90ddd17d10be97037bb841bbfd7671e50ea2f4",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M11/expected.json": "733e0865a4eb094051b78935e527f09a49280bda5c8893aebb8eba2d0b4af2b0",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M11/model.yaml": "da7b2e8240c89a349a3fd59996064e3eba322def7411aeb09f7ed2e334f63062",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M11/oracle.md": "afbaa4a60abb4ca72e69a5eda9e7414114be9834eb43517d565a71e61aab94f9",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M07/expected.json": "733e0865a4eb094051b78935e527f09a49280bda5c8893aebb8eba2d0b4af2b0",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M07/model.yaml": "a5d0e88fb52f006d10be66e75305b8be3fcc8ac76c13d1e475eb08130d038630",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M07/oracle.md": "57474b5ab1f444813672ce371a5f6fa7852279c74f8063d2384ed4537402c6ae",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M12/expected.json": "cabe240d066096cc959a27d7cb2bb846d08b41e63440cbf33c49e494c222c061",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M12/model.yaml": "648d6872923ecda42fdb1868e0f258fb4c6a01868a948be0fdafa81d918795c7",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M12/oracle.md": "a6e7a996aaef220335eaaac31abc59f8c4a6f02fdd165d16614ebbf0a409297c",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M14/expected.json": "cc33c0baf52f4baaf3d86d39cdc83352ded5202b38d45fb32268142501d4f36c",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M14/model.yaml": "bbde0251f4e85e12237bf8c3bf45228c9bb56d2a6cad0b8399036fafea27e8d7",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M14/oracle.md": "fec845f5481d10a6e7c881d624166daabfbffebdd1faeca2ef2962ae6bd609f4",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M10/expected.json": "a07cf9fb93f49312a1b413eeef8aac19f2e28fadd0f1b6bfb923d647b12c2126",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M10/model.yaml": "bc0ef11893c537060a7a14a6ae6c8415165ca059b62bdab0ba5ec2f8af332d1b",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M10/oracle.md": "dfcd79e97f77b48ba97f443bf00c8503314beb11682341b7427f36b212702442",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M05/expected.json": "733e0865a4eb094051b78935e527f09a49280bda5c8893aebb8eba2d0b4af2b0",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M05/model.yaml": "515ec8047e750a5d85c695e28213b845280a5fff8429836ebf24dbe71114e826",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M05/oracle.md": "8885d1c219093685cccb93b4ff5ddcf3e6c2e046b767e9ce88e264538ade3217",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M04/expected.json": "c7b1b39c46572f3dc1efa56756deeb1edf54f645c98d8536297620de4c36acef",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M04/model.yaml": "e03d7eedc92fe7fcb21d1b409ead252265591abd388763ab93c6b53cbb7e2668",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M04/oracle.md": "c79d2beb3e65210d91a7a56ad7babab2c940ce6f275a8091cf33bedd6b012e2a",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M01/expected.json": "8be5d5b4d1bd5cf9ef67ed75f11009891f13aac3932c52a3a1fc78b8391dd0fc",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M01/model.yaml": "85a4c5e03da293711055b618bb2a54cb1923a9370556b109f61e92d905dc5e39",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M01/oracle.md": "4a771b09a56fa0ba9b20127674d485dd80b37836fea82dd5dbb597b2dcb9eb56",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M03/expected.json": "cabe240d066096cc959a27d7cb2bb846d08b41e63440cbf33c49e494c222c061",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M03/model.yaml": "c205a86eb6dd80e06eaf7dc2945ff979a57a54c7b76a32053345e6759329f4d8",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M03/oracle.md": "e04fb17e6aa3beb209f247116b34d7006538051fe323cef8c904bb4621913c9b",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M06/expected.json": "c7b1b39c46572f3dc1efa56756deeb1edf54f645c98d8536297620de4c36acef",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M06/model.yaml": "b47b86f379c5a3f5471f00d9e0e6994d08c1dca01946585ca5b399d0df6994a6",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M06/oracle.md": "608465bf37f9fd351986832d4a4ebb492fddf9e1e7c5225892f45636a8287a9c",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M08/expected.json": "733e0865a4eb094051b78935e527f09a49280bda5c8893aebb8eba2d0b4af2b0",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M08/model.yaml": "8221ff025f85549c76c59d8ef4f5ae92af84ee797e49486f01e493b04efbaa24",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M08/oracle.md": "ef40237d56d15be236109d5125658bc4726413e840337ea4e26258a7e03d1592",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M13/expected.json": "0ded16c89f0074afef67d82b166fbf50c509e80a2996596a43119fdc49751dce",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M13/model.yaml": "bb83ee69617eec1d3f8a89897c2c70a6630511750ca3d7ea91aa4c9b09c2aa68",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M13/oracle.md": "0477b8688fbcf8ef932f6e13f878da70d7e5d696580e2fc806e120d65e0d815d",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M15/expected.json": "831957aca90fe1d397d0622bb21beeb652b35033867bcfb62eb148041f02ffc1",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M15/model.yaml": "bcb3758b8b71a5076f84834437b289d80a456d146c36b535faa0f3ca74d9ce7c",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M15/oracle.md": "5a9d313f145efdc6ae3c2c20fbd32478cc95a5dfcb029f6f6c3c06bf400bbc90",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M16/expected.json": "b385f5e268a46c8abf2e78d3ef20a6d0185e3f2d7571a665b3c1ef78b15c9965",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M16/model.yaml": "7dd79e3490fc40d575d00f21676365b0c193238d526c823e5ccbf62b17fa6b57",
+    "/mnt/data/Research/thesis_diagnosis_reset/D1/models/M16/oracle.md": "2fde07ebea94c945d89ebb5d849e1419be92e299ac03b20260bb5f67147f0c7d"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "example": {
+    "q0_interval": "[0.4, 0.6]",
+    "q1_interval": "[0.3, 0.5]",
+    "tightened_q0": "[0.5, 0.5]",
+    "tightened_q1": "[0.4, 0.5]",
+    "complement_feasible": false
+  },
+  "our_model": {
+    "q0": "1/2",
+    "q1": "1/2",
+    "tightening": "no change (already complementary)"
+  },
+  "conclusion": "Complement tightening can make infeasible intervals feasible or tighten feasible ones"
+}

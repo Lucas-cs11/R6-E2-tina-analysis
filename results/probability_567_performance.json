@@ -1,0 +1,18 @@
+{
+  "analytic_567": {
+    "time": "instant",
+    "memory": "negligible",
+    "rows": 567
+  },
+  "numeric_567_N100": {
+    "iterations": 5670000,
+    "estimated_time": "seconds",
+    "rows": 567
+  },
+  "numeric_567_N200_buckets1024": {
+    "iterations": 1800000,
+    "estimated_time": "minutes",
+    "rows": 45
+  },
+  "conclusion": "analytic formula is vastly more efficient than numerical integration"
+}

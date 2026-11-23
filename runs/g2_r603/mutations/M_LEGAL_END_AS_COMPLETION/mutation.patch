@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -33,7 +33,7 @@
+ 
+ def terminal(model, marking):
+     if marking in model['completion_markings']: return 'completed_first'
+-    if marking in model.get('legal_noncompletion_markings', []): return 'other_resolved'
++    if marking in model.get('legal_noncompletion_markings', []): return 'completed_first'
+     return None
+ 
+ 

@@ -1,0 +1,7 @@
+{
+  "category": "OK",
+  "bayes_error": "1/10",
+  "coverage": "1/2",
+  "coarsened_bayes_error": "1/10",
+  "coarsened_coverage": "1"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "total": 1620,
+  "unique": 1620,
+  "statuses": {
+    "GENERATED_STRUCTURE_PASS": 1620
+  },
+  "scope": "54 cells x 10 seeds x 3 WIP actual generation + structural validation; NOT four-implementation execution; NOT logic verdicts"
+}

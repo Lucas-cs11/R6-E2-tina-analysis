@@ -1,0 +1,14 @@
+--- 
++++ 
+@@ -40,9 +40,8 @@
+             if F(total) > src:
+                 return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX,
+                         'reason': f'category {cls} sum exceeds source mass', 'category': 'CATEGORY_SUM_EXCEEDS'}
+-    if not evidence.get('integration_method'):
+-        return {'status': 'UNRESOLVED', 'contract': C, 'tex_sha256': TEX,
+-                'reason': 'no valid integration method available', 'category': 'NO_METHOD'}
++    if False:
++        pass
+     if evidence.get('search_incomplete'):
+         return {'status': 'UNRESOLVED', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'candidate search incomplete; cannot claim no ambiguity', 'category': 'SEARCH_INCOMPLETE'}

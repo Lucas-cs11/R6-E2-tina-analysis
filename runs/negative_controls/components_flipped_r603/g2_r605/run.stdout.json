@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "phase_gate": "PROVISIONAL_R6_05_PARTIAL_NOT_PHASE_GATE",
+  "cases": 3,
+  "passed": 3,
+  "mutations": [
+    {
+      "mutation": "M_PRUNE_WHOLE_MIXED_CLASS",
+      "detected": true,
+      "observed": {
+        "compliant": false,
+        "violating": true,
+        "completion_witness_preserved": false
+      }
+    },
+    {
+      "mutation": "M_DROP_COMPLETION_WITNESS",
+      "detected": true,
+      "observed": {
+        "compliant": true,
+        "violating": true,
+        "completion_witness_preserved": false
+      }
+    }
+  ],
+  "not_covered": [
+    "general dimension polytope enumeration in independent oracle",
+    "general SCG construction"
+  ]
+}

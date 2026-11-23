@@ -1,0 +1,16 @@
+{
+  "analytic": {
+    "time_per_call": "0.000044s",
+    "method": "exact formula"
+  },
+  "numeric_slow": {
+    "time_per_call": "0.000951s",
+    "method": "python loops"
+  },
+  "numeric_fast": {
+    "time_per_call": "0.002113s",
+    "method": "numpy vectorized"
+  },
+  "speedup_fast_vs_slow": 0.4500733385986686,
+  "speedup_analytic_vs_fast": 47.90810810810811
+}

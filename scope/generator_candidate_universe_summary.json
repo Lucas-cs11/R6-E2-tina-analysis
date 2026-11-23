@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "total_candidates": 143360,
+  "valid_by_frozen_rule": 107520,
+  "invalid_by_frozen_rule": 35840,
+  "axis_sizes": {
+    "machine_counts": 7,
+    "part_type_counts": 5,
+    "operations_per_part": 4,
+    "wip_bounds": 4,
+    "unobservable_ratios": 4,
+    "fault_locations": 4,
+    "interval_width_factors": 4,
+    "adjustable_ratios": 4
+  },
+  "cartesian_product": 143360,
+  "paper_minimum_subdomain": 54,
+  "generator_sha256": "4ab74687b1593bd002f07b9b9af99259f822773db6ff060b732d2856fc3892fb",
+  "scope": "static pre-run rules only; actual generation status is a later phase"
+}

@@ -1,0 +1,29 @@
+{
+  "rows": 15,
+  "sample": [
+    {
+      "k": 0,
+      "a4": "3",
+      "weight": "W1",
+      "width_factor": 1.0,
+      "Pe": "0.125000",
+      "note": "Pe by numerical integration with X4~U[a4,5w]"
+    },
+    {
+      "k": 0,
+      "a4": "3",
+      "weight": "W1.5",
+      "width_factor": 1.5,
+      "Pe": "0.055556",
+      "note": "Pe by numerical integration with X4~U[a4,5w]"
+    },
+    {
+      "k": 0,
+      "a4": "3",
+      "weight": "W0.5",
+      "width_factor": 0.5,
+      "Pe": "-0.500000",
+      "note": "Pe by numerical integration with X4~U[a4,5w]"
+    }
+  ]
+}

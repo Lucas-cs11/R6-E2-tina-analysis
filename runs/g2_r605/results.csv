@@ -1,0 +1,4 @@
+test_id,expected,actual,compliant_witnesses,violating_witnesses,status,errors
+MIXED,"(True, True, True)","(True, True, True)",1,1,PASS,
+ALL_COMPLIANT,"(True, False, True)","(True, False, True)",1,0,PASS,
+ALL_VIOLATING,"(False, True, False)","(False, True, False)",0,1,PASS,

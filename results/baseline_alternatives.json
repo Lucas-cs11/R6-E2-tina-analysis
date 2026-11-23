@@ -1,0 +1,7 @@
+{
+  "tina": "download too slow, waiting for user manual download",
+  "tapaal": "no macOS binary found",
+  "python_packages": "externally-managed-environment, cannot install",
+  "brew": "no petri net tools in brew",
+  "conclusion": "external baselines NOT_AVAILABLE; only historical 52-model adapter validated"
+}

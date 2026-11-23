@@ -1,0 +1,29 @@
+{
+  "rows": 21,
+  "sample": [
+    {
+      "k": 0,
+      "a4": "3",
+      "Pe": "0.125000",
+      "Gamma": "0.000000",
+      "status": "NUMERIC_INTEGRATION",
+      "note": "Pe and Gamma by 2D numerical integration; validated against manual derivation at k=0,10,20"
+    },
+    {
+      "k": 10,
+      "a4": "3+10/20",
+      "Pe": "0.041667",
+      "Gamma": "0.000000",
+      "status": "NUMERIC_INTEGRATION",
+      "note": "Pe and Gamma by 2D numerical integration; validated against manual derivation at k=0,10,20"
+    },
+    {
+      "k": 20,
+      "a4": "3+20/20",
+      "Pe": "0.000000",
+      "Gamma": "0.000000",
+      "status": "NUMERIC_INTEGRATION",
+      "note": "Pe and Gamma by 2D numerical integration; validated against manual derivation at k=0,10,20"
+    }
+  ]
+}

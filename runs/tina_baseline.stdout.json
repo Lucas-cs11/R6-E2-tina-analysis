@@ -1,0 +1,4 @@
+{
+  "tested": 3,
+  "sample": "Tina version 4.0.0 -- 07/04/26 -- LAAS/CNRS\n\nmode -R\n\nINPUT NET ------------------------------------------------------- \n\nparsed net {}\n\n2 places, 1 transitions, 2 arcs\n\nnet {}\ntr t1 p1  -> p2 \npl p1 "
+}

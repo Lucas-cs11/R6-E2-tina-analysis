@@ -1,0 +1,13 @@
+{
+  "status": "COMPUTED",
+  "contract": "R6-E2-R6-03-PARTIAL",
+  "tex_sha256": "a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a",
+  "model_id": "R603_BUDGET_FRONTIER",
+  "leaves": [],
+  "termination_mass": {},
+  "resolved_mass": "0",
+  "frontier_mass": "0",
+  "mass_total": "0",
+  "H0_H1_partition": "not assessed without fault window",
+  "invariant": "resolved_mass + frontier_mass == 1"
+}

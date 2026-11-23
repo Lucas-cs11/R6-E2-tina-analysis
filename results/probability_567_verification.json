@@ -1,0 +1,149 @@
+[
+  {
+    "k": 0,
+    "a4": "3",
+    "analytic": "1/8",
+    "numeric": "47/400",
+    "match": false
+  },
+  {
+    "k": 1,
+    "a4": "61/20",
+    "analytic": "361/3120",
+    "numeric": "54231/500000",
+    "match": false
+  },
+  {
+    "k": 2,
+    "a4": "31/10",
+    "analytic": "81/760",
+    "numeric": "99539/1000000",
+    "match": false
+  },
+  {
+    "k": 3,
+    "a4": "63/20",
+    "analytic": "289/2960",
+    "numeric": "90743/1000000",
+    "match": false
+  },
+  {
+    "k": 4,
+    "a4": "16/5",
+    "analytic": "4/45",
+    "numeric": "82083/1000000",
+    "match": false
+  },
+  {
+    "k": 5,
+    "a4": "13/4",
+    "analytic": "9/112",
+    "numeric": "73571/1000000",
+    "match": false
+  },
+  {
+    "k": 6,
+    "a4": "33/10",
+    "analytic": "49/680",
+    "numeric": "13147/200000",
+    "match": false
+  },
+  {
+    "k": 7,
+    "a4": "67/20",
+    "analytic": "169/2640",
+    "numeric": "29053/500000",
+    "match": false
+  },
+  {
+    "k": 8,
+    "a4": "17/5",
+    "analytic": "9/160",
+    "numeric": "50703/1000000",
+    "match": false
+  },
+  {
+    "k": 9,
+    "a4": "69/20",
+    "analytic": "121/2480",
+    "numeric": "10887/250000",
+    "match": false
+  },
+  {
+    "k": 10,
+    "a4": "7/2",
+    "analytic": "1/24",
+    "numeric": "36667/1000000",
+    "match": false
+  },
+  {
+    "k": 11,
+    "a4": "71/20",
+    "analytic": "81/2320",
+    "numeric": "6069/200000",
+    "match": false
+  },
+  {
+    "k": 12,
+    "a4": "18/5",
+    "analytic": "1/35",
+    "numeric": "39/1600",
+    "match": false
+  },
+  {
+    "k": 13,
+    "a4": "73/20",
+    "analytic": "49/2160",
+    "numeric": "4699/250000",
+    "match": false
+  },
+  {
+    "k": 14,
+    "a4": "37/10",
+    "analytic": "9/520",
+    "numeric": "6827/500000",
+    "match": false
+  },
+  {
+    "k": 15,
+    "a4": "15/4",
+    "analytic": "1/80",
+    "numeric": "9/1000",
+    "match": false
+  },
+  {
+    "k": 16,
+    "a4": "19/5",
+    "analytic": "1/120",
+    "numeric": "9/1600",
+    "match": false
+  },
+  {
+    "k": 17,
+    "a4": "77/20",
+    "analytic": "9/1840",
+    "numeric": "587/200000",
+    "match": false
+  },
+  {
+    "k": 18,
+    "a4": "39/10",
+    "analytic": "1/440",
+    "numeric": "1023/1000000",
+    "match": false
+  },
+  {
+    "k": 19,
+    "a4": "79/20",
+    "analytic": "1/1680",
+    "numeric": "0",
+    "match": true
+  },
+  {
+    "k": 20,
+    "a4": "4",
+    "analytic": "0",
+    "numeric": "0",
+    "match": true
+  }
+]

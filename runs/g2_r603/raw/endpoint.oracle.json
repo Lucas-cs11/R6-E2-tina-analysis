@@ -1,0 +1,191 @@
+{
+  "status": "ORACLE_COMPUTED",
+  "contract": "R6-E2-R6-03-PARTIAL",
+  "tex_sha256": "a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a",
+  "model_id": "R603_ENDPOINT_DUE_BEFORE_TRUNCATION",
+  "leaves": [
+    {
+      "history": [
+        "choose_c",
+        "c_fire"
+      ],
+      "termination": "completed_first",
+      "mass": "1/5",
+      "time": "1",
+      "observations": [
+        "c",
+        "done"
+      ],
+      "first_completion": "1",
+      "sample_termination": true,
+      "fire_records": [
+        {
+          "transition": "choose_c",
+          "M_minus": {},
+          "M_next": {
+            "work_c": 1
+          },
+          "time": "0",
+          "mass": "1/5"
+        },
+        {
+          "transition": "c_fire",
+          "M_minus": {},
+          "M_next": {
+            "complete": 1
+          },
+          "time": "1",
+          "mass": "1/5"
+        }
+      ]
+    },
+    {
+      "history": [
+        "choose_e",
+        "e_fire"
+      ],
+      "termination": "other_resolved",
+      "mass": "1/5",
+      "time": "1",
+      "observations": [
+        "e",
+        "legal_end"
+      ],
+      "first_completion": null,
+      "sample_termination": true,
+      "fire_records": [
+        {
+          "transition": "choose_e",
+          "M_minus": {},
+          "M_next": {
+            "work_e": 1
+          },
+          "time": "0",
+          "mass": "1/5"
+        },
+        {
+          "transition": "e_fire",
+          "M_minus": {},
+          "M_next": {
+            "legal_end": 1
+          },
+          "time": "1",
+          "mass": "1/5"
+        }
+      ]
+    },
+    {
+      "history": [
+        "choose_d"
+      ],
+      "termination": "unfinished_deadlock",
+      "mass": "1/5",
+      "time": "0",
+      "observations": [],
+      "first_completion": null,
+      "sample_termination": true,
+      "fire_records": [
+        {
+          "transition": "choose_d",
+          "M_minus": {},
+          "M_next": {
+            "work_d": 1
+          },
+          "time": "0",
+          "mass": "1/5"
+        }
+      ]
+    },
+    {
+      "history": [
+        "choose_h",
+        "h_fire"
+      ],
+      "termination": "completed_first",
+      "mass": "1/5",
+      "time": "1",
+      "observations": [
+        "h",
+        "done"
+      ],
+      "first_completion": "1",
+      "sample_termination": true,
+      "fire_records": [
+        {
+          "transition": "choose_h",
+          "M_minus": {},
+          "M_next": {
+            "work_h": 1
+          },
+          "time": "0",
+          "mass": "1/5"
+        },
+        {
+          "transition": "h_fire",
+          "M_minus": {},
+          "M_next": {
+            "complete": 1
+          },
+          "time": "1",
+          "mass": "1/5"
+        }
+      ]
+    },
+    {
+      "history": [
+        "choose_budget",
+        "budget_prepare",
+        "budget_fire"
+      ],
+      "termination": "completed_first",
+      "mass": "1/5",
+      "time": "1",
+      "observations": [
+        "prepare",
+        "b",
+        "done"
+      ],
+      "first_completion": "1",
+      "sample_termination": true,
+      "fire_records": [
+        {
+          "transition": "choose_budget",
+          "M_minus": {},
+          "M_next": {
+            "work_budget": 1
+          },
+          "time": "0",
+          "mass": "1/5"
+        },
+        {
+          "transition": "budget_prepare",
+          "M_minus": {},
+          "M_next": {
+            "work_budget2": 1
+          },
+          "time": "0",
+          "mass": "1/5"
+        },
+        {
+          "transition": "budget_fire",
+          "M_minus": {},
+          "M_next": {
+            "complete": 1
+          },
+          "time": "1",
+          "mass": "1/5"
+        }
+      ]
+    }
+  ],
+  "termination_mass": {
+    "completed_first": "3/5",
+    "other_resolved": "1/5",
+    "unfinished_deadlock": "1/5",
+    "unresolved_frontier": "0",
+    "horizon_incomplete": "0"
+  },
+  "resolved_mass": "1",
+  "frontier_mass": "0",
+  "mass_total": "1"
+}

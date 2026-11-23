@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -11,7 +11,7 @@
+     if evidence.get('model_input_invalid'):
+         return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'model parameter violates declared domain', 'category': 'MODEL_INPUT_INVALID'}
+-    if not evidence.get('certified_interval'):
++    if False:
+         return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'interval lacks certified source', 'category': 'UNCERTIFIED_INTERVAL'}
+     q = {k: (F(v[0]), F(v[1])) for k, v in evidence['q_intervals'].items()}

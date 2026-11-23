@@ -1,0 +1,51 @@
+{
+  "status": "FAIL",
+  "phase_gate": "PROVISIONAL_R6_03_PARTIAL_NOT_PHASE_GATE",
+  "cases": 3,
+  "passed": 0,
+  "mutations": [
+    {
+      "mutation": "M_DROP_DEADLOCK_FRONTIER_RENORMALIZE",
+      "detected": true,
+      "errors": [
+        "leaves",
+        "termination_mass",
+        "resolved_mass",
+        "frontier_mass",
+        "mass_total",
+        "mass_total_not_one"
+      ],
+      "observed_termination_mass": {},
+      "observed_mass_total": "0"
+    },
+    {
+      "mutation": "M_LEGAL_END_AS_COMPLETION",
+      "detected": false,
+      "errors": [],
+      "observed_termination_mass": {
+        "unresolved_frontier": "4/5",
+        "unfinished_deadlock": "1/5"
+      },
+      "observed_mass_total": "1"
+    },
+    {
+      "mutation": "M_TRUNCATE_BEFORE_DUE",
+      "detected": true,
+      "errors": [
+        "leaves",
+        "termination_mass"
+      ],
+      "observed_termination_mass": {
+        "horizon_incomplete": "4/5",
+        "unfinished_deadlock": "1/5"
+      },
+      "observed_mass_total": "1"
+    }
+  ],
+  "supported_domain": "finite exclusive immediate roots and one fixed-delay enabled timed transition per branch",
+  "not_covered": [
+    "general continuous propagation",
+    "H0/H1 fault-window split",
+    "unbounded immediate closure"
+  ]
+}

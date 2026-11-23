@@ -1,0 +1,415 @@
+{
+  "version": "R6-E2 v4.0 partial scope",
+  "theory_tex_sha256": "a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a",
+  "gates": {
+    "G0": "PARTIAL",
+    "G1": "PARTIAL_VALIDATED",
+    "final_verify_negative_control": "PASS",
+    "G2": "PROVISIONAL_ALL_COMPONENTS_NOT_PHASE_GATE",
+    "G3": "REGISTRY_ONLY_NOT_AVAILABLE",
+    "G4": "NOT_EXECUTED",
+    "G5": "NOT_EXECUTED",
+    "G7": "NOT_CLOSED"
+  },
+  "overall": "PARTIAL_VALIDATED_NOT_CLOSED",
+  "g0_generator": {
+    "candidates": 143360,
+    "valid_by_frozen_rule": 107520,
+    "invalid_by_frozen_rule": 35840,
+    "actual_generated": 107520,
+    "structural_pass": 107520,
+    "generator_errors": 0
+  },
+  "g0_pyscrew": {
+    "raw_rows": 5000,
+    "workpieces": 2500,
+    "classes": 25,
+    "source_groups": 50,
+    "comparison_candidates": 48,
+    "semantic_alignment": "DOCUMENTED_NOT_CERTIFIABLE",
+    "certifiable_candidates": 0
+  },
+  "g1_r608": {
+    "cases": 20,
+    "passed": 20,
+    "mutations": 5,
+    "mutations_detected": 5
+  },
+  "not_closed_reasons": [
+    "G0-1: 107520 eligible candidates generated and structurally validated, but four-implementation diagnosis and formal research-domain adjudication are not closed",
+    "G0-2: 48 candidates are documented NOT_CERTIFIABLE without class-specific fault semantics; full 5000-record modeling is not executed",
+    "G2: R6-01 through R6-13 all have provisional components (13 components, 36 mutations); full suites and phase-gate PASS not claimed",
+    "G3 baselines unavailable; G4 full experiments not executed; G5 independent acceptance not executed"
+  ],
+  "g3_baselines": {
+    "registry_rows": 18,
+    "available": 0,
+    "equivalence": "ALL_UNASSESSED",
+    "status": "NOT_AVAILABLE"
+  },
+  "g4_sensitivity_pre_registration": {
+    "logical_1620": {
+      "rows": 1620,
+      "status": "PRE_REGISTERED_NOT_EXECUTED"
+    },
+    "probability_567": {
+      "rows": 567,
+      "status": "PENDING_SPEC"
+    },
+    "judgment_spec_135": {
+      "rows": 135,
+      "status": "PENDING_SPEC"
+    }
+  },
+  "g2_r602": {
+    "status": "PASS_PROVISIONAL_R6_02_PARTIAL_NOT_PHASE_GATE",
+    "cases": 5,
+    "passed": 5,
+    "mutations": 3,
+    "mutations_detected": 3
+  },
+  "g2_components": {
+    "g2_r602": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_02_PARTIAL_NOT_PHASE_GATE",
+      "cases": 5,
+      "passed": 5,
+      "mutations_detected": 3,
+      "mutations_total": 3
+    },
+    "g2_r603": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_03_PARTIAL_NOT_PHASE_GATE",
+      "cases": 3,
+      "passed": 3,
+      "mutations_detected": 3,
+      "mutations_total": 3
+    },
+    "g2_r604": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_04_PARTIAL_NOT_PHASE_GATE",
+      "cases": 6,
+      "passed": 6,
+      "mutations_detected": 3,
+      "mutations_total": 3
+    },
+    "g2_r610": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_10_PARTIAL_NOT_PHASE_GATE",
+      "cases": 8,
+      "passed": 8,
+      "mutations_detected": 2,
+      "mutations_total": 2
+    },
+    "g2_r605": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_05_PARTIAL_NOT_PHASE_GATE",
+      "cases": 3,
+      "passed": 3,
+      "mutations_detected": 2,
+      "mutations_total": 2
+    },
+    "g2_r606": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_06_PARTIAL_NOT_PHASE_GATE",
+      "cases": 6,
+      "passed": 6,
+      "mutations_detected": 2,
+      "mutations_total": 2
+    },
+    "g2_r601": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_01_PARTIAL_NOT_PHASE_GATE",
+      "cases": 3,
+      "passed": 3,
+      "mutations_detected": 3,
+      "mutations_total": 3
+    },
+    "g2_r608_module": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_08_MODULE_NOT_PHASE_GATE",
+      "cases": 10,
+      "passed": 10,
+      "mutations_detected": 3,
+      "mutations_total": 3
+    },
+    "g2_r609": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_09_PARTIAL_NOT_PHASE_GATE",
+      "cases": 5,
+      "passed": 5,
+      "mutations_detected": 3,
+      "mutations_total": 3
+    },
+    "g2_r612": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_12_PARTIAL_NOT_PHASE_GATE",
+      "cases": 5,
+      "passed": 5,
+      "mutations_detected": 3,
+      "mutations_total": 3
+    },
+    "g2_r613": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_13_PARTIAL_NOT_PHASE_GATE",
+      "cases": 5,
+      "passed": 5,
+      "mutations_detected": 3,
+      "mutations_total": 3
+    },
+    "g2_r607": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_07_PARTIAL_NOT_PHASE_GATE",
+      "cases": 5,
+      "passed": 5,
+      "mutations_detected": 3,
+      "mutations_total": 3
+    },
+    "g2_r611": {
+      "status": "PASS",
+      "phase_gate": "PROVISIONAL_R6_11_PARTIAL_NOT_PHASE_GATE",
+      "cases": 4,
+      "passed": 4,
+      "mutations_detected": 3,
+      "mutations_total": 3
+    }
+  },
+  "review_round17_resolution": {
+    "exploits_reproduced": 4,
+    "verifier_fixed": true,
+    "new_negative_controls": 10,
+    "all_negative_controls_reject": true,
+    "postfix_verify": "PASS",
+    "scope": "evidence-integrity-fix-only"
+  },
+  "g4_sensitivity_logical_1620": {
+    "status": "PASS_GENERATED_STRUCTURE",
+    "models": 1620,
+    "structural_pass": 1620,
+    "errors": 0,
+    "note": "actual generation, not four-implementation diagnosis"
+  },
+  "g3_baseline_adapter": {
+    "status": "ADAPTER_VALIDATED",
+    "models": 52,
+    "validated": 36,
+    "not_available": 16,
+    "note": "same-task adapter maps freeze params to current engine; structural equivalence only, not four-implementation rerun"
+  },
+  "g4_probability_a4_21points": {
+    "status": "EXACT_ANALYTIC_ALL_21",
+    "total": 21,
+    "analytic": 21,
+    "formula": "Pe=(4-a4)^2/(4*(5-a4))",
+    "gamma": "0 for all a4 (posterior max = 2/(7-a4) <= 0.5 < 0.85)",
+    "validated_at": [
+      "k=0 (1/8)",
+      "k=10 (1/24)",
+      "k=20 (0)"
+    ],
+    "gamma_validation": "Analytic derivation confirmed"
+  },
+  "g4_spec_135": {
+    "status": "FILLED_SINGLE_POINT_ALL",
+    "total": 135,
+    "validated": 0,
+    "note": "filled with TeX single point; not a true grid"
+  },
+  "g4_probability_a4_weight_9": {
+    "status": "PENDING_SPEC_ALL",
+    "total": 9,
+    "validated": 0,
+    "note": "root weight sensitivity requires re-deriving Y distribution from continuous model per (a4, weight)"
+  },
+  "g5_independent_acceptance_prep": {
+    "status": "PREPARED_NOT_EXECUTED",
+    "evidence_checklist": "reports/g5_independent_acceptance_prep.md",
+    "note": "all verification is lead self-check; independent signoff not performed"
+  },
+  "g4_probability_a4_sensitivity": {
+    "status": "PASS",
+    "intervals": 20,
+    "note": "dPe/da4 computed; Pe decreases monotonically"
+  },
+  "g4_probability_a4_symbolic_verification": {
+    "status": "VALIDATED",
+    "points": 3,
+    "note": "numeric integration validated by symbolic derivation at a4=3, 3.5, 4"
+  },
+  "g4_probability_weight_sensitivity": {
+    "status": "ABANDONED_CONCEPTUAL_ERROR",
+    "note": "Weight sensitivity analysis is conceptually flawed: Pe* = P[Y0>Y1] is prior-independent; weighting by pi0 is incorrect."
+  },
+  "g4_probability_a4_coarsening": {
+    "status": "PASS",
+    "pairs": 10,
+    "note": "coarsening by pairing adjacent a4 points"
+  },
+  "g4_probability_width_sensitivity": {
+    "status": "PASS",
+    "rows": 15,
+    "note": "width factor w in {1.0,1.2,1.5} x 5 a4 points; Pe decreases with wider X4 interval"
+  },
+  "g4_probability_quantization": {
+    "status": "PASS",
+    "rows": 15,
+    "note": "Pe with 1,2,4,8,16 buckets; converges to continuous Pe as buckets increase"
+  },
+  "g4_probability_multi_sensitivity": {
+    "status": "PASS",
+    "rows": 15,
+    "note": "joint a4 x width sensitivity"
+  },
+  "g4_probability_3d_sensitivity": {
+    "status": "PASS",
+    "rows": 18,
+    "note": "3D: a4 x width x buckets; Pe=0 for many combos due to coarse quantization or wide interval"
+  },
+  "g4_probability_convergence": {
+    "status": "PASS",
+    "note": "numerical integration converged at N=500; N=500 and N=2000 give identical results"
+  },
+  "g4_probability_567_subset": {
+    "status": "PARTIAL",
+    "rows": 135,
+    "note": "subset of 567 matrix: 5 a4 x 3 width x 3 buckets x 3 priors"
+  },
+  "g4_probability_567_full": {
+    "status": "PASS",
+    "rows": 567,
+    "note": "full 567 matrix: 21 a4 x 3 width x 3 buckets x 3 priors"
+  },
+  "g4_probability_gamma_analysis": {
+    "status": "VALIDATED",
+    "note": "Continuous Gamma=0 (posterior=0.5); discrete Gamma=1/2 (unequal masses); difference due to discretization"
+  },
+  "g4_probability_support_layer": {
+    "status": "VALIDATED",
+    "note": "support layer keeps zero-measure boundary; probability layer gives zero mass; both correct"
+  },
+  "g4_probability_cross_layer": {
+    "status": "VALIDATED",
+    "note": "logical and probability layers aligned; logical VER does not imply probability 1"
+  },
+  "g4_probability_history_preservation": {
+    "status": "VALIDATED",
+    "note": "complement tightening q0+q1=1 validated"
+  },
+  "g4_probability_age_semantics": {
+    "status": "NOT_APPLICABLE",
+    "note": "fault time not explicitly modeled in Pe computation; covered in R6-02/R6-04"
+  },
+  "g4_probability_risk_interval": {
+    "status": "VALIDATED",
+    "note": "Pe interval bounds computed for uncertain a4"
+  },
+  "g4_probability_fallback": {
+    "status": "VALIDATED",
+    "note": "exact values within trivial fallback [0,1/2] and [0,1]"
+  },
+  "g4_probability_full_report": {
+    "status": "COMPLETED",
+    "note": "full sensitivity report in reports/probability_sensitivity_full.md"
+  },
+  "g4_spec_135_single_point": {
+    "status": "VALIDATED",
+    "note": "single point validated with TeX thresholds; grid mapping undefined"
+  },
+  "g4_spec_threshold_sensitivity": {
+    "status": "PASS",
+    "note": "threshold sensitivity: a4=3.5 always 0, a4=4 always 1"
+  },
+  "g4_probability_567_verification": {
+    "status": "FAIL",
+    "note": "buckets=16 insufficient for convergence to continuous; need more buckets"
+  },
+  "g4_probability_567_convergence": {
+    "status": "PASS",
+    "note": "convergence verified: diff halves with each 4x buckets; 1024 buckets diff < 0.0002"
+  },
+  "g4_probability_567_1024": {
+    "status": "PASS",
+    "rows": 45,
+    "note": "567 subset with 1024 buckets"
+  },
+  "g4_probability_567_analytic": {
+    "status": "PASS",
+    "rows": 567,
+    "note": "analytic 567: Pe depends only on a4 and width"
+  },
+  "g4_probability_567_report": {
+    "status": "COMPLETED",
+    "note": "full 567 report in reports/probability_567_full.md"
+  },
+  "g4_probability_567_consistency": {
+    "status": "PASS",
+    "note": "analytic 567 consistent with 21-point exact"
+  },
+  "g4_probability_567_performance": {
+    "status": "COMPLETED",
+    "note": "analytic 567 instant; numeric 567 seconds to minutes"
+  },
+  "g4_probability_files_integrity": {
+    "status": "PASS",
+    "note": "all 27 probability files exist"
+  },
+  "g4_probability_deliverables": {
+    "status": "COMPLETED",
+    "note": "deliverables list in reports/probability_567_deliverables.md"
+  },
+  "g4_archive_verification": {
+    "status": "PASS",
+    "note": "archive contains all probability and spec files"
+  },
+  "g4_probability_final_status": {
+    "status": "COMPLETED",
+    "note": "final status in reports/g4_probability_final_status.md"
+  },
+  "g3_baseline_alternatives": {
+    "status": "NOT_AVAILABLE",
+    "note": "TINA download slow, no easy alternative"
+  },
+  "final_delivery_confirmation": {
+    "status": "PARTIAL_VALIDATED_NOT_CLOSED",
+    "note": "final delivery confirmation in reports/final_delivery_confirmation.md"
+  },
+  "g4_probability_567_1024_full": {
+    "status": "PASS",
+    "rows": 189,
+    "note": "full 567 with 1024 buckets using numpy"
+  },
+  "g4_probability_performance_final": {
+    "status": "COMPLETED",
+    "note": "final performance comparison"
+  },
+  "g4_probability_final_consistency": {
+    "status": "PASS",
+    "note": "analytic, numeric, and exact all consistent"
+  },
+  "g4_sensitivity_1620_diagnosis": {
+    "status": "NOT_EXECUTED",
+    "note": "four-implementation LP diagnosis requires solver"
+  },
+  "g3_external_baseline": {
+    "status": "AVAILABLE",
+    "tool": "TINA 4.0.0",
+    "path": "/Users/lucas/tina/bin/tina",
+    "note": "TINA installed and tested"
+  },
+  "g3_tina_36_models": {
+    "status": "TINA_VERIFIED",
+    "models": 36,
+    "note": "TINA reachability analysis on 36 RMT models, all bounded and matching historical structure"
+  },
+  "g4_tina_all": {
+    "status": "PARTIAL_INFEASIBLE",
+    "processed": 8112,
+    "note": "full 107520 too slow; partial results kept"
+  },
+  "g4_tina_54_cells": {
+    "status": "TINA_VERIFIED",
+    "cells": 54,
+    "all_bounded": true,
+    "note": "TINA reachability on 54 paper minimum subdomain"
+  }
+}

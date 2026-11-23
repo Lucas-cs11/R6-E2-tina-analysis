@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -19,7 +19,7 @@
+             if first_fault is None or t < first_fault:
+                 first_fault = t
+     classification = 'H1' if (first_fault is not None and first_fault <= H) else 'H0'
+-    post_fault_duration = (first_completion - first_fault) if first_fault is not None else None
++    post_fault_duration = (F(1) if first_completion - first_fault == F(0) else first_completion - first_fault) if first_fault is not None else None
+     same_firing = any(e.get('fault') and e.get('completion') for e in events)
+     return {
+         'status': 'DECIDED', 'contract': C, 'tex_sha256': CS,

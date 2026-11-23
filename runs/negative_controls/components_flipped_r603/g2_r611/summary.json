@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "phase_gate": "PROVISIONAL_R6_11_PARTIAL_NOT_PHASE_GATE",
+  "cases": 4,
+  "passed": 4,
+  "mutations": [
+    {
+      "mutation": "M_BAYES_MAX",
+      "target": "FINE_UNRELIABLE",
+      "detected": true
+    },
+    {
+      "mutation": "M_COVERAGE_WRONG_POSTERIOR",
+      "target": "FINE_RELIABLE",
+      "detected": true
+    },
+    {
+      "mutation": "M_COARSEN_MAP_WRONG",
+      "target": "COARSENING_B",
+      "detected": true
+    }
+  ],
+  "not_covered": [
+    "continuous distributions",
+    "full R6-11 suite"
+  ]
+}

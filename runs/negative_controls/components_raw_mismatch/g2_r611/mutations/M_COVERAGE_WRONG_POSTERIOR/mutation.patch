@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -18,7 +18,7 @@
+         p0, p1 = pi0 * F(d0.get(k, '0')), pi1 * F(d1.get(k, '0'))
+         s = p0 + p1
+         if s == 0: continue
+-        post = max(p0, p1) / s
++        post = min(p0, p1) / s
+         if post >= 1 - delta: total += s
+     return total
+ 

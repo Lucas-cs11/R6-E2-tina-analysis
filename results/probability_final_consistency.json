@@ -1,0 +1,9 @@
+{
+  "consistent": true,
+  "issues": [],
+  "checked": {
+    "analytic_vs_exact": 21,
+    "numeric_vs_analytic": 5
+  },
+  "conclusion": "all methods consistent"
+}

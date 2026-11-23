@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -40,8 +40,6 @@
+     if witnesses:
+         verdict = '0'
+     else:
+-        # Absence of a witness is not proved by a self-declared boolean flag.
+-        # This component only decides positive ambiguity from concrete paths.
+-        verdict = 'PERP'
++        verdict = '1'
+     return {'status': 'DECIDED' if verdict != 'PERP' else 'UNRESOLVED', 'contract': C,
+             'tex_sha256': TEX, 'verdict': verdict, 'witnesses': witnesses}

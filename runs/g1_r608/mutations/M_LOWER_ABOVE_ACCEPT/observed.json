@@ -1,0 +1,16 @@
+{
+  "status": "DECIDED",
+  "contract": "AP41-R6-E1-R6-08-PROVISIONAL",
+  "contract_sha256": "e0f38ecac74cd250e53a7618193089d33063a405f933b750e052b4166eaa9c8b",
+  "tex_sha256": "a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a",
+  "a_P": "1",
+  "v_P": "1",
+  "branch": "ALL_POSITIVE_CONDITIONS_CERTIFIED",
+  "E_P": [
+    "COMPLETE_SUPPORT_CHECK",
+    "PE_UPPER_AT_MOST_EPSILON",
+    "GAMMA_LOWER_AT_LEAST_THRESHOLD"
+  ],
+  "U_P": [],
+  "reasons": []
+}

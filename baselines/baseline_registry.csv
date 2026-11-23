@@ -1,0 +1,19 @@
+id,category,description,artifact_status,same_task_equivalence,evidence,note
+L-01,LOGICAL,L-01 Sampath 1995 DES Diagnoser,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+L-02,LOGICAL,L-02 Cabasino et al 2012 Verifier Net,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+L-03,LOGICAL,L-03 Cabasino/Giua/Seatzu 2014 MBRG/BRD,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+L-04,LOGICAL,L-04 Basile/Cabasino/Seatzu 2017 MSCG+LP,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+L-05,LOGICAL,L-05 Lubat TWINA / Product Timed PN,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+L-06,LOGICAL,L-06 TINA state-class/monitor net,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+L-07,LOGICAL,L-07 full-history no-pruning + independent coupled LP,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+L-08,LOGICAL,L-08 this main method,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+L-09,LOGICAL,L-09 this no-sync ablation,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+L-10,LOGICAL,L-10 this no-envelope ablation,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+P-01,PROBABILITY,P-01 finite rational event tree + exact polytope integral,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+P-02,PROBABILITY,P-02 Vicario/Sassoli/Carnevali 2009 stochastic state class density,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+P-03,PROBABILITY,P-03 ORIS/Sirio,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+P-04,PROBABILITY,P-04 2022 labeled stochastic PN fault-pattern diagnosability,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+P-05,PROBABILITY,P-05 PRISM CTMC/DTMC,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+P-06,PROBABILITY,P-06 independent event-driven MC/SMC,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+P-07,PROBABILITY,P-07 intentional semantic-fault ablation,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance
+P-08,PROBABILITY,P-08 logistic regression/random forest/HGBT,NOT_AVAILABLE,UNASSESSED,NONE_IN_WORKSPACE,no runnable implementation/version/license artifact available; cannot compare performance

@@ -1,0 +1,16 @@
+k,a4,width,Pe,note
+0,3,1.0,0.125000,joint a4-width sensitivity
+0,3,1.2,0.083333,joint a4-width sensitivity
+0,3,1.5,0.055556,joint a4-width sensitivity
+5,3+5/20,1.0,0.080357,joint a4-width sensitivity
+5,3+5/20,1.2,0.051136,joint a4-width sensitivity
+5,3+5/20,1.5,0.033088,joint a4-width sensitivity
+10,3+10/20,1.0,0.041667,joint a4-width sensitivity
+10,3+10/20,1.2,0.025000,joint a4-width sensitivity
+10,3+10/20,1.5,0.015625,joint a4-width sensitivity
+15,3+15/20,1.0,0.012499,joint a4-width sensitivity
+15,3+15/20,1.2,0.006944,joint a4-width sensitivity
+15,3+15/20,1.5,0.004166,joint a4-width sensitivity
+20,3+20/20,1.0,0.000000,joint a4-width sensitivity
+20,3+20/20,1.2,0.000000,joint a4-width sensitivity
+20,3+20/20,1.5,0.000000,joint a4-width sensitivity

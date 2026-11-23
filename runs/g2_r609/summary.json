@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "phase_gate": "PROVISIONAL_R6_09_PARTIAL_NOT_PHASE_GATE",
+  "cases": 5,
+  "passed": 5,
+  "mutations": [
+    {
+      "mutation": "M_SKIP_ZERO_CHECK",
+      "target": "ZERO_LIKELIHOOD",
+      "detected": true,
+      "observed": "EXCEPTION",
+      "expected": "ZERO_LIKELIHOOD"
+    },
+    {
+      "mutation": "M_ACCEPT_BAD_PRIOR",
+      "target": "NORMALIZATION_MISMATCH",
+      "detected": true,
+      "observed": "OK",
+      "expected": "NORMALIZATION_MISMATCH"
+    },
+    {
+      "mutation": "M_IGNORE_EVIDENCE_BOUND",
+      "target": "EVIDENCE_BELOW_BOUND",
+      "detected": true,
+      "observed": "OK",
+      "expected": "EVIDENCE_BELOW_BOUND"
+    }
+  ],
+  "not_covered": [
+    "continuous emission",
+    "full R6-09 suite",
+    "general Bayes with continuous support"
+  ]
+}

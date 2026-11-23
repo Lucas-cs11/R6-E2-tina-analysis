@@ -1,0 +1,18 @@
+{
+  "a4_3": {
+    "logical": "VER (support [3,4])",
+    "probability": "0 (Pe=1/8<=0.13, Gamma=0<0.8)",
+    "aligned": true
+  },
+  "a4_3.5": {
+    "logical": "VER (support [3.5,4])",
+    "probability": "0 (Pe=1/24<=0.13, Gamma=0<0.8)",
+    "aligned": true
+  },
+  "a4_4": {
+    "logical": "VER (support {4})",
+    "probability": "1 (Pe=0<=0.13, Gamma=1>=0.8)",
+    "aligned": true
+  },
+  "conclusion": "Logical and probability layers are aligned; logical VER does not imply probability 1"
+}

@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -15,7 +15,7 @@
+     if len(true_events) != len(observed):
+         return {'status': 'UNRESOLVED', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'event count mismatch under delay', 'category': 'COUNT_MISMATCH'}
+-    shifted = [t + delay for t in true_events]
++    shifted = [t + abs(delay) for t in true_events]
+     if shifted != observed:
+         return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX,
+                 'reason': 'observed times do not match true times + delay', 'category': 'DELAY_MISMATCH'}

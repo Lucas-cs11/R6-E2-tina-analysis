@@ -1,0 +1,24 @@
+{
+  "thresholds": {
+    "pi0": "1/2",
+    "pi1": "1/2",
+    "epsilon": "0.13",
+    "delta": "0.15",
+    "gamma": "0.8"
+  },
+  "a4_3.5": {
+    "Pe": "1/24",
+    "Pe<=0.13": true,
+    "Gamma": "0",
+    "Gamma>=0.8": false,
+    "verdict": "0"
+  },
+  "a4_4": {
+    "Pe": "0",
+    "Pe<=0.13": true,
+    "Gamma": "1",
+    "Gamma>=0.8": true,
+    "verdict": "1"
+  },
+  "note": "single point validated; grid level mapping undefined"
+}

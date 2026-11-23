@@ -1,0 +1,5 @@
+test_id,subject_bayes,oracle_bayes,subject_coverage,oracle_coverage,coarse_bayes,coarse_coverage,status,errors
+FINE_UNRELIABLE,1/10,1/10,1,1,1/10,1,PASS,
+FINE_RELIABLE,1/10,1/10,1,1,1/10,1,PASS,
+COARSENING_A,1/10,1/10,1,1,1/2,0,PASS,
+COARSENING_B,1/10,1/10,1/2,1/2,1/10,1,PASS,

@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -51,6 +51,7 @@
+ 
+ 
+ def distinguish(model):
++    model['edges'] = [e for e in model['edges'] if not e.get('urgent')]
+     states = closure(model)
+     eq = {(a[0], str(a[1]), b[0], str(b[1])) for a in states for b in states if trace_record(model, a) == trace_record(model, b) and a[0] == b[0]}
+     pairs = [f'{a[0]}@{a[1]}~{a[2]}@{a[3]}' for a in sorted(eq)]

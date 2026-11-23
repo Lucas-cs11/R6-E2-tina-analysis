@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r609.py", line 72, in <module>
+    mutate('M_SKIP_ZERO_CHECK', 'ZERO_LIKELIHOOD',
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           "    if total == 0:",
+           ^^^^^^^^^^^^^^^^^^^^^
+           "    if False:"),
+           ^^^^^^^^^^^^^^^^
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r609.py", line 64, in mutate
+    got = mod.posterior(copy.deepcopy(data)); ref = oracle.posterior(copy.deepcopy(data))
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/runs/g2_r609/mutations/M_SKIP_ZERO_CHECK/r609.py", line 27, in posterior
+    post0 = like['H0'] * prior0 / total
+            ~~~~~~~~~~~~~~~~~~~~^~~~~~~
+  File "/opt/homebrew/Cellar/python@3.15/3.15.2/Frameworks/Python.framework/Versions/3.15/lib/python3.15/fractions.py", line 699, in forward
+    return monomorphic_operator(a, b)
+  File "/opt/homebrew/Cellar/python@3.15/3.15.2/Frameworks/Python.framework/Versions/3.15/lib/python3.15/fractions.py", line 847, in _div
+    raise ZeroDivisionError('Fraction(%s, 0)' % db)
+ZeroDivisionError: Fraction(1, 0)

@@ -1,0 +1,173 @@
+{
+  "schema": "FINITE_DETERMINISTIC_TPN_V1",
+  "id": "R603_FIVE_OUTCOMES",
+  "places": [
+    "root",
+    "work_c",
+    "work_e",
+    "work_d",
+    "work_h",
+    "work_budget",
+    "work_budget2",
+    "complete",
+    "legal_end"
+  ],
+  "initial_marking": {
+    "root": 1
+  },
+  "transitions": [
+    {
+      "id": "choose_c",
+      "kind": "immediate",
+      "pre": {
+        "root": 1
+      },
+      "post": {
+        "work_c": 1
+      },
+      "weight": "1",
+      "label": null
+    },
+    {
+      "id": "choose_e",
+      "kind": "immediate",
+      "pre": {
+        "root": 1
+      },
+      "post": {
+        "work_e": 1
+      },
+      "weight": "1",
+      "label": null
+    },
+    {
+      "id": "choose_d",
+      "kind": "immediate",
+      "pre": {
+        "root": 1
+      },
+      "post": {
+        "work_d": 1
+      },
+      "weight": "1",
+      "label": null
+    },
+    {
+      "id": "choose_h",
+      "kind": "immediate",
+      "pre": {
+        "root": 1
+      },
+      "post": {
+        "work_h": 1
+      },
+      "weight": "1",
+      "label": null
+    },
+    {
+      "id": "choose_budget",
+      "kind": "immediate",
+      "pre": {
+        "root": 1
+      },
+      "post": {
+        "work_budget": 1
+      },
+      "weight": "1",
+      "label": null
+    },
+    {
+      "id": "c_fire",
+      "kind": "timed",
+      "pre": {
+        "work_c": 1
+      },
+      "post": {
+        "complete": 1
+      },
+      "interval": [
+        "1",
+        "1"
+      ],
+      "label": "c",
+      "external_event": "done"
+    },
+    {
+      "id": "e_fire",
+      "kind": "timed",
+      "pre": {
+        "work_e": 1
+      },
+      "post": {
+        "legal_end": 1
+      },
+      "interval": [
+        "1",
+        "1"
+      ],
+      "label": "e",
+      "external_event": "legal_end"
+    },
+    {
+      "id": "h_fire",
+      "kind": "timed",
+      "pre": {
+        "work_h": 1
+      },
+      "post": {
+        "complete": 1
+      },
+      "interval": [
+        "2",
+        "2"
+      ],
+      "label": "h",
+      "external_event": "done"
+    },
+    {
+      "id": "budget_prepare",
+      "kind": "timed",
+      "pre": {
+        "work_budget": 1
+      },
+      "post": {
+        "work_budget2": 1
+      },
+      "interval": [
+        "0",
+        "0"
+      ],
+      "label": "prepare",
+      "external_event": null
+    },
+    {
+      "id": "budget_fire",
+      "kind": "timed",
+      "pre": {
+        "work_budget2": 1
+      },
+      "post": {
+        "complete": 1
+      },
+      "interval": [
+        "1",
+        "1"
+      ],
+      "label": "b",
+      "external_event": "done"
+    }
+  ],
+  "completion_markings": [
+    {
+      "complete": 1
+    }
+  ],
+  "legal_noncompletion_markings": [
+    {
+      "legal_end": 1
+    }
+  ],
+  "H_A": "1",
+  "path_budget": 3,
+  "observation_projection": "label_plus_external_completion"
+}

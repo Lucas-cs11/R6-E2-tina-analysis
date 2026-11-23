@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -19,8 +19,7 @@
+         explicit = set(step.get('explicit_reset', []))
+         consumed = set(t['pre'].keys())
+         implicit = consumed - explicit
+-        for p in explicit:
+-            if p not in consumed: return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX, 'category': 'RESET_NOT_CONSUMED'}
++        pass
+         for p in implicit:
+             marking[p] = 0
+         for p, n in t['pre'].items(): marking[p] = marking.get(p, 0) - n

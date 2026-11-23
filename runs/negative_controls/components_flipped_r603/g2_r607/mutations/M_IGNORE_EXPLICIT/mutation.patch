@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -21,7 +21,7 @@
+         implicit = consumed - explicit
+         for p in explicit:
+             if p not in consumed: return {'status': 'INVALID_EVIDENCE', 'contract': C, 'tex_sha256': TEX, 'category': 'RESET_NOT_CONSUMED'}
+-        for p in implicit:
++        for p in consumed:
+             marking[p] = 0
+         for p, n in t['pre'].items(): marking[p] = marking.get(p, 0) - n
+         for p, n in t.get('post', {}).items(): marking[p] = marking.get(p, 0) + n

@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -18,7 +18,7 @@
+             t = F(e['time'])
+             if first_fault is None or t < first_fault:
+                 first_fault = t
+-    classification = 'H1' if (first_fault is not None and first_fault <= H) else 'H0'
++    classification = 'H1' if (first_fault is not None and first_fault < H) else 'H0'
+     post_fault_duration = (first_completion - first_fault) if first_fault is not None else None
+     same_firing = any(e.get('fault') and e.get('completion') for e in events)
+     return {

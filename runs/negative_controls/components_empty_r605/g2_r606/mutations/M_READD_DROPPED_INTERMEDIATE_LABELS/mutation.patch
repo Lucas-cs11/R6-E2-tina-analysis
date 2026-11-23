@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -22,6 +22,7 @@
+     if 'intermediate_times' in fields:
+         out['intermediate_times'] = [quantized(x, psi.get('quantum')) for x in path.get('intermediate_times', [])]
+     if 'external_completion' in fields: out['external_completion'] = path.get('external_completion')
++    out['intermediate_labels'] = list(path.get('intermediate_labels', []))
+     return out
+ 
+ 

@@ -1,0 +1,97 @@
+{
+  "module": "D2R4C self-exclusion learning with original class-label allocation",
+  "case_ids": [
+    "101_left",
+    "101_right",
+    "102_left",
+    "102_right",
+    "103_left",
+    "103_right",
+    "104_left",
+    "104_right",
+    "105_left",
+    "105_right",
+    "201_left",
+    "201_right",
+    "202_left",
+    "202_right",
+    "205_left",
+    "205_right",
+    "301_left",
+    "301_right",
+    "303_left",
+    "303_right",
+    "304_left",
+    "304_right",
+    "305_left",
+    "305_right",
+    "402_left",
+    "402_right",
+    "403_left",
+    "403_right",
+    "404_left",
+    "404_right",
+    "405_left",
+    "405_right"
+  ],
+  "calibration": "/mnt/data/Research/thesis_diagnosis_reset/D2R1/results/erratum1/calibration_features.json",
+  "outer_folds": "/mnt/data/Research/thesis_diagnosis_reset/D2R1/results/erratum1/calibration_workpiece_folds.json",
+  "scope": "all 32 contexts, stage4 only; calibration-only outer5/inner3 grouped workpieces; no historical heldout reading by runner",
+  "variants": [
+    "main",
+    "fixed_allocation",
+    "in_sample_allocation"
+  ],
+  "prior": "1/2",
+  "delta": "3/20",
+  "epsilon": "13/100",
+  "gamma": "4/5",
+  "kernel_width": "exact old posterior-CV fit rule, old multiplier grid .5,1,2,4; no new bandwidth grid",
+  "background_mass": "1/20 fixed; common finite uniform product [0,max(2*training_axis_max+1,kernel_hi)]",
+  "theta_bounds": [
+    "0",
+    "1"
+  ],
+  "theta_initial": [
+    "0",
+    "1"
+  ],
+  "objective": "leave-own-center-out, separately class-renormalized conditional likelihood at pi=.5 + same quadratic penalty; general constrained SLSQP, no claim of convexity",
+  "regularization_grid": [
+    0.1,
+    1,
+    10
+  ],
+  "inner_seed": "D2R4-inner-workpiece-v1:",
+  "inner_minimum_training_per_class": 5,
+  "inner_default": 1,
+  "optimizer": {
+    "method": "SLSQP",
+    "maxiter": 500,
+    "ftol": 1e-10
+  },
+  "rationalization": "theta to nearest millionth; normalize each class weights exactly; deployed law used for evaluation",
+  "success": "primary sixpp matched80 improvement over original finite model; partial minimum2pp, beats continuous reference and delta Pareto; only if partial gate holds evaluate historical data once after model freeze",
+  "source_sha256": {
+    "/mnt/data/Research/thesis_diagnosis_reset/D2R1/results/erratum1/calibration_features.json": "b626d502fdb747811df428359591b76573b39d9d1ea8095823ad1b00fcdde90b",
+    "/mnt/data/Research/thesis_diagnosis_reset/D2R1/results/erratum1/calibration_workpiece_folds.json": "75e57a03e7f08082cf01ddf76ba498eb5bb101080e262571775afa23fdc46e81",
+    "/mnt/data/Research/thesis_diagnosis_reset/D2R4/self_exclusion/freeze/protocol.json": "778d60b0bfe98b00eef462fc35b2f0d526c06d4b6c1304487b9116b489512f1a",
+    "/mnt/data/Research/thesis_diagnosis_reset/D2R4/self_exclusion/results/summary.json": "7df259f3a3085c1327f5c50993b90d02701758042960397dc6a94ec43b77da92",
+    "/mnt/data/Research/thesis_diagnosis_reset/D2R4/label_preserving/code/preflight.py": "da009c2cb19565e59e1fda2d7b3f988a4e850329506920c791fa93e0183fe1d2",
+    "/mnt/data/Research/thesis_diagnosis_reset/D2R4/label_preserving/code/evaluate.py": "435d9682204da8e29fc4395366005d6402e79e5ad1ee51b0171038f7c78ffabf",
+    "/mnt/data/Research/thesis_diagnosis_reset/D2R4/label_preserving/code/run.py": "c1e8bd96cda53d420f6e6234676b5cf44ee223c9e184bac9d8f467417b3ef5cf",
+    "/mnt/data/Research/thesis_diagnosis_reset/D2R4/label_preserving/code/model.py": "e022793871e093389ada825610df87e086b75b14966a484b5941235b7768d665"
+  },
+  "versions": {
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "pydantic": "2.12.5",
+      "PyYAML": "6.0.3"
+    }
+  },
+  "reason": "B explicit fixed label contamination p=.05+.9*p_original (without background) artificially shrinks confidence; remove redundant cross-class contamination, keep shared background; no contamination grid, priors/thresholds unchanged",
+  "original_attempt_immutable": true
+}

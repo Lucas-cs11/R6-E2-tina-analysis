@@ -1,0 +1,38 @@
+{
+  "status": "FAIL",
+  "phase_gate": "PROVISIONAL_R6_01_PARTIAL_NOT_PHASE_GATE",
+  "cases": 3,
+  "passed": 3,
+  "mutations": [
+    {
+      "mutation": "M_DELAYED_BEFORE_URGENT",
+      "target": "URGENT_DELAYED_PRIORITY",
+      "detected": false,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "mutation": "M_ENDPOINT_OPEN",
+      "target": "NONURGENT_ENDPOINT_DISTINGUISHED",
+      "detected": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "mutation": "M_ALL_IDENTICAL",
+      "target": "URGENT_FIRES_BEFORE_DELAYED",
+      "detected": false,
+      "observed": false,
+      "expected": false
+    }
+  ],
+  "subdomains": [
+    "endpoint equality",
+    "urgent priority over delayed"
+  ],
+  "not_covered": [
+    "unbounded closure",
+    "general timed automata",
+    "full R6-01 13-boundary suite"
+  ]
+}

@@ -1,0 +1,13 @@
+--- 
++++ 
+@@ -82,6 +82,10 @@
+     compliant_witnesses = [w for w in model.get('witnesses', []) if satisfies(w, compliant_bounds, extra)]
+     violating_witnesses = [w for w in model.get('witnesses', []) if satisfies(w, violating_bounds, extra, var, bc)]
+     completion_witness_preserved = any(w.get('first_completion') for w in compliant_witnesses)
++    if violating_range is not None and violating_range[1] > bc:
++        compliant_range = None
++        compliant_witnesses = []
++        completion_witness_preserved = False
+     return {'status': 'DECIDED', 'contract': C, 'tex_sha256': TEX,
+             'compliant': {'feasible': compliant_range is not None, 'strict_upper': False,
+                           'witnesses': compliant_witnesses, 'completion_witness_preserved': completion_witness_preserved},

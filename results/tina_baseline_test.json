@@ -1,0 +1,14 @@
+[
+  {
+    "case_id": "RMT_j1_m2_u0.1_w0.5",
+    "tina_output": "Tina version 4.0.0 -- 07/04/26 -- LAAS/CNRS\n\nmode -R\n\nINPUT NET ------------------------------------------------------- \n\nparsed net {}\n\n2 places, 1 transitions, 2 arcs\n\nnet {}\ntr t1 p1  -> p2 \npl p1 (1)\n\n0.000s\n\nREACHABILITY ANALYSIS ------------------------------------------- \n\nbounded\n\n2 marking(s), 1 transition(s)\n\nMARKINGS:\n\n0 : p1\n1 : p2\n\nREACHABILITY GRAPH:\n\n0 -> t1/1\n1 -> \n\n0.000s\n\nLIVENESS ANALYSIS ----------------------------------------------- \n\nnot live\nnot reversible\n\n1 dead marking"
+  },
+  {
+    "case_id": "RMT_j1_m2_u0.1_w1.0",
+    "tina_output": "Tina version 4.0.0 -- 07/04/26 -- LAAS/CNRS\n\nmode -R\n\nINPUT NET ------------------------------------------------------- \n\nparsed net {}\n\n2 places, 1 transitions, 2 arcs\n\nnet {}\ntr t1 p1  -> p2 \npl p1 (1)\n\n0.000s\n\nREACHABILITY ANALYSIS ------------------------------------------- \n\nbounded\n\n2 marking(s), 1 transition(s)\n\nMARKINGS:\n\n0 : p1\n1 : p2\n\nREACHABILITY GRAPH:\n\n0 -> t1/1\n1 -> \n\n0.000s\n\nLIVENESS ANALYSIS ----------------------------------------------- \n\nnot live\nnot reversible\n\n1 dead marking"
+  },
+  {
+    "case_id": "RMT_j1_m2_u0.1_w1.5",
+    "tina_output": "Tina version 4.0.0 -- 07/04/26 -- LAAS/CNRS\n\nmode -R\n\nINPUT NET ------------------------------------------------------- \n\nparsed net {}\n\n2 places, 1 transitions, 2 arcs\n\nnet {}\ntr t1 p1  -> p2 \npl p1 (1)\n\n0.000s\n\nREACHABILITY ANALYSIS ------------------------------------------- \n\nbounded\n\n2 marking(s), 1 transition(s)\n\nMARKINGS:\n\n0 : p1\n1 : p2\n\nREACHABILITY GRAPH:\n\n0 -> t1/1\n1 -> \n\n0.000s\n\nLIVENESS ANALYSIS ----------------------------------------------- \n\nnot live\nnot reversible\n\n1 dead marking"
+  }
+]

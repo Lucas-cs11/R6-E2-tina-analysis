@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "phase_gate": "PROVISIONAL_R6_10_PARTIAL_NOT_PHASE_GATE",
+  "cases": 8,
+  "passed": 8,
+  "mutations": [
+    {
+      "mutation": "M_THEOREM_WITHOUT_EXTERNAL",
+      "target": "NO_EXTERNAL_COMPLETION",
+      "detected": true,
+      "observed_status": "THEOREM_APPLICABLE"
+    },
+    {
+      "mutation": "M_THEOREM_WITHOUT_SUPPORT",
+      "target": "SUPPORT_MISMATCH",
+      "detected": true,
+      "observed_status": "THEOREM_APPLICABLE"
+    }
+  ],
+  "not_covered": [
+    "general measurable-support proof",
+    "automatic LSTPN extraction",
+    "theorem counterexample search"
+  ]
+}

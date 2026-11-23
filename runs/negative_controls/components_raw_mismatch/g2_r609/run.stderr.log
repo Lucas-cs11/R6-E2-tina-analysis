@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r609.py", line 42, in <module>
+    if abs(float(s['posterior'][hyp]) - float(o['posterior'][hyp])) > 1e-9: errors.append(f'posterior_mismatch_{hyp}')
+           ~~~~~^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '4/7'

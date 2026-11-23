@@ -1,0 +1,16 @@
+physical_element,physical_role,tpn_element,tpn_role
+controller program (SMW_4step),four-stage controller: Finding -> Thread forming -> Pre-tightening -> Tightening 1.4,P0 -> (t_find/t_thread/t_pretight/t_final) chain (N and F copies),"sequential stage chain; each stage is an in-stage place and a completion transition (sequential transition firing delays, Section 4)"
+'Finding' step (graph.time window),controller step 1,S_FIND_N/S_FIND_F + t_find_N/t_find_F,in-stage place pair + completion transition (firing delay = window span)
+event 'Finding-complete',observation emitted when Finding finishes,t_find_N / t_find_F label,observable label 'Finding-complete' (in frozen alphabet)
+'Thread forming' step,controller step 2,S_THREAD_N/S_THREAD_F + t_thread_N/t_thread_F,in-stage place pair + completion transition
+event 'Thread-forming-complete',observation emitted when Thread forming finishes,t_thread_N / t_thread_F label,observable label 'Thread-forming-complete'
+'Pre-tightening' step,controller step 3,S_PRETIGHT_N/S_PRETIGHT_F + t_pretight_N/t_pretight_F,in-stage place pair + completion transition
+event 'Pre-tightening-complete',observation emitted when Pre-tightening finishes,t_pretight_N / t_pretight_F label,observable label 'Pre-tightening-complete'
+'Tightening 1.4' step,controller step 4 (final tightening),S_FINAL_N/S_FINAL_F + t_final_N/t_final_F,in-stage place pair + completion transition (firing delay = final window span)
+event 'Final-tightening-complete',observation emitted when Tightening 1.4 finishes,t_final_N / t_final_F label,observable label 'Final-tightening-complete'
+workpiece_result = OK,task completion (all four steps OK),P_COMPLETE (completion_marking {P_COMPLETE: 1}),M_fin; completion time = first_entry into P_COMPLETE = sum of four stage firing delays (Section 4)
+category-1 fault applied before execution (class c manipulation),fault status decided before execution,t_init_F,"unobservable fault transition in T_f, interval [0,0] (time-0 firing); distinguishes fault condition"
+no manipulation (normal),fault status = absent,t_init_N,"unobservable non-fault transition, interval [0,0]"
+step result = NOK (abort at failing step),execution stops; failing step emits no completion,(omitted — completion sub-model),aborted executions are outside the completed-task observation language; documented in abort_semantics_audit.md (Section 10)
+workpiece_location (left/right),station asymmetry (final-stage d=1.73; Section 9),model instance suffix '__{location}',"known nuisance variable conditioned on by model stratification, not a TPN element"
+stage window sampling grid,native quantization 1.2 ms,"GRID = Fraction(3,2500)",outward rounding lattice for frozen intervals (Section 12)

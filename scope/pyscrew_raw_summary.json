@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "raw_files_available": true,
+  "verification_level": "SOURCE_MANIFEST_AUDITED",
+  "raw_rows": 5000,
+  "workpieces": 2500,
+  "classes": 25,
+  "source_groups": 50,
+  "pair_failures": 0,
+  "raw_sha256_provided": 5000,
+  "note": "never claims FULL_RAW_REPRODUCIBLE unless every raw JSON SHA is recomputed from provided files"
+}

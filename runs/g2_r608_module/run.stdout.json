@@ -1,0 +1,33 @@
+{
+  "status": "FAIL",
+  "phase_gate": "PROVISIONAL_R6_08_MODULE_NOT_PHASE_GATE",
+  "cases": 10,
+  "passed": 9,
+  "mutations": [
+    {
+      "mutation": "M_SKIP_COMPLEMENT_CHECK",
+      "target": "COMPLEMENT_INFEASIBLE",
+      "detected": true,
+      "observed": "OK",
+      "expected": "COMPLEMENT_INFEASIBLE"
+    },
+    {
+      "mutation": "M_ACCEPT_UNCERTIFIED",
+      "target": "UNCERTIFIED_INTERVAL",
+      "detected": true,
+      "observed": "OK",
+      "expected": "UNCERTIFIED_INTERVAL"
+    },
+    {
+      "mutation": "M_DECIDE_WITHOUT_METHOD",
+      "target": "NO_METHOD",
+      "detected": true,
+      "observed": "OK",
+      "expected": "NO_METHOD"
+    }
+  ],
+  "not_covered": [
+    "full 13-boundary R6-08 suite",
+    "all error paths with real SCG traces"
+  ]
+}

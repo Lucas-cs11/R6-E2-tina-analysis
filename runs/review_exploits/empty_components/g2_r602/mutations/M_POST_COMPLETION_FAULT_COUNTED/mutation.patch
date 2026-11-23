@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -14,7 +14,7 @@
+     # A fault only counts toward this run's H0/H1 if it fires no later than first completion.
+     first_fault = None
+     for e in events:
+-        if e.get('fault') and F(e['time']) <= first_completion:
++        if e.get('fault'):
+             t = F(e['time'])
+             if first_fault is None or t < first_fault:
+                 first_fault = t

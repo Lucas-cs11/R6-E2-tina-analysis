@@ -1,0 +1,30 @@
+name: TINA Full Analysis
+
+on:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        batch: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Install TINA
+        run: |
+          wget https://projects.laas.fr/tina/binaries/tina-4.0.0-amd64-linux.tgz
+          tar xzf tina-4.0.0-amd64-linux.tgz
+          export PATH=$PWD/tina/bin:$PATH
+      
+      - name: Run analysis batch ${{ matrix.batch }}
+        run: |
+          export PATH=$PWD/tina/bin:$PATH
+          python3 tests/tina_batch.py --batch ${{ matrix.batch }} --total-batches 10
+      
+      - name: Upload results
+        uses: actions/upload-artifact@v3
+        with:
+          name: tina-results-batch-${{ matrix.batch }}
+          path: results/tina_batch_${{ matrix.batch }}.csv

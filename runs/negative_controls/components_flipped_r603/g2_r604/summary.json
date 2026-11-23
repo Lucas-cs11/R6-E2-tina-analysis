@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "phase_gate": "PROVISIONAL_R6_04_PARTIAL_NOT_PHASE_GATE",
+  "cases": 6,
+  "passed": 6,
+  "mutations": [
+    {
+      "mutation": "M_EQ_Bc_TREATED_VIOLATION",
+      "target": "POST_FAULT_EQ_Bc",
+      "detected": true,
+      "observed_outcome": "VIOLATION",
+      "expected": "COMPLETED_IN_TIME"
+    },
+    {
+      "mutation": "M_SHORT_PREFIX_VIOLATION",
+      "target": "SHORT_PREFIX_NOT_DUE",
+      "detected": true,
+      "observed_outcome": "VIOLATION",
+      "expected": "PENDING"
+    },
+    {
+      "mutation": "M_ENDPOINT_NOT_FIRST",
+      "target": "ENDPOINT_DEADLINE_EQ_HA_COMPLETE",
+      "detected": true,
+      "observed_outcome": "PENDING",
+      "expected": "COMPLETED_IN_TIME"
+    }
+  ],
+  "not_covered": [
+    "general H_A truncation sweep",
+    "mixed-state split"
+  ]
+}

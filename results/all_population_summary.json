@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "valid_candidates": 107520,
+  "generated": 107520,
+  "unique": 107520,
+  "status_counts": {
+    "GENERATED_STRUCTURE_PASS": 107520
+  },
+  "structural_issues": 0,
+  "generator_errors": 0,
+  "scope": "actual generation + structural validation only; NOT four-implementation execution; NOT logic verdicts"
+}

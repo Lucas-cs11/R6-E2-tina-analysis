@@ -1,0 +1,8 @@
+{
+  "mutation": "replace first raw file SHA256 with invalid all zeros (counts unchanged)",
+  "command": "python -B tests/final_verify_r6.py",
+  "exit_code": 0,
+  "result_status": "NOT_CLOSED",
+  "result_errors": [],
+  "discovered_tamper": false
+}

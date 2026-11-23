@@ -1,0 +1,33 @@
+{
+  "status": "FAIL",
+  "phase_gate": "PROVISIONAL_R6_12_PARTIAL_NOT_PHASE_GATE",
+  "cases": 5,
+  "passed": 5,
+  "mutations": [
+    {
+      "mutation": "M_ALLOW_SPAN",
+      "target": "SPANS_SWITCH",
+      "detected": true,
+      "observed": "MISSING_CONFIG",
+      "expected": "SPANS_SWITCH"
+    },
+    {
+      "mutation": "M_REQUIRE_BOTH_SIDES",
+      "target": "CLEAN_SWITCH",
+      "detected": false,
+      "observed": "OK",
+      "expected": "OK"
+    },
+    {
+      "mutation": "M_IGNORE_ENDPOINT",
+      "target": "AT_ENDPOINT",
+      "detected": true,
+      "observed": "MISSING_CONFIG",
+      "expected": "OK"
+    }
+  ],
+  "not_covered": [
+    "general reconfiguration semantics",
+    "full R6-12 suite"
+  ]
+}

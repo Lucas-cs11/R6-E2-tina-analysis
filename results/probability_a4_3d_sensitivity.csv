@@ -1,0 +1,19 @@
+k,a4,width,buckets,Pe,note
+0,3,1.0,1,0.000000,3D sensitivity: a4 x width x buckets
+0,3,1.0,4,0.093750,3D sensitivity: a4 x width x buckets
+0,3,1.0,16,0.117500,3D sensitivity: a4 x width x buckets
+0,3,1.2,1,0.000000,3D sensitivity: a4 x width x buckets
+0,3,1.2,4,0.062500,3D sensitivity: a4 x width x buckets
+0,3,1.2,16,0.078333,3D sensitivity: a4 x width x buckets
+10,3+10/20,1.0,1,0.000000,3D sensitivity: a4 x width x buckets
+10,3+10/20,1.0,4,0.020833,3D sensitivity: a4 x width x buckets
+10,3+10/20,1.0,16,0.036667,3D sensitivity: a4 x width x buckets
+10,3+10/20,1.2,1,0.000000,3D sensitivity: a4 x width x buckets
+10,3+10/20,1.2,4,0.012500,3D sensitivity: a4 x width x buckets
+10,3+10/20,1.2,16,0.022000,3D sensitivity: a4 x width x buckets
+20,3+20/20,1.0,1,0.000000,3D sensitivity: a4 x width x buckets
+20,3+20/20,1.0,4,0.000000,3D sensitivity: a4 x width x buckets
+20,3+20/20,1.0,16,0.000000,3D sensitivity: a4 x width x buckets
+20,3+20/20,1.2,1,0.000000,3D sensitivity: a4 x width x buckets
+20,3+20/20,1.2,4,0.000000,3D sensitivity: a4 x width x buckets
+20,3+20/20,1.2,16,0.000000,3D sensitivity: a4 x width x buckets

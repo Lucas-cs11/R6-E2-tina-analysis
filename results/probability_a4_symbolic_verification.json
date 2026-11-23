@@ -1,0 +1,23 @@
+{
+  "a4_3": {
+    "symbolic": "1/8",
+    "numeric": "0.125000",
+    "match": true
+  },
+  "a4_3.5": {
+    "symbolic": "1/24",
+    "numeric": "0.041667",
+    "match": true
+  },
+  "a4_4": {
+    "symbolic": "0",
+    "numeric": "0.000000",
+    "match": true
+  },
+  "gamma": {
+    "symbolic": "0 for all a4 (posterior=0.5)",
+    "numeric": "0 for all",
+    "match": true
+  },
+  "conclusion": "numeric integration validated by symbolic derivation at k=0,10,20"
+}

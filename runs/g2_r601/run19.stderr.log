@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r601.py", line 70, in <module>
+    mutate('M_DELAYED_BEFORE_URGENT', 'URGENT_DELAYED_PRIORITY',
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           "            urgent = enabled(model, s, 'urgent')\n            if urgent:",
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           "            urgent = []\n            if urgent:"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r601.py", line 66, in mutate
+    return {'mutation': name, 'target': target, 'detected': detected, 'observed': got['undistinguished_pairs'], 'expected': expected}
+                                                                                                                            ^^^^^^^^
+NameError: name 'expected' is not defined. Did you mean: 'detected'?

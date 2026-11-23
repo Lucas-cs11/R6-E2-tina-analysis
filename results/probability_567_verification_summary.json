@@ -1,0 +1,6 @@
+{
+  "status": "FAIL",
+  "verified": 21,
+  "matched": 2,
+  "note": "numeric with buckets=16 does not match analytic continuous; need more buckets or exact computation"
+}

@@ -1,0 +1,65 @@
+{
+  "version": "pre-run static only",
+  "generator_sha256": "4ab74687b1593bd002f07b9b9af99259f822773db6ff060b732d2856fc3892fb",
+  "fixed_parameters": {
+    "seed": 0,
+    "machine_capacity": 1,
+    "n_configs": 2,
+    "repair_domain": "standard"
+  },
+  "rules": [
+    {
+      "id": "R1",
+      "field": "machine_counts",
+      "predicate": ">=1",
+      "note": "at least one machine"
+    },
+    {
+      "id": "R2",
+      "field": "part_type_counts",
+      "predicate": ">=1",
+      "note": "at least one part type"
+    },
+    {
+      "id": "R3",
+      "field": "operations_per_part",
+      "predicate": ">=1",
+      "note": "at least one operation"
+    },
+    {
+      "id": "R4",
+      "field": "wip_bounds",
+      "predicate": ">=1",
+      "note": "positive work-in-process bound"
+    },
+    {
+      "id": "R5",
+      "field": "unobservable_ratios",
+      "predicate": "0<=x<=1",
+      "note": "valid ratio"
+    },
+    {
+      "id": "R6",
+      "field": "fault_locations",
+      "predicate": "1<=x<=machine_counts",
+      "note": "distinct fault machines must be realizable"
+    },
+    {
+      "id": "R7",
+      "field": "interval_width_factors",
+      "predicate": ">0",
+      "note": "positive width factor"
+    },
+    {
+      "id": "R8",
+      "field": "adjustable_ratios",
+      "predicate": "0<=x<=1",
+      "note": "valid ratio"
+    }
+  ],
+  "status_labels": [
+    "VALID_BY_FROZEN_RULE",
+    "INVALID_BY_FROZEN_RULE"
+  ],
+  "note": "validity is declared BEFORE any solver run; GENERATOR_ERROR may only be added by an actual generation attempt in a later phase"
+}

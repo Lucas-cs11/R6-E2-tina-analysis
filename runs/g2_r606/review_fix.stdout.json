@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "phase_gate": "PROVISIONAL_R6_06_PARTIAL_NOT_PHASE_GATE",
+  "cases": 6,
+  "passed": 6,
+  "mutations": [
+    {
+      "mutation": "M_READD_DROPPED_INTERMEDIATE_LABELS",
+      "target": "COMPLETION_ONLY_IGNORES_INTERMEDIATE",
+      "detected": true,
+      "observed": "PERP",
+      "expected": "0"
+    },
+    {
+      "mutation": "M_INCOMPLETE_SEARCH_NO_AMBIGUITY",
+      "target": "INCOMPLETE_SEARCH_UNRESOLVED",
+      "detected": true,
+      "observed": "1",
+      "expected": "PERP"
+    }
+  ],
+  "not_covered": [
+    "complete SCG construction",
+    "general non-prefix-compatible psi",
+    "deadline sweep"
+  ]
+}

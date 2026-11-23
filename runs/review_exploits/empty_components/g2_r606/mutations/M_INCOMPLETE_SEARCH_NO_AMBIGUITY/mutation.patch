@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -39,8 +39,6 @@
+                 witnesses.append({'normal_path': normal['id'], 'fault_path': fault['id'], 'observation': no})
+     if witnesses:
+         verdict = '0'
+-    elif not data.get('search_complete', False):
+-        verdict = 'PERP'
+     else:
+         verdict = '1'
+     return {'status': 'DECIDED' if verdict != 'PERP' else 'UNRESOLVED', 'contract': C,

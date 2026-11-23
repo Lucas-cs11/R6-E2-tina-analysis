@@ -1,0 +1,19 @@
+--- 
++++ 
+@@ -63,12 +63,10 @@
+         if not (0 <= gamma <= 1):
+             raise EvidenceError('gamma outside safe scope')
+         # R6-08 complement tightening q0+q1=1.
+-        if q0[0] + q1[0] > 1 or q0[1] + q1[1] < 1:
+-            raise EvidenceError('q0+q1=1 jointly infeasible (INVALID_EVIDENCE)')
+-        t0 = (max(q0[0], 1 - q1[1]), min(q0[1], 1 - q1[0]))
+-        t1 = (max(q1[0], 1 - q0[1]), min(q1[1], 1 - q0[0]))
+-        if t0[0] > t0[1] or t1[0] > t1[1]:
+-            raise EvidenceError('complement tightening empty (INVALID_EVIDENCE)')
++        if False:
++            pass
++        t0 = q0
++        t1 = q1
+         # Optional Q_i^Y(B) <= q_i check.
+         for name, q in (('Q0_Y', t0), ('Q1_Y', t1)):
+             if name in data:

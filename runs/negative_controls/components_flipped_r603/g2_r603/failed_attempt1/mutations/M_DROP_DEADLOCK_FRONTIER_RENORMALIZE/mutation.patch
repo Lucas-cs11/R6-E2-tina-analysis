@@ -1,0 +1,13 @@
+--- 
++++ 
+@@ -99,7 +99,10 @@
+ 
+ 
+ def report(model, leaves):
++    leaves = [x for x in leaves if x['termination'] not in {'unfinished_deadlock', 'unresolved_frontier'}]
+     resolved = sum((x['mass'] for x in leaves if x['resolved']), F(0))
++    for x in leaves:
++        x['mass'] = x['mass'] / resolved
+     frontier = sum((x['mass'] for x in leaves if not x['resolved']), F(0))
+     total = resolved + frontier
+     by_term = {}

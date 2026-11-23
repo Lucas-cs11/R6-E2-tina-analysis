@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/run_g2_r601.py", line 35, in <module>
+    s = subject.distinguish(copy.deepcopy(model)); o = oracle.distinguish(copy.deepcopy(model))
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/implementations/subject/r601.py", line 56, in distinguish
+    pairs = [f'{a[0]}@{a[1]}~{b[0]}@{b[1]}' for a in sorted(eq)]
+                              ^
+NameError: name 'b' is not defined

@@ -1,0 +1,10 @@
+a4,weight,pi0,pi1,Pe,Gamma,status,note
+3,W1,,,,,PENDING_SPEC_REQUIRES_DISTRIBUTION,"root weight changes prior; Y distribution must be re-derived from continuous model per (a4, weight); no simplified discrete approximation accepted"
+3,W2,,,,,PENDING_SPEC_REQUIRES_DISTRIBUTION,"root weight changes prior; Y distribution must be re-derived from continuous model per (a4, weight); no simplified discrete approximation accepted"
+3,W3,,,,,PENDING_SPEC_REQUIRES_DISTRIBUTION,"root weight changes prior; Y distribution must be re-derived from continuous model per (a4, weight); no simplified discrete approximation accepted"
+7/2,W1,,,,,PENDING_SPEC_REQUIRES_DISTRIBUTION,"root weight changes prior; Y distribution must be re-derived from continuous model per (a4, weight); no simplified discrete approximation accepted"
+7/2,W2,,,,,PENDING_SPEC_REQUIRES_DISTRIBUTION,"root weight changes prior; Y distribution must be re-derived from continuous model per (a4, weight); no simplified discrete approximation accepted"
+7/2,W3,,,,,PENDING_SPEC_REQUIRES_DISTRIBUTION,"root weight changes prior; Y distribution must be re-derived from continuous model per (a4, weight); no simplified discrete approximation accepted"
+4,W1,,,,,PENDING_SPEC_REQUIRES_DISTRIBUTION,"root weight changes prior; Y distribution must be re-derived from continuous model per (a4, weight); no simplified discrete approximation accepted"
+4,W2,,,,,PENDING_SPEC_REQUIRES_DISTRIBUTION,"root weight changes prior; Y distribution must be re-derived from continuous model per (a4, weight); no simplified discrete approximation accepted"
+4,W3,,,,,PENDING_SPEC_REQUIRES_DISTRIBUTION,"root weight changes prior; Y distribution must be re-derived from continuous model per (a4, weight); no simplified discrete approximation accepted"

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/lucas/Downloads/results1005/theory_validation/R6_E2/tests/enumerate_generator_universe.py", line 76, in <module>
+    cid = f'RMT_m{m}_j{j}_ops{ops}_wip{wip}_u{u}_f{fault}_w{w}_a{adj}'
+                                                            ^
+NameError: name 'w' is not defined. Did you mean: 'wf'?

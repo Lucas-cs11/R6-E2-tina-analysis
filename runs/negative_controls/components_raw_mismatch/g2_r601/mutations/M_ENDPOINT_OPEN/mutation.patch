@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -11,7 +11,7 @@
+ def closure(model):
+     out = set()
+     for loc, interval in model['locations'].items():
+-        steps = 1 if model.get('endpoint_grid', False) else 2
++        steps = 2
+         lo, hi = F(interval[0]), F(interval[1])
+         for i in range(steps + 1):
+             out.add((loc, lo + (hi - lo) * i / steps))

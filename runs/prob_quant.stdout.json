@@ -1,0 +1,40 @@
+{
+  "rows": 15,
+  "sample": [
+    {
+      "k": 0,
+      "a4": "3",
+      "buckets": 1,
+      "Pe": "0.000000",
+      "note": "Pe with Y quantized into b buckets on [3,4]"
+    },
+    {
+      "k": 0,
+      "a4": "3",
+      "buckets": 2,
+      "Pe": "0.062500",
+      "note": "Pe with Y quantized into b buckets on [3,4]"
+    },
+    {
+      "k": 0,
+      "a4": "3",
+      "buckets": 4,
+      "Pe": "0.094000",
+      "note": "Pe with Y quantized into b buckets on [3,4]"
+    },
+    {
+      "k": 0,
+      "a4": "3",
+      "buckets": 8,
+      "Pe": "0.109500",
+      "note": "Pe with Y quantized into b buckets on [3,4]"
+    },
+    {
+      "k": 0,
+      "a4": "3",
+      "buckets": 16,
+      "Pe": "0.117250",
+      "note": "Pe with Y quantized into b buckets on [3,4]"
+    }
+  ]
+}

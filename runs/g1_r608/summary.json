@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "cases": 20,
+  "passed": 20,
+  "mutations": [
+    {
+      "mutation": "M_NO_COMPLEMENT",
+      "target": "COMPLEMENT_SYMMETRIC_TIGHTEN",
+      "detected": true,
+      "expected": [
+        "DECIDED",
+        "1",
+        "1"
+      ],
+      "observed": [
+        "DECIDED",
+        "PERP",
+        "NULL"
+      ]
+    },
+    {
+      "mutation": "M_ACCEPT_INCOMPATIBLE",
+      "target": "JOINT_INCOMPATIBLE_INVALID",
+      "detected": true,
+      "expected": [
+        "INVALID_EVIDENCE",
+        null,
+        null
+      ],
+      "observed": [
+        "DECIDED",
+        "PERP",
+        "NULL"
+      ]
+    },
+    {
+      "mutation": "M_LOOSE_UPPER_REJECT",
+      "target": "QY_LOOSE_UPPER_CLAMP",
+      "detected": true,
+      "expected": [
+        "DECIDED",
+        "1",
+        "1"
+      ],
+      "observed": [
+        "INVALID_EVIDENCE",
+        null,
+        null
+      ]
+    },
+    {
+      "mutation": "M_LOWER_ABOVE_ACCEPT",
+      "target": "QY_LOWER_ABOVE_Q",
+      "detected": true,
+      "expected": [
+        "INVALID_EVIDENCE",
+        null,
+        null
+      ],
+      "observed": [
+        "DECIDED",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "mutation": "M_EQUALITY_STRICT",
+      "target": "PE_EQUALITY_NOT_NEG",
+      "detected": true,
+      "expected": [
+        "DECIDED",
+        "1",
+        "PERP"
+      ],
+      "observed": [
+        "DECIDED",
+        "1",
+        "0"
+      ]
+    }
+  ],
+  "p0_audit_fix": "loose upper Q clamped via intersection; only lower>q upper is infeasible",
+  "note": "independent oracle uses separate linear feasibility path"
+}

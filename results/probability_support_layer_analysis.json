@@ -1,0 +1,18 @@
+{
+  "a4_4": {
+    "support": "{4} (single point)",
+    "Pe": "0 (zero measure)",
+    "Gamma": "1 (posterior arbitrary at zero-measure point)"
+  },
+  "a4_3": {
+    "support": "[3,4] (interval)",
+    "Pe": "1/8",
+    "Gamma": "0 (posterior=0.5 everywhere)"
+  },
+  "a4_3.5": {
+    "support": "[3.5,4] (interval)",
+    "Pe": "1/24",
+    "Gamma": "0 (posterior=0.5 everywhere)"
+  },
+  "conclusion": "Support layer keeps zero-measure boundary; probability layer gives zero mass. Both are correct."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "DECIDED",
+  "contract": "R6-E2-R6-11-PARTIAL",
+  "tex_sha256": "a4196145c95812ff19376a5985b6a6f2cf469d432c80836071cad1c8ac174c5a",
+  "category": "OK",
+  "bayes_error": "1/10",
+  "coverage": "0",
+  "coarsened_bayes_error": "1/10",
+  "coarsened_coverage": "0",
+  "bayes_monotone": true
+}
