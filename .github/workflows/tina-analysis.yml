@@ -14,16 +14,18 @@ jobs:
       
       - name: Install TINA
         run: |
-          wget https://projects.laas.fr/tina/binaries/tina-4.0.0-amd64-linux.tgz
-          tar xzf tina-4.0.0-amd64-linux.tgz
-          ls -la tina/bin/
-          export PATH=$PWD/tina/bin:$PATH
-          which tina
-          tina -h | head -5
+          curl -sL https://projects.laas.fr/tina/binaries/tina-4.0.0-amd64-linux.tgz -o tina.tgz
+          tar xzf tina.tgz
+          ls -la
+          find . -name "tina" -type f 2>/dev/null | head -5
+          TINA_DIR=$(find . -name "tina" -type f | head -1 | xargs dirname)
+          echo "TINA_DIR=$TINA_DIR" >> $GITHUB_ENV
+          export PATH=$PWD/$TINA_DIR:$PATH
+          which tina || echo "tina not in PATH"
       
       - name: Run analysis batch ${{ matrix.batch }}
         run: |
-          export PATH=$PWD/tina/bin:$PATH
+          export PATH=$PWD/$TINA_DIR:$PATH
           python3 tests/tina_batch.py --batch ${{ matrix.batch }} --total-batches 10
       
       - name: Upload results
