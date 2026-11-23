@@ -24,7 +24,7 @@ jobs:
           python3 tests/tina_batch.py --batch ${{ matrix.batch }} --total-batches 10
       
       - name: Upload results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: tina-results-batch-${{ matrix.batch }}
           path: results/tina_batch_${{ matrix.batch }}.csv
