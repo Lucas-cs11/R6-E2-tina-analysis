@@ -16,7 +16,10 @@ jobs:
         run: |
           wget https://projects.laas.fr/tina/binaries/tina-4.0.0-amd64-linux.tgz
           tar xzf tina-4.0.0-amd64-linux.tgz
+          ls -la tina/bin/
           export PATH=$PWD/tina/bin:$PATH
+          which tina
+          tina -h | head -5
       
       - name: Run analysis batch ${{ matrix.batch }}
         run: |
