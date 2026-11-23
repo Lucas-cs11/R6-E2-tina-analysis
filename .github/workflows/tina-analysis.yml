@@ -2,34 +2,51 @@ name: TINA Full Analysis
 
 on:
   workflow_dispatch:
+    inputs:
+      smoke:
+        description: Run four cases per shard before dispatching a full run
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
 
 jobs:
   analyze:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
     strategy:
+      fail-fast: false
       matrix:
         batch: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     steps:
-      - uses: actions/checkout@v3
-      
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Install TINA
         run: |
-          curl -sL https://projects.laas.fr/tina/binaries/tina-4.0.0-amd64-linux.tgz -o tina.tgz
-          tar xzf tina.tgz
-          ls -la
-          find . -name "tina" -type f 2>/dev/null | head -5
-          TINA_DIR=$(find . -name "tina" -type f | head -1 | xargs dirname)
-          echo "TINA_DIR=$TINA_DIR" >> $GITHUB_ENV
-          export PATH=$PWD/$TINA_DIR:$PATH
-          which tina || echo "tina not in PATH"
-      
-      - name: Run analysis batch ${{ matrix.batch }}
+          set -euo pipefail
+          curl --fail --location --retry 3 'https://projects.laas.fr/tina/binaries/tina-4.0.0-amd64-linux.tgz' -o "$RUNNER_TEMP/tina.tgz"
+          tar -xzf "$RUNNER_TEMP/tina.tgz" -C "$RUNNER_TEMP"
+          binary="$RUNNER_TEMP/tina-4.0.0/bin/tina"
+          test -x "$binary"
+          echo "TINA=$binary" >> "$GITHUB_ENV"
+          mkdir -p "$RUNNER_TEMP/tina-evidence"
+          sha256sum "$RUNNER_TEMP/tina.tgz" "$binary" > "$RUNNER_TEMP/tina-evidence/tool.sha256"
+      - name: Run TINA
+        env:
+          BATCH: ${{ matrix.batch }}
+          SMOKE: ${{ inputs.smoke }}
         run: |
-          export PATH=$PWD/$TINA_DIR:$PATH
-          python3 tests/tina_batch.py --batch ${{ matrix.batch }} --total-batches 10
-      
-      - name: Upload results
+          set -euo pipefail
+          args=()
+          if [[ "$SMOKE" == true ]]; then args+=(--limit 4); fi
+          python3 -B tests/tina_batch.py --batch "$BATCH" --total-batches 10 \
+            --output-dir "$RUNNER_TEMP/tina-evidence" "${args[@]}" | tee "$RUNNER_TEMP/tina-evidence/summary.json"
+      - name: Upload evidence
+        if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
           name: tina-results-batch-${{ matrix.batch }}
-          path: results/tina_batch_${{ matrix.batch }}.csv
+          path: ${{ runner.temp }}/tina-evidence/
+          if-no-files-found: error
